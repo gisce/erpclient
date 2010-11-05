@@ -1,0 +1,21 @@
+<b>Bienvenue sur OpenERP !</b>
+
+C'est votre première installation de OpenERP, nous vous conseillons de lire les quelques astuces qui suivent.
+
+Cliquez sur 'Astuce suivante' pour continuer...
+---
+<b>Première connexion...</b>
+
+Lors du premier lancement de OpenERP, vous devrez créer une nouvelle base de données via le menu Fichier > Nouvelle base de données.
+---
+<b>Se connecter au serveur...</b>
+Vous pouvez dès lors vous connecter au serveur via le menu 'Fichier > Connecter...'. Quelques comptes pré-configurés:
+      user/user
+      admin/admin
+      compta/compta
+      compta_admin/admin
+---
+<b>Plus d'infos...</b>
+
+Pour obtenir plus d'informations quand à OpenERP, rendez-vous sur le site
+http://wwww.openerp.com/

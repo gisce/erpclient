@@ -1,0 +1,19 @@
+<b>Welcome to OpenERP !</b>
+
+If it is your first install of OpenERP, we suggest you to read the first five tips.
+Click on the 'Next Tip' button to continue...
+---
+<b>OpenERP Tutorial:</b>
+
+To simplify the learning of OpenERP, have a look at the tutorial.
+It describes the first steps of a complete flow.
+The tutorial is available on http://www.openerp.com/, section 'Online Shop'.
+---
+<b>Connect to the server:</b>
+At the first installation, 2 users are created: demo/demo a simplified demo account and admin/admin, a complete administrator account.
+Click on 'File > Connect' and use the following data:
+	login: demo, password: demo
+---
+<b>First connection:</b>
+
+You can use the shortcuts on the left or use the complete menu to expand sections. The demo database is an enterprise that builds computers on demand.

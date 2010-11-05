@@ -1,0 +1,109 @@
+Screen
+------
+
+1 model
+Liste de vues - vue active
+
+	def sélection de la vue
+
+	screen.model
+	screel.view
+
+Parser_form
+	pour chaque form
+	cherche la vue
+
+
+Pouvoir faire:
+	<field name="order_lines">
+		<form>
+
+
+		</form>
+	</field>
+
+
+View (observater)
+-----------------
+
+view_widget
+	valeur par défaut
+	self.model_widget
+	self.view_form
+
+view_form
+	self.model_form
+
+
+Model (observateur)
+-------------------
+
+model_list
+	save
+	load
+	self.valid:
+		ok
+
+model_form
+	validate
+	save
+	reload
+
+model_field
+	set
+	set_client
+	get
+	get_client
+
+
+Observater
+----------
+
+	connect(nom signal, objet, **kwargs, *args2)
+	signal
+
+
+============================================================================
+Parent ou fils ?
+Bon voila, j'ai dessiné une structure de classe ultra-basique de comment les
+trucs devraient s'agencer dans le client (à mon avis).
+
+Les specs:
+
+    - Un changement dans un modèle doit se voir dans toutes les vues qui lui
+      sont associées
+
+    - On doit pouvoir composer les vues facilement, autrement dit on doit
+      pouvoir mixer vue en arbre et vue en forme.
+
+
+Comment je propose de le faire:
+
+    - MVC
+
+    - Un modèle quand il est mis à jour averti l'observateur qui à son tour
+      averti les vues qui surveille cet observateur.
+
+    - Une vue ou une mégavue, c'est la même interface : elles doivent donc être
+      interchangeable
+
+    - Une vue comprend deux objets: self.form et self.tree qui sont les deux
+      façons de la représenter dans le contexte définit par la mégavue.
+
+
+J'hésite sur les objets observés: modèle ou mégamodèle ? Sur les modèles c'est
+ma première idée car ils sont à la base des informations. Le problème c'est que
+fait on quand il y a création/effacement ? Passer par un observateur sur le
+mégamodèle ? C'est une solution, à la création/l'effacement le mégamodèle
+change et passe alors un message, les vues qui le doivent l'interceptant.
+
+Quel genre de messages sont envoyés via l'observateur:
+
+    - id de la ressource
+    - ressource (res.partner)
+    - champ (name, address_id)
+
+Ainsi les vues savent si elles doivent agir ou pas, et poum un petit reload
+fait l'affaire.
+
+

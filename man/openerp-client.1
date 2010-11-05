@@ -1,0 +1,57 @@
+.TH openerp 1
+
+.SH NAME
+openerp \- Client for OpenERP
+
+.SH SYNOPSIS
+
+.B openerp-client.py [options]
+
+.SH DESCRIPTION
+OpenERP is an Enterprise Resource Planning and Customer Relationship
+Management software package. It is developed to meet changing needs.
+The main functional features are: CRM and SRM, analytic and financial
+accounting, double-entry stock management, sales and purchases management,
+tasks automation, a help desk, marketing campaigns, and vertical modules
+for very specific businesses. Technical features include a distributed
+server, flexible workflows, an object database, a dynamic GUI, customizable
+reports, and a NET-RPC and XML-RPC interface.
+
+.SH OPTIONS
+.TP
+.B \-h, \-\-help
+Print this help message and exit.
+
+.TP
+.B \-\-version
+Print the program's version number and exit.
+.TP
+.B \-c \fIfile\fR, \-\-config=\fIfile\fR
+Specify alternate config file. By default, openerp uses ~/.openerprc
+
+.TP
+.B \-v, \-\-verbose
+Enable verbose mode. This is equivalent to: \fB\-\-log\-level\fR=INFO
+
+.TP
+.B \-l \fIlevel\fR, \-\-log-level=\fIlevel\fR
+Specify the log level. By default, openerp only logs ERROR messages.
+\fIlevel\fR can be any of the following: DEBUG, INFO, WARNING, ERROR, CRITICAL
+
+.TP
+.B \-d \fIchannels\fR, \-\-log=\fIchannels\fR
+Specify which channels to log. Available channels are: view, view.form,
+common.options, common.message, rpc.exception, rpc.request, rpc.result
+
+.SH FILES
+~/.openerprc
+
+.SH AUTHORS
+
+OpenERP is a product of \fBTiny.be\fR (\fIhttp://www.tiny.be\fR)
+
+.SH SEE ALSO
+openerp_server(1)
+.br
+\fIhttp://www.openerp.com\fR : OpenERP functional description
+
