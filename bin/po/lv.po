@@ -1,0 +1,2555 @@
+# Latvian translation for openobject-client
+# Copyright (c) 2009 Rosetta Contributors and Canonical Ltd 2009
+# This file is distributed under the same license as the openobject-client package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: openobject-client\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2009-11-25 02:00+0530\n"
+"PO-Revision-Date: 2010-10-25 17:58+0000\n"
+"Last-Translator: Fabien (Open ERP) <fp@tinyerp.com>\n"
+"Language-Team: Latvian <lv@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2010-10-26 04:37+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#: bin/plugins/__init__.py:28
+msgid "Print Workflow"
+msgstr "Drukāt procesu"
+
+#: bin/plugins/__init__.py:29
+msgid "Print Workflow (with subflows)"
+msgstr "Drukāt procesu (izvērsti)"
+
+#: bin/plugins/__init__.py:41
+msgid "No available plugin for this resource !"
+msgstr "Šim resursam nav pieejami papildinājumi!"
+
+#: bin/plugins/__init__.py:43
+msgid "Choose a Plugin"
+msgstr "Izvēlies papildinājumu"
+
+#: bin/translate.py:184
+#, python-format
+msgid "Unable to set locale %s"
+msgstr "Nevar uzstādīt lokalizāciju %s"
+
+#: bin/openerp-client.py:139
+msgid "Closing OpenERP, KeyboardInterrupt"
+msgstr "Aizveru OpenERP, KeyboardInterrupt"
+
+#: bin/options.py:108
+#, python-format
+msgid "OpenERP Client %s"
+msgstr "OpenERP klients %s"
+
+#: bin/options.py:109
+msgid "specify alternate config file"
+msgstr "norādi citu konfigurācijas datni"
+
+#: bin/options.py:110
+msgid "Enable basic debugging. Alias for '--log-level=debug'"
+msgstr ""
+
+#: bin/options.py:111
+#, python-format
+msgid "specify the log level: %s"
+msgstr ""
+
+#: bin/options.py:112
+msgid "specify the user login"
+msgstr "norādi lietotāja vārdu (login)"
+
+#: bin/options.py:113
+msgid "specify the server port"
+msgstr "norādi servera portu"
+
+#: bin/options.py:114
+msgid "specify the server ip/name"
+msgstr "norādi servera IP adresi vai vārdu"
+
+#: bin/printer/printer.py:185
+#, python-format
+msgid "Unable to handle %s filetype"
+msgstr "Nevar apstrādāt %s datnes tipu"
+
+#: bin/printer/printer.py:190
+msgid ""
+"Linux Automatic Printing not implemented.\n"
+"Use preview option !"
+msgstr ""
+"Automātiskā drukāšana linux'ā nav pieejama.\n"
+"Izvēlies apskates iespēju!"
+
+#: bin/printer/printer.py:198
+msgid "Error no report"
+msgstr "Kļūda - nav atskaites"
+
+#: bin/printer/printer.py:217 bin/modules/gui/window/win_export.py:289
+#: bin/modules/gui/main.py:1424 bin/widget/view/form_gtk/binary.py:162
+#: bin/widget/view/form_gtk/image.py:119
+msgid "Save As..."
+msgstr "Saglabāt ar citu nosaukumu..."
+
+#: bin/printer/printer.py:225
+msgid "Error writing the file!"
+msgstr "Kļūda saglabājot datni!"
+
+#: bin/common/common.py:212
+msgid ""
+"Thank you for the feedback !\n"
+"Your comments have been sent to OpenERP.\n"
+"You should now start by creating a new database or\n"
+"connecting to an existing server through the \"File\" menu."
+msgstr ""
+"Paldies par atsaucību!\n"
+"Tavi komentāri ir nosūtīti uz OpenERP.\n"
+"Turpini izveidojot jaunu datubāzi vai pieslēdzoties jau esošai."
+
+#: bin/common/common.py:222
+msgid ""
+"Thank you for testing OpenERP !\n"
+"You should now start by creating a new database or\n"
+"connecting to an existing server through the \"File\" menu."
+msgstr ""
+"Paldies par OpenERP imēģinājumu!\n"
+"Tavi komentāri ir nosūtīti uz OpenERP.\n"
+"Turpini izveidojot jaunu datubāzi vai pieslēdzoties jau esošai."
+
+#: bin/common/common.py:325
+msgid "Support request sent !"
+msgstr "Atbalsta pieprasījums ir nosūtīts!"
+
+#: bin/common/common.py:345 bin/common/common.py:388
+msgid ""
+"\n"
+"<b>An unknown error has been reported.</b>\n"
+"\n"
+"<b>You do not have a valid Open ERP maintenance contract !</b>\n"
+"If you are using Open ERP in production, it is highly suggested to "
+"subscribe\n"
+"a maintenance program.\n"
+"\n"
+"The Open ERP maintenance contract provides you a bugfix guarantee and an\n"
+"automatic migration system so that we can fix your problems within a few\n"
+"hours. If you had a maintenance contract, this error would have been sent\n"
+"to the quality team of the Open ERP editor.\n"
+"\n"
+"The maintenance program offers you:\n"
+"* Automatic migrations on new versions,\n"
+"* A bugfix guarantee,\n"
+"* Monthly announces of potential bugs and their fixes,\n"
+"* Security alerts by email and automatic migration,\n"
+"* Access to the customer portal.\n"
+"\n"
+"You can use the link bellow for more information. The detail of the error\n"
+"is displayed on the second tab.\n"
+msgstr ""
+"\n"
+"<b> Notikusi nezināma kļūda. </b> \n"
+"\n"
+"<b> Jums nav derīga Open ERP servisa līguma! </b> \n"
+"Ja jūs izmantojat Open ERP ražošanā, ir ļoti ieteicams abonēt \n"
+"servisa programmu. \n"
+"\n"
+"Open ERP servisa līgums paredz jums kļūdu labošanas garantijas, un \n"
+"automātiskās migrācijas sistēmas, kas ļauj novērst Jūsu problēmas dažās \n"
+"stundās. Ja jums bija uzturēšanas līgums, šī kļūda būtu nosūtīta Open ERP "
+"kvalitātes komandai. \n"
+"\n"
+"Apkopes programma Jums piedāvā: \n"
+"* automātiska migrācija uz jaunu versiju, \n"
+"* kļūdu labošanas garantiju, \n"
+"* Ikmēneša ziņojumus par iespējamām kļūdām un to labojumus, \n"
+"* Drošības brīdinājumus uz e-pastu un automātisko migrāciju, \n"
+"* Piekļuvi klientu portālā. \n"
+"\n"
+"Varat izmantot zemāk esošās saites, lai iegūtu vairāk informācijas. Sīkāka "
+"informācija par šo kļūdu \n"
+"izlasāma otrā lapā.\n"
+
+#: bin/common/common.py:368
+#, python-format
+msgid ""
+"\n"
+"<b>An unknown error has been reported.</b>\n"
+"\n"
+"Your maintenance contract does not cover all modules installed in your "
+"system !\n"
+"If you are using Open ERP in production, it is highly suggested to upgrade "
+"your\n"
+"contract.\n"
+"\n"
+"If you have developed your own modules or installed third party module, we\n"
+"can provide you an additional maintenance contract for these modules. After\n"
+"having reviewed your modules, our quality team will ensure they will "
+"migrate\n"
+"automatically for all future stable versions of Open ERP at no extra cost.\n"
+"\n"
+"Here is the list of modules not covered by your maintenance contract:\n"
+"%s\n"
+"\n"
+"You can use the link bellow for more information. The detail of the error\n"
+"is displayed on the second tab."
+msgstr ""
+
+#: bin/common/common.py:443
+msgid ""
+"Your problem has been sent to the quality team !\n"
+"We will recontact you after analysing the problem."
+msgstr ""
+"Jūsu pieteikums ir nosūtīts kvalitātes kontroles komandai!\n"
+"Sazināsimies pēc problēmas analīzes."
+
+#: bin/common/common.py:446
+#, python-format
+msgid ""
+"Your problem could *NOT* be sent to the quality team !\n"
+"Please report this error manually at:\n"
+"\t%s"
+msgstr ""
+"Jūsu problēma netika nosūtīta kvalitātes komandai!\n"
+"Lūdzu paziņojiet par šo kļūdu:\n"
+"\t%s"
+
+#: bin/common/common.py:446
+msgid "Error"
+msgstr "Kļūda"
+
+#: bin/common/common.py:599
+msgid "Open with..."
+msgstr "Atvērt ar..."
+
+#: bin/widget_search/checkbox.py:36 bin/widget_search/checkbox.py:49
+msgid "Yes"
+msgstr "Jā"
+
+#: bin/widget_search/checkbox.py:37
+msgid "No"
+msgstr "Nē"
+
+#: bin/widget_search/checkbox.py:55 bin/widget_search/char.py:47
+#: bin/widget_search/reference.py:74 bin/widget_search/spinbutton.py:69
+#: bin/widget_search/calendar.py:117 bin/widget_search/spinint.py:73
+msgid "The content of the widget or ValueError if not valid"
+msgstr "Miniprogrammas vai KļūdasVērtības saturs, kad rezultāts nav derīgs"
+
+#: bin/widget_search/form.py:145
+msgid "Limit :"
+msgstr "Ierobežojums:"
+
+#: bin/widget_search/form.py:154
+msgid "Offset :"
+msgstr "Atkāpe:"
+
+#: bin/widget_search/form.py:193
+msgid "Parameters :"
+msgstr "Parametri:"
+
+#: bin/widget_search/form.py:301
+msgid "The content of the form or exception if not valid"
+msgstr "Formas saturs vai izņēmums, ja nav pareizs"
+
+#: bin/widget_search/wid_int.py:44
+msgid "The content of the widget or exception if not valid"
+msgstr ""
+
+#: bin/widget_search/date_widget.py:65
+#: bin/widget/view/form_gtk/date_widget.py:65
+msgid ""
+"You can use special operation by pressing +, - or =.  Plus/minus "
+"adds/decrease the variable to the current selected date. Equals set part of "
+"selected date. Available variables: 12h = 12 hours, 8d = 8 days, 4w = 4 "
+"weeks, 1m = 1 month, 2y = 2 years. Some examples:\n"
+"* +21d : adds 21 days to selected year\n"
+"* =23w : set date to the 23th week of the year\n"
+"* -4m : decrease 4 months to the current date\n"
+"You can also use \"=\" to set the date to the current date/time and '-' to "
+"clear the field."
+msgstr ""
+"Var veikt darbības +, - vai =.  Pluss/mīnuss pieskaita/atņem norādīto "
+"daudzumu no pašlaik izvēlētā datuma. Vienāds uzstāda daļu no datuma. "
+"Iespējamie vairianti: 12h = 12 stundas, 8d = 8 dienas, 4w = 4 nedēļas, 1m = "
+"1 mēnesis, 2y = 2 gadi.\n"
+"Daži piemēri:\n"
+"* +21d : pieskaita 21 dienu pie izvēlētā gada\n"
+"* =23w : uzstādīt datumu uz gada 23.nedēļu\n"
+"* -4m : atskaitīt 4 mēnešus no pašreizējā datuma\n"
+"Var lietot \"=\", lai norādītu tekošo datumu/laiku, vai '-', lai dzēstu "
+"lauka saturu."
+
+#: bin/widget_search/calendar.py:55
+msgid "Start date"
+msgstr "Sākuma datums"
+
+#: bin/widget_search/calendar.py:59 bin/widget_search/calendar.py:79
+#: bin/widget/view/form_gtk/calendar.py:62
+#: bin/widget/view/form_gtk/calendar.py:184
+msgid "Open the calendar widget"
+msgstr "Atvērt kalendāru"
+
+#: bin/widget_search/calendar.py:75
+msgid "End date"
+msgstr "Beigu datums"
+
+#: bin/widget_search/calendar.py:120 bin/widget/view/form_gtk/calendar.py:136
+#: bin/widget/view/form_gtk/calendar.py:266
+msgid "OpenERP - Date selection"
+msgstr "OpenERP - datuma izvēlne"
+
+#: bin/rpc.py:140 bin/modules/gui/main.py:210 bin/modules/action/wizard.py:175
+msgid "Connection refused !"
+msgstr "Pieslēgšanās atteikta!"
+
+#: bin/rpc.py:141
+msgid "Connection refused!"
+msgstr "Pieslēgšanās atteikta!"
+
+#: bin/rpc.py:171
+msgid ""
+"Unable to reach to OpenERP server !\n"
+"You should check your connection to the network and the OpenERP server."
+msgstr ""
+"Nav iespējams piekļūt OpenERP serverim!\n"
+"Pārbaudi tīkla datortīkla pieslēgumu līdz OpenERP serverim."
+
+#: bin/rpc.py:171
+msgid "Connection Error"
+msgstr "Savienojuma kļūda"
+
+#: bin/rpc.py:186 bin/rpc.py:188 bin/modules/gui/main.py:218
+#: bin/modules/gui/main.py:224 bin/modules/action/wizard.py:187
+#: bin/modules/action/wizard.py:193 bin/modules/action/wizard.py:195
+msgid "Application Error"
+msgstr "Aplikācijas kļūda"
+
+#: bin/rpc.py:188 bin/modules/action/wizard.py:195
+msgid "View details"
+msgstr "Skatīt detaļas"
+
+#: bin/modules/gui/window/win_search.py:50
+#: bin/widget/view/form_gtk/one2many_list.py:51
+msgid "OpenERP - Link"
+msgstr "Saite uz OpenERP"
+
+#: bin/modules/gui/window/win_search.py:147
+#, python-format
+msgid "OpenERP Search: %s"
+msgstr "OpenERP meklēšana: %s"
+
+#: bin/modules/gui/window/win_search.py:148
+#, python-format
+msgid "OpenERP Search: %s (%%d result(s))"
+msgstr "OpenERP meklēšana: %s (%%d resultāts(i))"
+
+#: bin/modules/gui/window/win_import.py:52
+msgid "The file is empty !"
+msgstr ""
+
+#: bin/modules/gui/window/win_import.py:52
+msgid "Importation !"
+msgstr "Ielāde!"
+
+#: bin/modules/gui/window/win_import.py:57
+msgid "XML-RPC error !"
+msgstr "XML-RPC kļūda!"
+
+#: bin/modules/gui/window/win_import.py:62
+msgid "Imported one object !"
+msgstr "Ielādēts viens objekts!"
+
+#: bin/modules/gui/window/win_import.py:64
+#, python-format
+msgid "Imported %d objects !"
+msgstr "Importēti %d objekti!"
+
+#: bin/modules/gui/window/win_import.py:70
+msgid "Importation Error !"
+msgstr "Ielādes kļūda!"
+
+#: bin/modules/gui/window/win_import.py:101
+#: bin/modules/gui/window/win_import.py:105
+msgid "Field name"
+msgstr "Lauka nosaukums"
+
+#: bin/modules/gui/window/win_import.py:186
+#, python-format
+msgid "You cannot import this field %s, because we cannot auto-detect it"
+msgstr ""
+
+#: bin/modules/gui/window/win_import.py:220
+msgid "You have not selected any fields to import"
+msgstr ""
+
+#: bin/modules/gui/window/win_selection.py:52
+msgid "Name"
+msgstr "Nosaukums"
+
+#: bin/modules/gui/window/win_selection.py:56
+msgid "Ressource Name"
+msgstr "Resursa nosaukums"
+
+#: bin/modules/gui/window/win_selection.py:56
+msgid "Names"
+msgstr "Vārdi"
+
+#: bin/modules/gui/window/win_export.py:51
+msgid " record(s) saved !"
+msgstr " ieraksts(i) saglabāts(i)..."
+
+#: bin/modules/gui/window/win_export.py:54
+msgid ""
+"Operation failed !\n"
+"I/O error"
+msgstr ""
+"Darbība pārtraukta !\n"
+"I/O kļūda"
+
+#: bin/modules/gui/window/win_export.py:78
+msgid "Error Opening Excel !"
+msgstr "Kļūda atverot Excel!"
+
+#: bin/modules/gui/window/win_export.py:80
+msgid ""
+"Function only available for MS Office !\n"
+"Sorry, OOo users :("
+msgstr "Šī funkcionalitāte pieejama tikai MS Office !"
+
+#: bin/modules/gui/window/win_export.py:281
+msgid "Exportation Error !"
+msgstr ""
+
+#: bin/modules/gui/window/form.py:165
+msgid "Resource ID does not exist for this object!"
+msgstr ""
+
+#: bin/modules/gui/window/form.py:221
+msgid "No record selected ! You can only attach to existing record."
+msgstr "Nav iezīmēts neviens ieraksts! Var pievienot tikai esošam ierakstam."
+
+#: bin/modules/gui/window/form.py:233
+msgid "You have to select a record !"
+msgstr "Izvēlies ierakstu!"
+
+#: bin/modules/gui/window/form.py:239
+#: bin/modules/gui/window/view_tree/view_tree_sc.py:43
+msgid "ID"
+msgstr "ID"
+
+#: bin/modules/gui/window/form.py:240
+msgid "Creation User"
+msgstr "Lietotāja izveide"
+
+#: bin/modules/gui/window/form.py:241
+msgid "Creation Date"
+msgstr "Izveidošanas datums"
+
+#: bin/modules/gui/window/form.py:242
+msgid "Latest Modification by"
+msgstr "Pedējais labojis"
+
+#: bin/modules/gui/window/form.py:243
+msgid "Latest Modification Date"
+msgstr "Pēdējās labošanas datums"
+
+#: bin/modules/gui/window/form.py:254
+msgid ""
+"Record is not saved ! \n"
+" Do You want to Clear Current Record ?"
+msgstr ""
+"Ieraksts nav saglabāts! \n"
+"Vai vēlies dzest šo ierakstu?"
+
+#: bin/modules/gui/window/form.py:257
+msgid "Are you sure to remove this record ?"
+msgstr "Vai tiešām vēlies dzēst šo ierakstu?"
+
+#: bin/modules/gui/window/form.py:259
+msgid "Are you sure to remove those records ?"
+msgstr "Vai tiešām vēlies dzēst šos ierakstus?"
+
+#: bin/modules/gui/window/form.py:263
+msgid "Resources cleared."
+msgstr "Resursi dzēsti."
+
+#: bin/modules/gui/window/form.py:265
+msgid "Resources successfully removed."
+msgstr "Resursu veiksmīgi dzēsti."
+
+#: bin/modules/gui/window/form.py:298
+msgid "Working now on the duplicated document !"
+msgstr "Tagad tiek labots dokumenta dublikāts!"
+
+#: bin/modules/gui/window/form.py:306
+msgid "Document Saved."
+msgstr "Dokuments saglabāts."
+
+#: bin/modules/gui/window/form.py:308 bin/modules/gui/window/form.py:309
+#: bin/widget/view/form_gtk/parser.py:137
+#: bin/widget/view/form_gtk/parser.py:138
+msgid "Invalid form, correct red fields !"
+msgstr "Nepareizi aizpildīta veidlapa, izlabo sarkanos laukus!"
+
+#: bin/modules/gui/window/form.py:308 bin/widget/view/form_gtk/parser.py:137
+msgid "Error !"
+msgstr "Kļūda!"
+
+#: bin/modules/gui/window/form.py:328 bin/modules/gui/window/form.py:423
+msgid ""
+"This record has been modified\n"
+"do you want to save it ?"
+msgstr ""
+"Šis ieraksts ir izmainīts,\n"
+"vai vēlies to saglabāt?"
+
+#: bin/modules/gui/window/form.py:375
+msgid "You must select one or several records !"
+msgstr "Izvēlies vienu vai vairākus ierakstus!"
+
+#: bin/modules/gui/window/form.py:384
+msgid "Print Screen"
+msgstr "Drukāt ekrāna saturu"
+
+#: bin/modules/gui/window/form.py:404
+msgid "No record selected"
+msgstr "Nav izvēlēts neviens ieraksts"
+
+#: bin/modules/gui/window/form.py:409
+msgid "New document"
+msgstr "Jauns dokuments"
+
+#: bin/modules/gui/window/form.py:411
+msgid "Editing document (id: "
+msgstr "Tiek labots dokuments ar ID: "
+
+#: bin/modules/gui/window/form.py:412
+msgid "Record: "
+msgstr "Ieraksts: "
+
+#: bin/modules/gui/window/form.py:413
+msgid " of "
+msgstr " no "
+
+#: bin/modules/gui/window/view_tree/parse.py:36
+msgid "Tree"
+msgstr "Koks"
+
+#: bin/modules/gui/window/view_tree/view_tree_sc.py:49
+msgid "Description"
+msgstr "Apraksts"
+
+#: bin/modules/gui/window/__init__.py:33
+msgid "Unknown Window"
+msgstr "Nezināms logs"
+
+#: bin/modules/gui/window/win_extension.py:115
+msgid "This extension is already defined"
+msgstr "Papildinājums jau ir definēts."
+
+#: bin/modules/gui/window/tree.py:190 bin/modules/gui/window/tree.py:246
+msgid "No resource selected!"
+msgstr "Nav izvēlēts neviens resurss!"
+
+#: bin/modules/gui/window/tree.py:204
+msgid ""
+"Are you sure you want\n"
+"to remove this record?"
+msgstr ""
+"Vai tiešām vēlies\n"
+"dzēst šo ierakstu?"
+
+#: bin/modules/gui/window/tree.py:209
+msgid "Error removing resource!"
+msgstr "Notikusi kļūda dzēšot resursu!"
+
+#: bin/modules/gui/window/tree.py:220
+msgid "Unable to chroot: no tree resource selected"
+msgstr "Nevar izpildīt \"chroot\": nav izvēlēts koka tipa resurss."
+
+#: bin/modules/gui/window/win_preference.py:69
+msgid "Preference"
+msgstr "Izvēle"
+
+#: bin/modules/gui/window/win_preference.py:80
+msgid ""
+"The default language of the interface has been modified, do not forget to "
+"restart the client to have the interface in your language"
+msgstr ""
+
+#: bin/modules/gui/window/win_preference.py:82
+msgid "Default language modified !"
+msgstr ""
+
+#: bin/modules/gui/main.py:87 bin/modules/gui/main.py:436
+#: bin/modules/gui/main.py:1445
+msgid "Could not connect to server !"
+msgstr "Nav iespējams pieslēgties serverim!"
+
+#: bin/modules/gui/main.py:91 bin/openerp.glade:72 bin/openerp.glade:6272
+#: bin/openerp.glade:6508 bin/openerp.glade:6830 bin/openerp.glade:7475
+msgid "Server:"
+msgstr "Serveris:"
+
+#: bin/modules/gui/main.py:102 bin/openerp.glade:98 bin/openerp.glade:6544
+#: bin/openerp.glade:6787 bin/openerp.glade:7084 bin/openerp.glade:7432
+msgid "Change"
+msgstr "Mainīt"
+
+#: bin/modules/gui/main.py:109 bin/openerp.glade:7011
+msgid "Super Administrator Password:"
+msgstr "Super administrātora parole:"
+
+#: bin/modules/gui/main.py:172 bin/modules/action/wizard.py:137
+msgid "OpenERP Computing"
+msgstr "OpenERP skaitļo"
+
+#: bin/modules/gui/main.py:183 bin/modules/action/wizard.py:147
+msgid "Operation in progress"
+msgstr "Operācija progresā"
+
+#: bin/modules/gui/main.py:187 bin/modules/gui/main.py:639
+#: bin/modules/action/wizard.py:151
+msgid ""
+"Please wait,\n"
+"this operation may take a while..."
+msgstr ""
+"Lūdzu uzgaidiet,\n"
+"datu apstrāde var aizņemt kādu laiku..."
+
+#: bin/modules/gui/main.py:240
+msgid "Migration Scripts"
+msgstr ""
+
+#: bin/modules/gui/main.py:243
+msgid "Contract ID:"
+msgstr ""
+
+#: bin/modules/gui/main.py:249
+msgid "Contract Password:"
+msgstr ""
+
+#: bin/modules/gui/main.py:264
+msgid "You already have the latest version"
+msgstr ""
+
+#: bin/modules/gui/main.py:269
+msgid "The following updates are available:"
+msgstr ""
+
+#: bin/modules/gui/main.py:281
+msgid "You can now migrate your databases."
+msgstr ""
+
+#: bin/modules/gui/main.py:286
+msgid "Migrate Database"
+msgstr ""
+
+#: bin/modules/gui/main.py:315
+msgid "Your database has been upgraded."
+msgstr ""
+
+#: bin/modules/gui/main.py:317
+msgid "Your databases have been upgraded."
+msgstr ""
+
+#: bin/modules/gui/main.py:432
+msgid "Unknown"
+msgstr "Nezināms"
+
+#: bin/modules/gui/main.py:443 bin/modules/gui/main.py:1449
+msgid "No database found, you must create one !"
+msgstr "Nav atrasta neviena datubāze. Izveido jaunu!"
+
+#: bin/modules/gui/main.py:467
+#, python-format
+msgid ""
+"The versions of the server (%s) and the client (%s) missmatch. The client "
+"may not work properly. Use it at your own risks."
+msgstr ""
+"Nesakrīt servera (%s) un klienta (%s) aplikāciju versijas. Klienta "
+"pārlūkprogramma var darboties nekorekti. Lietojiet ļoti uzmanīgi."
+
+#: bin/modules/gui/main.py:595
+msgid "Sorry,'"
+msgstr "Atvainojiet,'"
+
+#: bin/modules/gui/main.py:595 bin/modules/gui/main.py:598
+msgid "Bad database name !"
+msgstr "Nepareizs datubāzes nosaukums!"
+
+#: bin/modules/gui/main.py:598
+msgid ""
+"The database name must contain only normal characters or \"_\".\n"
+"You must avoid all accents, space or special characters."
+msgstr ""
+"Datubāzes nosaukums drīkst saturēt parastus burtus, ciparus un \"_\".\n"
+"Nelieto atstarpes un speciālos simbolus."
+
+#: bin/modules/gui/main.py:626
+msgid "OpenERP Database Installation"
+msgstr "OpenERP datubāzes uzstādīšana"
+
+#: bin/modules/gui/main.py:635
+msgid "<b>Operation in progress</b>"
+msgstr "<b>Notiek darbība</b>"
+
+#: bin/modules/gui/main.py:658 bin/modules/gui/main.py:660
+#: bin/modules/gui/main.py:662
+msgid "Could not create database."
+msgstr "Nevar izveidot datubāzi."
+
+#: bin/modules/gui/main.py:658
+msgid "Database already exists !"
+msgstr "Datubāze jau eksistē!"
+
+#: bin/modules/gui/main.py:660 bin/modules/gui/main.py:1342
+#: bin/modules/gui/main.py:1361 bin/modules/gui/main.py:1437
+msgid "Bad database administrator password !"
+msgstr "Nekorekta datubāzes administratora parole!"
+
+#: bin/modules/gui/main.py:662 bin/modules/gui/main.py:669
+msgid "Error during database creation !"
+msgstr "Kļūda veidojot datubāzi!"
+
+#: bin/modules/gui/main.py:669
+msgid ""
+"The server crashed during installation.\n"
+"We suggest you to drop this database."
+msgstr ""
+"Severis pārtrauca darbu instalācijas laikā.\n"
+"Mēs iesakam izdzēst šo datubāzi."
+
+#: bin/modules/gui/main.py:687
+msgid "The following users have been installed on your database:"
+msgstr "Tavai datubāzei ir uzstādīti sekojoši lietotāji:"
+
+#: bin/modules/gui/main.py:687
+msgid "You can now connect to the database as an administrator."
+msgstr "Tagad tu vari pieslēgties datubāzei kā administrators."
+
+#: bin/modules/gui/main.py:731 bin/modules/gui/main.py:1064
+msgid "Press Ctrl+O to login"
+msgstr "Nospied Ctrl+O , lai ieietu sistēmā"
+
+#: bin/modules/gui/main.py:906
+msgid "Edit"
+msgstr "Labot"
+
+#: bin/modules/gui/main.py:995
+#, python-format
+msgid "%s request(s)"
+msgstr "%s pieprasījums(i)"
+
+#: bin/modules/gui/main.py:997
+msgid "No request"
+msgstr "Pieprasījumu nav"
+
+#: bin/modules/gui/main.py:999
+#, python-format
+msgid " - %s request(s) sended"
+msgstr " nosūtīts(i) %s pieprasījums(i)"
+
+#: bin/modules/gui/main.py:1035
+msgid ""
+"Connection error !\n"
+"Unable to connect to the server !"
+msgstr ""
+"Savienojuma kļūda!\n"
+"Nav iespējams pieslēgties serverim!"
+
+#: bin/modules/gui/main.py:1037
+msgid ""
+"Authentication error !\n"
+"Bad Username or Password !"
+msgstr ""
+"Pieslēgšanās kļūda!\n"
+"Nepareizs lietotāja vārds vai parole!"
+
+#: bin/modules/gui/main.py:1062
+msgid "Not logged !"
+msgstr "Nav pieslēdzies!"
+
+#: bin/modules/gui/main.py:1138
+msgid ""
+"You can not log into the system !\n"
+"Ask the administrator to verify\n"
+"you have an action defined for your user."
+msgstr ""
+"Nevar pieslēgties sistēmai!\n"
+"Vaicā administratoram vai tavam lietotājam ir norādīta darbība (action)."
+
+#: bin/modules/gui/main.py:1170 bin/modules/gui/main.py:1177
+msgid "Do you really want to quit ?"
+msgstr "Patiešām iziet?"
+
+#: bin/modules/gui/main.py:1232
+#, python-format
+msgid "Attachments (%d)"
+msgstr "(%d) pievienojumi"
+
+#: bin/modules/gui/main.py:1245
+msgid "Attachments"
+msgstr "Pielikumi"
+
+#: bin/modules/gui/main.py:1333
+msgid "Delete a database"
+msgstr "Dzēst datubāzi"
+
+#: bin/modules/gui/main.py:1339
+msgid "Database dropped successfully !"
+msgstr "Datubāze veiksmīgi izdzēsta!"
+
+#: bin/modules/gui/main.py:1342
+msgid "Could not drop database."
+msgstr "Nevar izdzēst datubāzi."
+
+#: bin/modules/gui/main.py:1344
+msgid "Couldn't drop database"
+msgstr "Nevar izdzēst datubāzi"
+
+#: bin/modules/gui/main.py:1347 bin/widget/view/form_gtk/image.py:112
+#: bin/widget/view/form_gtk/url.py:112 bin/openerp.glade:5895
+msgid "Open..."
+msgstr "Atvērt..."
+
+#: bin/modules/gui/main.py:1358
+msgid "Database restored successfully !"
+msgstr "Datubāze atjaunota veiksmīgi!"
+
+#: bin/modules/gui/main.py:1361
+msgid "Could not restore database."
+msgstr "Nevar atjaunot datubāzi."
+
+#: bin/modules/gui/main.py:1363
+msgid "Couldn't restore database"
+msgstr "Nevar atjaunot datubāzi"
+
+#: bin/modules/gui/main.py:1402
+msgid ""
+"Confirmation password does not match new password, operation cancelled!"
+msgstr ""
+"Atkārtoti ievadītā parole nesakrīt ar sākonēji ievadīto, darbība atcelta!"
+
+#: bin/modules/gui/main.py:1404
+msgid "Validation Error."
+msgstr "Pārbaudes kļūda."
+
+#: bin/modules/gui/main.py:1412
+msgid "Could not change the Super Admin password."
+msgstr "Nevar labot Super Administrātora paroli."
+
+#: bin/modules/gui/main.py:1413
+msgid "Bad password provided !"
+msgstr "Ievadīta nepareiza parole."
+
+#: bin/modules/gui/main.py:1415
+msgid "Error, password not changed."
+msgstr "Notikusi kļūda, parole nav nomainīta."
+
+#: bin/modules/gui/main.py:1421 bin/modules/gui/main.py:1441
+msgid "Backup a database"
+msgstr "Izveidot datubāzes rezerves kopiju"
+
+#: bin/modules/gui/main.py:1434
+msgid "Database backed up successfully !"
+msgstr "Datubāzes rezerves kopēšana notikusi veiksmīgi!"
+
+#: bin/modules/gui/main.py:1437
+msgid "Could not backup the database."
+msgstr "Nevar veikt datubāzes rezerves kopēšanu."
+
+#: bin/modules/gui/main.py:1439
+msgid "Couldn't backup database."
+msgstr "Nevar veikt datubāzes rezerves kopēšanu."
+
+#: bin/modules/action/main.py:46
+msgid "Nothing to print!"
+msgstr "Nav ko drukāt!"
+
+#: bin/modules/action/main.py:63
+msgid "Printing aborted, too long delay !"
+msgstr "Druka pārtraukta, pārāk ilga aizture!"
+
+#: bin/modules/action/main.py:180
+msgid "Select your action"
+msgstr "Izvēlies savu darbību"
+
+#: bin/widget/view/gantt_gtk/parser_dummy.py:31
+msgid "Gantt view not yet implemented !"
+msgstr "Gānta skatījums vēl nav izstrādāts!"
+
+#: bin/widget/view/gantt_gtk/parser_dummy.py:32
+msgid ""
+"The gantt view is not available in this GTK Client, you should use the web "
+"interface or switch to the calendar view."
+msgstr ""
+"Gānta skatījums nav pieejams GTK pārlūkā. Lai apskatītu jālieto web saskarne "
+"vai kalendāra skatījums."
+
+#: bin/widget/view/tree_gtk/date_renderer.py:200
+msgid ""
+"Press <i>'+'</i>, <i>'-'</i> or <i>'='</i> for special date operations."
+msgstr ""
+"Lai izmantotu papildus datuma darbības - nospiest <i>'+'</i>, <i>'-'</i> or "
+"<i>'='</i> ."
+
+#: bin/widget/view/tree_gtk/editabletree.py:124
+#, python-format
+msgid "Shortcut: %s"
+msgstr "Saīsne: %s"
+
+#: bin/widget/view/tree_gtk/editabletree.py:124
+msgid "F1 New - F2 Open/Search"
+msgstr "F1 Jauns - F2 Atvērt/Meklēt"
+
+#: bin/widget/view/tree_gtk/editabletree.py:189
+#, python-format
+msgid "Warning; field %s is required!"
+msgstr "Uzmanību; lauks %s ir jāaizpilda obligāti!"
+
+#: bin/widget/view/graph_gtk/parser.py:65
+msgid "Can not generate graph !"
+msgstr "Nevar izveidot grafiku!"
+
+#: bin/widget/view/form.py:170
+msgid "You must save this record to use the relate button !"
+msgstr "Jums jāsaglabā šis ieraksts, lai lietotu saviešanas pogu"
+
+#: bin/widget/view/form.py:182
+msgid "You must select a record to use the relate button !"
+msgstr "Jums jāizvēlas ieraksts, lai lietotu savienošanas pogu"
+
+#: bin/widget/view/form.py:200 bin/widget/view/form_gtk/parser.py:558
+#: bin/widget/view/form_gtk/parser.py:672
+#: bin/widget/view/form_gtk/parser.py:729
+msgid "No other language available!"
+msgstr "nav pieejama neviena cita valoda!"
+
+#: bin/widget/view/form.py:207 bin/widget/view/form_gtk/parser.py:574
+#: bin/widget/view/form_gtk/parser.py:678
+#: bin/widget/view/form_gtk/parser.py:735
+msgid "Add Translation"
+msgstr "Pievienot tulkojumu"
+
+#: bin/widget/view/form.py:258 bin/widget/view/form_gtk/parser.py:791
+msgid "Translate label"
+msgstr "Tulkot birku"
+
+#: bin/widget/view/widget_parse.py:53
+#, python-format
+msgid "This type (%s) is not supported by the GTK client !"
+msgstr "GTK pārlūks neatbalsta šo (%s) datu tipu!"
+
+#: bin/widget/view/widget_parse.py:63
+msgid "No valid view found for this object!"
+msgstr "Šim objektam nav atrasts neviens derīgs skatījums!"
+
+#: bin/widget/view/form_gtk/wid_common.py:60
+msgid "Always applicable !"
+msgstr "Pielietojams vienmēr!"
+
+#: bin/widget/view/form_gtk/reference.py:92 bin/openerp.glade:1247
+msgid "Create a new resource"
+msgstr "Izveidot jaunu resursu"
+
+#: bin/widget/view/form_gtk/reference.py:93
+msgid "Search / Open a resource"
+msgstr "Meklēt / Atvērt resursu"
+
+#: bin/widget/view/form_gtk/many2one.py:156
+msgid "Open this resource"
+msgstr "Atvērt šo resursu"
+
+#: bin/widget/view/form_gtk/many2one.py:159
+msgid "Search a resource"
+msgstr "Meklēt resursu"
+
+#: bin/widget/view/form_gtk/many2one.py:168 bin/openerp.glade:1389
+msgid "Action"
+msgstr "Darbība"
+
+#: bin/widget/view/form_gtk/many2one.py:169
+msgid "Report"
+msgstr "Atskaite"
+
+#: bin/widget/view/form_gtk/many2one.py:375 bin/widget/view/list.py:274
+msgid "You must select a record to use the relation !"
+msgstr "Jums jāizvēlas ieraksts, lai veiktu savienošanu"
+
+#: bin/widget/view/form_gtk/binary.py:77
+msgid "Select"
+msgstr "Izvēlēties"
+
+#: bin/widget/view/form_gtk/binary.py:81
+msgid "Open"
+msgstr "Atvērt"
+
+#: bin/widget/view/form_gtk/binary.py:85 bin/widget/view/form_gtk/image.py:80
+msgid "Save As"
+msgstr "Saglabāt ar citu nosaukumu"
+
+#: bin/widget/view/form_gtk/binary.py:89 bin/widget/view/form_gtk/image.py:89
+msgid "Clear"
+msgstr "Attīrīt"
+
+#: bin/widget/view/form_gtk/binary.py:114
+#: bin/widget/view/form_gtk/binary.py:158
+msgid "Unable to read the file data"
+msgstr "Nevar nolasīt datnes saturu"
+
+#: bin/widget/view/form_gtk/binary.py:124
+#: bin/widget/view/form_gtk/binary.py:150
+#, python-format
+msgid "Error reading the file: %s"
+msgstr "Kļūda nolasot datni: %s"
+
+#: bin/widget/view/form_gtk/binary.py:133
+msgid "All Files"
+msgstr "Visi faili"
+
+#: bin/widget/view/form_gtk/binary.py:143
+msgid "Select a file..."
+msgstr "Izvēlies failu..."
+
+#: bin/widget/view/form_gtk/binary.py:172
+#, python-format
+msgid "Error writing the file: %s"
+msgstr "Kļūda saglabājot datni: %s"
+
+#: bin/widget/view/form_gtk/calendar.py:102
+#: bin/widget/view/form_gtk/calendar.py:163
+msgid "Invalid date value! Year must be greater than 1899 !"
+msgstr ""
+
+#: bin/widget/view/form_gtk/calendar.py:130
+#: bin/widget/view/form_gtk/calendar.py:263
+msgid "This widget is readonly !"
+msgstr "Ievades lauka saturs nav labojams!"
+
+#: bin/widget/view/form_gtk/calendar.py:230
+#: bin/widget/view/form_gtk/calendar.py:309
+msgid "Invalid datetime value! Year must be greater than 1899 !"
+msgstr ""
+
+#: bin/widget/view/form_gtk/calendar.py:272
+msgid "Hour:"
+msgstr "Stunda:"
+
+#: bin/widget/view/form_gtk/calendar.py:275
+msgid "Minute:"
+msgstr "Minūte:"
+
+#: bin/widget/view/form_gtk/parser.py:61
+msgid "Wrong icon for the button !"
+msgstr "Pogai norādīta nepareiza ikona!"
+
+#: bin/widget/view/form_gtk/parser.py:541
+msgid "Enter some text to the related field before adding translations!"
+msgstr ""
+
+#: bin/widget/view/form_gtk/parser.py:548
+msgid "You need to save resource before adding translations!"
+msgstr "Pirms ievadīt tulkojumu resurss ir jāsaglabā!"
+
+#: bin/widget/view/form_gtk/parser.py:797
+msgid "Translate view"
+msgstr "Tulkot skatījumu"
+
+#: bin/widget/view/form_gtk/image.py:71
+msgid "Set Image"
+msgstr "Norādi attēlu"
+
+#: bin/widget/view/form_gtk/image.py:102
+msgid "All files"
+msgstr "Visi faili"
+
+#: bin/widget/view/form_gtk/image.py:106
+msgid "Images"
+msgstr "Attēli"
+
+#: bin/widget/view/form_gtk/interface.py:47
+#: bin/widget/view/form_gtk/one2many_list.py:148
+msgid "Set to default value"
+msgstr "Ievadīt noklusēto vērtību"
+
+#: bin/widget/view/form_gtk/interface.py:48
+msgid "Set as default"
+msgstr "Uzstādīt kā noklusēto"
+
+#: bin/widget/view/form_gtk/one2many_list.py:151
+msgid "Set Default"
+msgstr "Iestatīt Kā Noklusējumu"
+
+#: bin/widget/view/form_gtk/one2many_list.py:162
+msgid "Create a new entry"
+msgstr "Izveidot jaunu ierakstu"
+
+#: bin/widget/view/form_gtk/one2many_list.py:172
+msgid "Edit this entry"
+msgstr "Labot šo ierakstu"
+
+#: bin/widget/view/form_gtk/one2many_list.py:182
+msgid "Remove this entry"
+msgstr "Dzēst šo ierakstu"
+
+#: bin/widget/view/form_gtk/one2many_list.py:194
+msgid "Previous"
+msgstr "Iepriekšējais"
+
+#: bin/widget/view/form_gtk/one2many_list.py:207
+msgid "Next"
+msgstr "Nākamais"
+
+#: bin/widget/view/form_gtk/one2many_list.py:219
+msgid "Switch"
+msgstr "Pārslēgt"
+
+#: bin/widget/view/form_gtk/one2many_list.py:269
+msgid "You have to select a resource !"
+msgstr "Jāizvēlas resurss!"
+
+#: bin/widget/view/calendar_gtk/parser_dummy.py:31
+msgid "Calendar View Error !"
+msgstr "Kļūda kalendāra skatījumā!"
+
+#: bin/widget/view/calendar_gtk/parser_dummy.py:32
+msgid "You must intall the library python-hippocanvas to use calendars."
+msgstr ""
+"Lai lietotu kalendāra skatījumu ir jābūt uzstādītai python-hippocanvas "
+"bibliotēkai."
+
+#: bin/widget/view/calendar_gtk/parser.py:245 bin/openerp.glade:8254
+msgid "Week"
+msgstr "Nedēļa"
+
+#: bin/openerp.glade:6
+msgid "OpenERP - Login"
+msgstr "OpenERP - Login"
+
+#: bin/openerp.glade:116 bin/openerp.glade:6444
+msgid "Database:"
+msgstr "Datubāze:"
+
+#: bin/openerp.glade:131
+msgid "User:"
+msgstr "Lietotājs:"
+
+#: bin/openerp.glade:146 bin/openerp.glade:6430 bin/openerp.glade:6730
+msgid "Password:"
+msgstr "Parole:"
+
+#: bin/openerp.glade:255
+msgid "_File"
+msgstr "_Datne"
+
+#: bin/openerp.glade:262
+msgid "_Connect..."
+msgstr "_Pieslēgties..."
+
+#: bin/openerp.glade:278
+msgid "_Disconnect"
+msgstr "_Atvienoties"
+
+#: bin/openerp.glade:298
+msgid "Databases"
+msgstr "Datubāzes"
+
+#: bin/openerp.glade:305
+msgid "_New database"
+msgstr "_Jauna datubāze"
+
+#: bin/openerp.glade:320
+msgid "_Restore database"
+msgstr "_Atjaunot datubāzi"
+
+#: bin/openerp.glade:335
+msgid "_Backup database"
+msgstr "_Veidot datubāzes rezerves kopiju"
+
+#: bin/openerp.glade:350
+msgid "Dro_p database"
+msgstr "Dzēst datubāzi"
+
+#: bin/openerp.glade:370
+msgid "_Download Migrations Code"
+msgstr ""
+
+#: bin/openerp.glade:385
+msgid "_Migrate Database(s)"
+msgstr ""
+
+#: bin/openerp.glade:405
+msgid "Administrator Password"
+msgstr "Administrātora parole"
+
+#: bin/openerp.glade:450
+msgid "_User"
+msgstr "_Lietotājs"
+
+#: bin/openerp.glade:458
+msgid "_Preferences"
+msgstr "_Uzstādījumi"
+
+#: bin/openerp.glade:478
+msgid "_Send a request"
+msgstr "_Sūtīt pieprasījumu"
+
+#: bin/openerp.glade:493
+msgid "_Read my requests"
+msgstr "_Lasīt manus pieprasījumus"
+
+#: bin/openerp.glade:513
+msgid "_Waiting Requests"
+msgstr "_Neapstrādātie pieprasījumi"
+
+#: bin/openerp.glade:526
+msgid "For_m"
+msgstr "Veidlapa"
+
+#: bin/openerp.glade:534
+msgid "_New"
+msgstr "_Jauns"
+
+#: bin/openerp.glade:550
+msgid "_Save"
+msgstr "_Saglabāt"
+
+#: bin/openerp.glade:566
+msgid "Copy this resource"
+msgstr "Kopēt šo resursu"
+
+#: bin/openerp.glade:567
+msgid "_Duplicate"
+msgstr "_Dublēt"
+
+#: bin/openerp.glade:583
+msgid "_Delete"
+msgstr "_Dzēst"
+
+#: bin/openerp.glade:604
+msgid "Find"
+msgstr "Meklēt"
+
+#: bin/openerp.glade:620
+msgid "Ne_xt"
+msgstr "Tālā_k"
+
+#: bin/openerp.glade:636
+msgid "Pre_vious"
+msgstr "Iep_riekšējais"
+
+#: bin/openerp.glade:652
+msgid "Switch to list/form"
+msgstr "Pārslēgties uz sarakstu / veidlapu"
+
+#: bin/openerp.glade:668
+msgid "_Menu"
+msgstr "_Izvēlne"
+
+#: bin/openerp.glade:689
+msgid "_New Home Tab"
+msgstr "_Jauna mājas cilne"
+
+#: bin/openerp.glade:705 bin/openerp.glade:5018
+msgid "Close Tab"
+msgstr "Aizvērt cilni"
+
+#: bin/openerp.glade:721
+msgid "Previous Tab"
+msgstr "Iepriekšējais Cilnis"
+
+#: bin/openerp.glade:730 bin/openerp.glade:5074
+msgid "Next Tab"
+msgstr "Nākamais Cilnis"
+
+#: bin/openerp.glade:744
+msgid "View _logs"
+msgstr "Skatīt žurnālu"
+
+#: bin/openerp.glade:752
+msgid "_Go to resource ID..."
+msgstr "_Atvērt resursu pēc ID..."
+
+#: bin/openerp.glade:766
+msgid "_Open"
+msgstr "_Atvērt"
+
+#: bin/openerp.glade:781
+msgid "Reloa_d / Undo"
+msgstr "Pārlādēt / Atcelt"
+
+#: bin/openerp.glade:802
+msgid "Repeat latest _action"
+msgstr "Atkārtot pēdējo darbību"
+
+#: bin/openerp.glade:816
+msgid "_Preview in PDF"
+msgstr "Skatīt PDF formātā"
+
+#: bin/openerp.glade:832
+msgid "Previe_w in editor"
+msgstr "Apskatīt redaktorā"
+
+#: bin/openerp.glade:852
+msgid "Expor_t data..."
+msgstr "Eksportēt datus..."
+
+#: bin/openerp.glade:867
+msgid "I_mport data..."
+msgstr "Importēt datus..."
+
+#: bin/openerp.glade:879
+msgid "_Options"
+msgstr "_Uzstādījumi"
+
+#: bin/openerp.glade:886
+msgid "_Extension Manager"
+msgstr "_Paplašinājuma vadītājs"
+
+#: bin/openerp.glade:894
+msgid "_Menubar"
+msgstr "Menu josla"
+
+#: bin/openerp.glade:902
+msgid "Text _and Icons"
+msgstr "Ikonas ar tekstu"
+
+#: bin/openerp.glade:910
+msgid "_Icons only"
+msgstr "_Tikai ikonas"
+
+#: bin/openerp.glade:919
+msgid "_Text only"
+msgstr "_Tikai teksts"
+
+#: bin/openerp.glade:932
+msgid "_Forms"
+msgstr "Veidlapas"
+
+#: bin/openerp.glade:940
+msgid "Right Toolbar"
+msgstr "Labā rīkjosla"
+
+#: bin/openerp.glade:948
+msgid "Tabs default position"
+msgstr "Cilnes noklusētā pozīcija"
+
+#: bin/openerp.glade:956
+msgid "Top"
+msgstr "Augšā"
+
+#: bin/openerp.glade:964
+msgid "Left"
+msgstr "Pa kreisi"
+
+#: bin/openerp.glade:973
+msgid "Right"
+msgstr "Pa labi"
+
+#: bin/openerp.glade:982
+msgid "Bottom"
+msgstr "Apakšā"
+
+#: bin/openerp.glade:995
+msgid "Tabs default orientation"
+msgstr "Standarta novietojums"
+
+#: bin/openerp.glade:1003
+msgid "Horizontal"
+msgstr "Horizontāli"
+
+#: bin/openerp.glade:1011
+msgid "Vertical"
+msgstr "Vertikāli"
+
+#: bin/openerp.glade:1028
+msgid "_Print"
+msgstr "_Drukāt"
+
+#: bin/openerp.glade:1035
+msgid "Previe_w before print"
+msgstr "Apskatīt pirms drukas"
+
+#: bin/openerp.glade:1059
+msgid "_Save options"
+msgstr "_Saglabāšanas iespējas"
+
+#: bin/openerp.glade:1079
+msgid "_Plugins"
+msgstr "_Papildinājumi"
+
+#: bin/openerp.glade:1087
+msgid "_Execute a plugin"
+msgstr "Iedarbināt papildinājumu"
+
+#: bin/openerp.glade:1107
+msgid "_Shortcuts"
+msgstr "_Saīsnes"
+
+#: bin/openerp.glade:1115
+msgid "_Help"
+msgstr "_Palīdzība"
+
+#: bin/openerp.glade:1122 bin/openerp.glade:4389
+msgid "Support Request"
+msgstr "Atbalsta pieprasījums"
+
+#: bin/openerp.glade:1142
+msgid "User _Manual"
+msgstr "Lietotāja ceļvadis"
+
+#: bin/openerp.glade:1157
+msgid "_Contextual Help"
+msgstr "_Kontektuālā palīdzība"
+
+#: bin/openerp.glade:1173
+msgid "_Tips"
+msgstr "Padomi"
+
+#: bin/openerp.glade:1188
+msgid "Keyboard Shortcuts"
+msgstr "Tastatūras saīsnes"
+
+#: bin/openerp.glade:1201
+msgid "_License"
+msgstr "_Licence"
+
+#: bin/openerp.glade:1216
+msgid "_About..."
+msgstr "_Par..."
+
+#: bin/openerp.glade:1258
+msgid "Edit / Save this resource"
+msgstr "Labot / Saglabāt šo resursu"
+
+#: bin/openerp.glade:1274
+msgid "Delete this resource"
+msgstr "Dzēst šo resursu"
+
+#: bin/openerp.glade:1287
+msgid "Go to previous matched search"
+msgstr "Doties uz iepriekšējo atrasto ierakstu"
+
+#: bin/openerp.glade:1298
+msgid "Go to next matched resource"
+msgstr "Iet uz nākamo atrasto resursu"
+
+#: bin/openerp.glade:1311
+msgid "List"
+msgstr "Saraksts"
+
+#: bin/openerp.glade:1323
+msgid "Form"
+msgstr "Veidlapas"
+
+#: bin/openerp.glade:1336
+msgid "Calendar"
+msgstr "Kalendārs"
+
+#: bin/openerp.glade:1346
+msgid "Graph"
+msgstr "Grafiks"
+
+#: bin/openerp.glade:1359
+msgid "Gantt"
+msgstr "Gānta"
+
+#: bin/openerp.glade:1377
+msgid "Print documents"
+msgstr "Drukāt dokumentus"
+
+#: bin/openerp.glade:1388
+msgid "Launch actions about this resource"
+msgstr "Darbības ar šo resursu"
+
+#: bin/openerp.glade:1401
+msgid "Add an attachment to this resource"
+msgstr "Pievienot šim resursam"
+
+#: bin/openerp.glade:1402
+msgid "Attachment"
+msgstr "Pielikums"
+
+#: bin/openerp.glade:1417 bin/openerp.glade:1418
+msgid "Menu"
+msgstr "Izvēlne"
+
+#: bin/openerp.glade:1435 bin/openerp.glade:1436
+msgid "Reload"
+msgstr "Pārlādēt"
+
+#: bin/openerp.glade:1453
+msgid "Close this window"
+msgstr "Aizvērt šo logu"
+
+#: bin/openerp.glade:1497
+msgid "Requests:"
+msgstr "Pieprasījumi:"
+
+#: bin/openerp.glade:1520
+msgid "Read my Requests"
+msgstr "Lasīt paša pieprasījumus"
+
+#: bin/openerp.glade:1541
+msgid "Send a new request"
+msgstr "Sūtīt jaunu pieprasījumu"
+
+#: bin/openerp.glade:1581
+msgid "OpenERP - Tree Resources"
+msgstr "OpenERP -Kokveida resursi"
+
+#: bin/openerp.glade:1634
+msgid "Shortcuts"
+msgstr "Saīsnes"
+
+#: bin/openerp.glade:1743
+msgid "OpenERP - Forms"
+msgstr "OpenERP - Veidlapas"
+
+#: bin/openerp.glade:1767
+msgid "State:"
+msgstr "Stāvoklis:"
+
+#: bin/openerp.glade:1799
+msgid "OpenERP - About"
+msgstr "Par OpenERP"
+
+#: bin/openerp.glade:1813
+msgid ""
+"<b>About OpenERP</b>\n"
+"<i>The most advanced Open Source ERP &amp; CRM !</i>"
+msgstr ""
+"<b>Par OpenERP</b>\n"
+"<i>Vispilnīgākais atvērtā pirmkoda ERP un CRM !</i>"
+
+#: bin/openerp.glade:1852
+msgid ""
+"\n"
+"OpenERP - GTK Client - v%s\n"
+"\n"
+"OpenERP is an Open Source ERP+CRM\n"
+"for small to medium businesses.\n"
+"\n"
+"The whole source code is distributed under\n"
+"the terms of the GNU Public Licence.\n"
+"\n"
+"(c) 2003-TODAY, Tiny sprl\n"
+"\n"
+"More Info on www.openerp.com !"
+msgstr ""
+"\n"
+"OpenERP - GTK Client - v%s\n"
+"\n"
+"OpenERP is an Open Source ERP+CRM\n"
+"for small to medium businesses.\n"
+"\n"
+"The whole source code is distributed under\n"
+"the terms of the GNU Public Licence.\n"
+"\n"
+"(c) 2003-TODAY, Tiny sprl\n"
+"\n"
+"More Info on www.openerp.com !"
+
+#: bin/openerp.glade:1880
+msgid "_OpenERP"
+msgstr "_OpenERP"
+
+#: bin/openerp.glade:1908
+msgid ""
+"\n"
+"(c) 2003-TODAY - Tiny sprl\n"
+"OpenERP is a product of Tiny sprl:\n"
+"\n"
+"Tiny sprl\n"
+"40 Chaussée de Namur\n"
+"1367 Gérompont\n"
+"Belgium\n"
+"\n"
+"Tel : (+32)81.81.37.00\n"
+"Mail: sales@tiny.be\n"
+"Web: http://tiny.be"
+msgstr ""
+"\n"
+"(c) 2003-TODAY - Tiny sprl\n"
+"OpenERP is a product of Tiny sprl:\n"
+"\n"
+"Tiny sprl\n"
+"40 Chaussée de Namur\n"
+"1367 Gérompont\n"
+"Belgium\n"
+"\n"
+"Tel : (+32)81.81.37.00\n"
+"Mail: sales@tiny.be\n"
+"Web: http://tiny.be"
+
+#: bin/openerp.glade:1939
+msgid "_Contact"
+msgstr "_Kontakts"
+
+#: bin/openerp.glade:1991
+msgid "Open ERP - Forms widget"
+msgstr "OpenERP - Veidlapu ievades lauks"
+
+#: bin/openerp.glade:2170 bin/openerp.glade:4735
+msgid "OpenERP - Confirmation"
+msgstr "OpenERP - Apstiprinājums"
+
+#: bin/openerp.glade:2249
+msgid "OpenERP - Selection"
+msgstr "OpenERP - Izvēle"
+
+#: bin/openerp.glade:2263
+msgid "Your selection:"
+msgstr "Tava izvēle"
+
+#: bin/openerp.glade:2343
+msgid "OpenERP - Dialog"
+msgstr "OpenERP - Dialogs"
+
+#: bin/openerp.glade:2367
+msgid "OpenERP, Field Preference target"
+msgstr "OpenERP, Lauka preferences mērķis"
+
+#: bin/openerp.glade:2398
+msgid "_only for you"
+msgstr "_tikai tev"
+
+#: bin/openerp.glade:2412
+msgid "for _all users"
+msgstr "visiem lietotājiem"
+
+#: bin/openerp.glade:2432
+msgid "<b>Value applicable for:</b>"
+msgstr "<b>Vērtība pielietojama priekš:</b>"
+
+#: bin/openerp.glade:2468
+msgid "<b>Value applicable if:</b>"
+msgstr "<b>Vērtība pielietojama ja:</b>"
+
+#: bin/openerp.glade:2486
+msgid "Field _Name:"
+msgstr "Lauka nosaukums:"
+
+#: bin/openerp.glade:2500
+msgid "_Domain:"
+msgstr "_Domēns:"
+
+#: bin/openerp.glade:2559
+msgid "Default _value:"
+msgstr "Vērtība pēc noklusējuma:"
+
+#: bin/openerp.glade:2614
+msgid "OpenERP - Export to CSV"
+msgstr "OpenERP - Eksportēt uz CSV formātu"
+
+#: bin/openerp.glade:2662
+msgid "Save List"
+msgstr "Saglabāt sarakstu"
+
+#: bin/openerp.glade:2710
+msgid "Remove List"
+msgstr "Dzēst sarakstu"
+
+#: bin/openerp.glade:2765
+msgid "<b>Exports List</b>"
+msgstr "<b>Eksportēt sarakstu</b>"
+
+#: bin/openerp.glade:2782
+msgid "<b>Predefined Exports</b>"
+msgstr "<b>Predefinēti eksporti</b>"
+
+#: bin/openerp.glade:2807
+msgid "Import Compatible"
+msgstr ""
+
+#: bin/openerp.glade:2824
+msgid "<b>Select an Option to Export</b>"
+msgstr ""
+
+#: bin/openerp.glade:2871
+msgid "Available Fields"
+msgstr "Pieejamie lauki"
+
+#: bin/openerp.glade:2914 bin/openerp.glade:5641
+msgid "_Add"
+msgstr "_Pievienot"
+
+#: bin/openerp.glade:2961 bin/openerp.glade:5688
+msgid "_Remove"
+msgstr "_Aizvākt"
+
+#: bin/openerp.glade:3009
+msgid "_Nothing"
+msgstr "_Nekas"
+
+#: bin/openerp.glade:3064
+msgid "Fields to Export"
+msgstr "Eksportēt laukus"
+
+#: bin/openerp.glade:3094
+msgid ""
+"Open in Excel\n"
+"Save as CSV"
+msgstr ""
+"Etvērt Excel programmā\n"
+"Saglabāt CSV formātā"
+
+#: bin/openerp.glade:3113
+msgid "Add _field names"
+msgstr "Pielikt lauku nosaukumus"
+
+#: bin/openerp.glade:3130
+msgid "<b>Opti_ons</b>"
+msgstr "<b>Uzstādījumi</b>"
+
+#: bin/openerp.glade:3189
+msgid "OpenERP - Search"
+msgstr "OpenERP - meklēšana"
+
+#: bin/openerp.glade:3301
+msgid "OpenERP - Preferences"
+msgstr "OpenERP - uzstādījumi"
+
+#: bin/openerp.glade:3315
+msgid "<b>User preferences</b>"
+msgstr "<b>Lietotāja uzstādījumi</b>"
+
+#: bin/openerp.glade:3381
+msgid "Tip of the Day"
+msgstr "Dienas padoms"
+
+#: bin/openerp.glade:3428
+msgid "_Display a new tip next time?"
+msgstr "_Turpināt rādīt padomus?"
+
+#: bin/openerp.glade:3481
+msgid "Pre_vious Tip"
+msgstr "Iepriekšējais padoms"
+
+#: bin/openerp.glade:3527
+msgid "Ne_xt Tip"
+msgstr "Nākamais padoms"
+
+#: bin/openerp.glade:3573
+msgid "OpenERP - License"
+msgstr "OpenERP - Licence"
+
+#: bin/openerp.glade:3588
+msgid "OpenERP license"
+msgstr "OpenERP licence"
+
+#: bin/openerp.glade:4286
+msgid "Go to resource ID"
+msgstr "Atvērt resursu pēc ID"
+
+#: bin/openerp.glade:4336
+msgid "Search ID:"
+msgstr "Meklēt ID"
+
+#: bin/openerp.glade:4415
+msgid ""
+"<b>Complete this form to submit your bug and/or send a support request.</b>\n"
+"<i>\n"
+"Your request will be sent to the OpenERP team and we will reply shortly.\n"
+"Note that we may not reply if you do not have a support contract with Tiny "
+"or an official partner.</i>"
+msgstr ""
+"<b> Aizpildiet šo veidlapu, lai iesniegtu savu kļūdu un / vai nosūtīt "
+"atbalsta pieprasījumu. </ b> \n"
+"<i> \n"
+"Jūsu pieprasījums tiks nosūtīts OpenERP komandai, un mēs drīzumā atbildēsim. "
+"\n"
+"Ņemiet vērā, ka mēs varam neatbildēt, ja Jums nav atbalsta līgums ar Tiny "
+"vai oficiālu partneri. </i>"
+
+#: bin/openerp.glade:4474
+msgid "Phone number:"
+msgstr "Tālruņa numurs:"
+
+#: bin/openerp.glade:4487
+msgid "Emergency:"
+msgstr "Neatliekami:"
+
+#: bin/openerp.glade:4501
+msgid ""
+"Not Urgent\n"
+"Medium\n"
+"Urgent\n"
+"Very Urgent"
+msgstr ""
+"Nav steidzami\n"
+"Vidēji steidzami\n"
+"Steidzami\n"
+"Ļoti steidzami"
+
+#: bin/openerp.glade:4534
+msgid "<b>Support contract id:</b>"
+msgstr "<b>Apkalpošanas līguma numurs:</b>"
+
+#: bin/openerp.glade:4591
+msgid "Other comments:"
+msgstr "Citi komentāri:"
+
+#: bin/openerp.glade:4605
+msgid "Explain your problem:"
+msgstr "Izklāsti savu problēmu:"
+
+#: bin/openerp.glade:4644
+msgid "<b>Your email:</b>"
+msgstr "<b>E-pasta adrese:</b>"
+
+#: bin/openerp.glade:4658
+msgid "<b>Your Company:</b>"
+msgstr "<b>Tavs uzņēmums:</b>"
+
+#: bin/openerp.glade:4672
+msgid "<b>Your name:</b>"
+msgstr "<b>Tavs vārds:</b>"
+
+#: bin/openerp.glade:4763 bin/openerp.glade:6149
+msgid "Hello World!"
+msgstr "Sveika pasaule!"
+
+#: bin/openerp.glade:4825
+msgid "Keyboard shortcuts"
+msgstr "Tastatūras saīsnes"
+
+#: bin/openerp.glade:4847
+msgid "<b>Shortcuts for OpenERP</b>"
+msgstr "<b>OpenERP saites</b>"
+
+#: bin/openerp.glade:4861
+msgid "Close window without saving"
+msgstr "Aizvērt logu nesaglabājot"
+
+#: bin/openerp.glade:4876
+msgid "<Ctrl> + <Esc>"
+msgstr "<Ctrl> + <Esc>"
+
+#: bin/openerp.glade:4890
+msgid "<i>When editing a resource in a popup window</i>"
+msgstr "<i>Ja rediģē resursu izlecošā logā</i>"
+
+#: bin/openerp.glade:4906
+msgid "Save and Close window"
+msgstr "Saglabāt un Aizvērt logu"
+
+#: bin/openerp.glade:4921
+msgid "<Ctrl> + <Enter>"
+msgstr "<Ctrl> + <Enter>"
+
+#: bin/openerp.glade:4934
+msgid "Switch view mode"
+msgstr "Pārslēgt skatījuma režīmu"
+
+#: bin/openerp.glade:4949
+msgid "<Ctrl> + L"
+msgstr "<Ctrl> + L"
+
+#: bin/openerp.glade:4962
+msgid "Next record"
+msgstr "Nākamais ieraksts"
+
+#: bin/openerp.glade:4977
+msgid "Previous record"
+msgstr "Iepriekšējais ieraksts"
+
+#: bin/openerp.glade:4992
+msgid "<PgDn>"
+msgstr "<PgDn>"
+
+#: bin/openerp.glade:5005
+msgid "<PgUp>"
+msgstr "<PgUp>"
+
+#: bin/openerp.glade:5033
+msgid "Save"
+msgstr "Saglabāt"
+
+#: bin/openerp.glade:5048
+msgid "<Ctrl> + W"
+msgstr "<Ctrl> + W"
+
+#: bin/openerp.glade:5061
+msgid "<Ctrl> + S"
+msgstr "<Ctrl> + S"
+
+#: bin/openerp.glade:5089
+msgid "<Ctrl> + <PgDn>"
+msgstr "<Ctrl> + <PgDn>"
+
+#: bin/openerp.glade:5102
+msgid "Previous tab"
+msgstr "Iepriekšējā cilne"
+
+#: bin/openerp.glade:5117
+msgid "<Ctrl> + <PgUp>"
+msgstr "<Ctrl> + <PgUp>"
+
+#: bin/openerp.glade:5130
+msgid "New"
+msgstr "Jauns"
+
+#: bin/openerp.glade:5145
+msgid "<Ctrl> + N"
+msgstr "<Ctrl> + N"
+
+#: bin/openerp.glade:5158
+msgid "Delete"
+msgstr "Dzēst"
+
+#: bin/openerp.glade:5173
+msgid "<Ctrl> + D"
+msgstr "<Ctrl> + D"
+
+#: bin/openerp.glade:5186
+msgid "Find / Search"
+msgstr "Meklēt"
+
+#: bin/openerp.glade:5201
+msgid "<Ctrl> + F"
+msgstr "<Ctrl> + F"
+
+#: bin/openerp.glade:5214
+msgid "Connect"
+msgstr "Pieslēgties"
+
+#: bin/openerp.glade:5229
+msgid "<Ctrl> + O"
+msgstr "<Ctrl> + O"
+
+#: bin/openerp.glade:5243
+msgid "Main Shortcuts"
+msgstr "Galvenās saīsnes"
+
+#: bin/openerp.glade:5260
+msgid "F2"
+msgstr "F2"
+
+#: bin/openerp.glade:5273
+msgid "<b>Shortcuts in relation fields</b>"
+msgstr "<b>Ātrās saites relāciju laukos</b>"
+
+#: bin/openerp.glade:5288
+msgid "<b>Shortcuts in text entries</b>"
+msgstr "<b>Ātrās saites teksta ierakstos</b>"
+
+#: bin/openerp.glade:5301
+msgid "Open current field"
+msgstr "Atvērt tekošo lauku"
+
+#: bin/openerp.glade:5316
+msgid "Add a new line/field"
+msgstr "Pielikt jaunu rindu / lauku"
+
+#: bin/openerp.glade:5331
+msgid "F1"
+msgstr "F1"
+
+#: bin/openerp.glade:5344
+msgid "Auto-Complete text field"
+msgstr "Automātiskā lauka aizpilde"
+
+#: bin/openerp.glade:5359
+msgid "<Enter>"
+msgstr "<Enter>"
+
+#: bin/openerp.glade:5372
+msgid "Previous editable widget"
+msgstr "Iepriekšējais labojamais ievades lauks"
+
+#: bin/openerp.glade:5387
+msgid "<Shift> + <Tab>"
+msgstr "<Shift> + <Tab>"
+
+#: bin/openerp.glade:5400
+msgid "Next editable widget"
+msgstr "Nākamais labojamais ievades lauks"
+
+#: bin/openerp.glade:5415
+msgid "<Tab>"
+msgstr "<Tab>"
+
+#: bin/openerp.glade:5428
+msgid "Paste selected text"
+msgstr "Ielikt iezīmēto tekstu"
+
+#: bin/openerp.glade:5443
+msgid "Copy selected text"
+msgstr "Kopēt iezīmēto tekstu"
+
+#: bin/openerp.glade:5458
+msgid "Cut selected text"
+msgstr "Izgriezt iezīmēto tekstu"
+
+#: bin/openerp.glade:5473
+msgid "<Ctrl> + V"
+msgstr "<Ctrl> + V"
+
+#: bin/openerp.glade:5486
+msgid "<Ctrl> + C"
+msgstr "<Ctrl> + C"
+
+#: bin/openerp.glade:5499
+msgid "<Ctrl> + X"
+msgstr "<Ctrl> + X"
+
+#: bin/openerp.glade:5516
+msgid "Edition Widgets"
+msgstr "Labojamie ievades lauki"
+
+#: bin/openerp.glade:5554
+msgid "Import from CSV"
+msgstr "Importēt no CSV"
+
+#: bin/openerp.glade:5599
+msgid "<b>All fields</b>"
+msgstr "<b>Visi lauki</b>"
+
+#: bin/openerp.glade:5736
+msgid "N_othing"
+msgstr "Nekas"
+
+#: bin/openerp.glade:5795
+msgid "Auto-Detect"
+msgstr "Noteikt automātiski"
+
+#: bin/openerp.glade:5850
+msgid "<b>Fields to import</b>"
+msgstr "<b>Importēt laukus</b>"
+
+#: bin/openerp.glade:5885
+msgid "File to Import:"
+msgstr "Importēt datni:"
+
+#: bin/openerp.glade:5959
+msgid "Lines to Skip:"
+msgstr "Izlaist rindas:"
+
+#: bin/openerp.glade:5988
+msgid "Text Delimiter:"
+msgstr "Teksta atdalītājs:"
+
+#: bin/openerp.glade:6016
+msgid "Encoding:"
+msgstr "Kodējums:"
+
+#: bin/openerp.glade:6029
+msgid "Field Separater:"
+msgstr "Lauku atdalītājs:"
+
+#: bin/openerp.glade:6041
+msgid "CSV Parameters"
+msgstr "CSV Parametri"
+
+#: bin/openerp.glade:6120
+msgid "OpenERP"
+msgstr "OpenERP"
+
+#: bin/openerp.glade:6216
+msgid "Server"
+msgstr "Serveris"
+
+#: bin/openerp.glade:6226
+msgid "<b>Connect to a OpenERP server</b>"
+msgstr "<b>Pieslēgties OpenERP serverim</b>"
+
+#: bin/openerp.glade:6285
+msgid "Protocol connection:"
+msgstr "Protokols:"
+
+#: bin/openerp.glade:6331
+msgid "Port:"
+msgstr "Ports:"
+
+#: bin/openerp.glade:6383
+msgid "Choose a database..."
+msgstr "Izvēlies datubāzi..."
+
+#: bin/openerp.glade:6398
+msgid "<b>Backup a database</b>"
+msgstr "<b>Veidot datubāzes rezerves kopiju</b>"
+
+#: bin/openerp.glade:6629
+msgid "Restore a database"
+msgstr "Atjaunot datubāzi"
+
+#: bin/openerp.glade:6642
+msgid "<b>Restore a database</b>"
+msgstr "<b>Atjaunot datubāzi</b>"
+
+#: bin/openerp.glade:6686
+msgid "(must not contain any special char)"
+msgstr "(nedrīkst saturēt speciālās rakstzīmes)"
+
+#: bin/openerp.glade:6715
+msgid "New database name:"
+msgstr "Jaunās datubāzes nosaukums"
+
+#: bin/openerp.glade:6815 bin/openerp.glade:6961 bin/openerp.glade:7460
+msgid "http://localhost:8069"
+msgstr "http://localhost:8069"
+
+#: bin/openerp.glade:6889
+msgid "Create a new database"
+msgstr "Izveidot jaunu datubāzi"
+
+#: bin/openerp.glade:6902
+msgid "<b>Create a new database</b>"
+msgstr "<b>Izveidot jaunu datubāzi</b>"
+
+#: bin/openerp.glade:6973
+msgid ""
+"This is the URL of the OpenERP server. Use 'localhost' if the server is "
+"installed on this computer. Click on 'Change' to change the address."
+msgstr ""
+"Šis ir OpenERP URL (adrese). Ievadi 'localhost', ja serveris ir uzstādīt uz "
+"tava datora. Spied \"Mainīt\", lai mainītu adresi."
+
+#: bin/openerp.glade:6977
+msgid "OpenERP Server:"
+msgstr "OpenERP serveris:"
+
+#: bin/openerp.glade:7007
+msgid ""
+"This is the password of the user that have the rights to administer "
+"databases. This is not a OpenERP user, just a super administrator. If you "
+"did not changed it, the password is 'admin' after installation."
+msgstr ""
+"Šī ir parole lietotājam, kas drīkst administrēt datubāzes. Šis nav OpenERP "
+"lietotājs - bet gan Super Administrātors. Ja neesi veicis izmaiņas, pēc "
+"uzstādīšanas parole būs 'admin'."
+
+#: bin/openerp.glade:7043
+msgid "(<i>admin</i>, by default)"
+msgstr "(<i>admin</i>, pēc noklusējuma)"
+
+#: bin/openerp.glade:7108
+msgid ""
+"Choose the name of the database that will be created. The name must not "
+"contain any special character. Exemple: 'terp'."
+msgstr ""
+"Norādi jaunās datubāzes nosaukumu. Piemēram: 'terp'. Piezīme: nosaukums "
+"nedrīkst saturēt speciālos simbolus un atstarpes."
+
+#: bin/openerp.glade:7110
+msgid "New Database Name:"
+msgstr "Jaunās datubāzes nosaukums"
+
+#: bin/openerp.glade:7134
+msgid ""
+"Choose the default language that will be installed for this database. You "
+"will be able to install new languages after installation through the "
+"administration menu."
+msgstr ""
+"Norādi datubāzes valodu. Caur administrācijas paneli varēsi pielikt valodas "
+"arī pēc uzstādīšanas."
+
+#: bin/openerp.glade:7136
+msgid "Default Language:"
+msgstr "Valoda pēc noklusējuma:"
+
+#: bin/openerp.glade:7149
+msgid ""
+"This is the password of the '<i>admin</i>' user that will be created in your "
+"new database."
+msgstr ""
+"Šī ir '<i>admin</i>' lietotāja parole, kas tiks izveidots jaunajā datubāzē."
+
+#: bin/openerp.glade:7151
+msgid "Administrator Password:"
+msgstr "Administrātora parole:"
+
+#: bin/openerp.glade:7163
+msgid ""
+"This is the password of the '<i>admin</i>' user that will be created in your "
+"new database. It has to be the same than the above field."
+msgstr ""
+"Šī ir '<i>admin</i>' lietotāja parole, kas tiks izveidots jaunajā datubāzē. "
+"Tai jāsakrīt ar paroli, kas norādīta iepriekšējā laukā."
+
+#: bin/openerp.glade:7165
+msgid "Confirm Password:"
+msgstr "Apstiprināt paroli:"
+
+#: bin/openerp.glade:7256
+msgid ""
+"Check this box if you want demonstration data to be installed on your new "
+"database. These data will help you to understand OpenERP, with predefined "
+"products, partners, etc."
+msgstr ""
+"Atzīmē šo lauku, ja vēlies lai jaunajā datubāzē tiktu ielādēti "
+"demonstrācijas dati. Kā piemēri, tie palīdzēs ātrāk apgūt OpenERP."
+
+#: bin/openerp.glade:7259
+msgid "Load Demonstration Data:"
+msgstr "Ielādēt demonstrācijas datus:"
+
+#: bin/openerp.glade:7316
+msgid "Change password"
+msgstr "Mainīt paroli"
+
+#: bin/openerp.glade:7333
+msgid "<b>Change your super admin password</b>"
+msgstr "<b>Mainīt Super Administrātora paroli</b>"
+
+#: bin/openerp.glade:7486
+msgid "Old password:"
+msgstr "Iepriekšējā parole:"
+
+#: bin/openerp.glade:7499
+msgid "New password:"
+msgstr "Jaunā parole:"
+
+#: bin/openerp.glade:7512
+msgid "New password confirmation:"
+msgstr "Ievadi atkārtoti jauno paroli:"
+
+#: bin/openerp.glade:7571
+msgid "OpenERP Message"
+msgstr "OpenERP paziņojums"
+
+#: bin/openerp.glade:7650
+msgid "Database creation"
+msgstr "Datubāzes izveide"
+
+#: bin/openerp.glade:7683
+msgid "<b>Database created successfully!</b>"
+msgstr "<b>Datubāze izveidota veiksmīgi!</b>"
+
+#: bin/openerp.glade:7715
+msgid ""
+"You can connect to the new database using one of the following account:\n"
+"\n"
+"    Administrator: admin / admin "
+msgstr ""
+"Vari pieslēgties jaunajai datubāzei kā:\n"
+"\n"
+"    Administrātors: admin / admin "
+
+#: bin/openerp.glade:7768
+msgid "Connect Later"
+msgstr ""
+
+#: bin/openerp.glade:7812
+msgid "Connect now"
+msgstr ""
+
+#: bin/openerp.glade:7843
+msgid "Extension Manager"
+msgstr "Paplašinājumu pārvaldnieks"
+
+#: bin/openerp.glade:7947
+msgid "Concurrency exception"
+msgstr "Labošanas konkurences kļūda"
+
+#: bin/openerp.glade:7972
+msgid ""
+"<b>\n"
+"Write concurrency warning:\n"
+"</b>\n"
+"This document has been modified while you were editing it.\n"
+"  Choose:\n"
+"   - \"Cancel\" to cancel saving.\n"
+"   - \"Compare\" to see the modified version.\n"
+"   - \"Write anyway\" to save your current version.\n"
+msgstr ""
+"<b>\n"
+"Labošanas konkurences brīdinājums:\n"
+"</b>\n"
+"Kamēr dokumentu laboji, kāds paralēli ir veicis izmaiņas.\n"
+"  Iespējamās darbības:\n"
+"   - \"Atcelt\" lai atsauktu saglabāšanu.\n"
+"   - \"Salīdzināt\" lai redzētu izmainītos laukus.\n"
+"   - \"Saglabāt\" lai saglabātu pašreizējo versiju.\n"
+
+#: bin/openerp.glade:8035
+msgid "Compare"
+msgstr "Salīdzīnāt"
+
+#: bin/openerp.glade:8081
+msgid "Write anyway"
+msgstr "Saglabāt tik un tā"
+
+#: bin/openerp.glade:8110
+msgid "window1"
+msgstr "logs1"
+
+#: bin/openerp.glade:8182
+msgid "Today"
+msgstr "Šodien"
+
+#: bin/openerp.glade:8228
+msgid "September 2008"
+msgstr "2008.gada septembris"
+
+#: bin/openerp.glade:8242
+msgid "Day"
+msgstr "Diena"
+
+#: bin/openerp.glade:8266
+msgid "Month"
+msgstr "Mēnesis"
+
+#: bin/win_error.glade:40
+msgid "label"
+msgstr "birka"
+
+#: bin/win_error.glade:102
+msgid "Click here for details about the maintenance proposition"
+msgstr "Spiediet šeit, lai apskatītu uzturēšanas piedāvājuma detaļas"
+
+#: bin/win_error.glade:119
+msgid "<i>_Maintenance</i>"
+msgstr "<i>_Apkalpošana</i>"
+
+#: bin/win_error.glade:150
+msgid ""
+"<b>Maintenance Contract.</b>\n"
+"<i>\n"
+"Your request will be send to OpenERP and maintenance team will reply you "
+"shortly.\n"
+"</i>"
+msgstr ""
+"<b>Uzturēšanas līgums.</b>\n"
+"<i>\n"
+"Jūsu pieprasījums tiks nosūtīts uz OpenERP un uzturēšanas komanda jums "
+"atbildēs tuvākajā laikā.\n"
+"</i>"
+
+#: bin/win_error.glade:184
+msgid "Explain what you did:"
+msgstr "Aprakasti kas tika darīts:"
+
+#: bin/win_error.glade:196
+msgid "Others Comments:"
+msgstr "Citi komentāri:"
+
+#: bin/win_error.glade:278
+msgid "Send to Maintenance Team"
+msgstr "Sūtīt apkalpojošajam dienestam"
+
+#: bin/win_error.glade:326
+msgid "<i>_Support Request</i>"
+msgstr "<i>_Atbalsta pieprasījums</i>"
+
+#: bin/win_error.glade:353
+msgid "Details"
+msgstr "Sīkāka informācija"
+
+#: bin/win_error.glade:369
+msgid "<i>_Details</i>"
+msgstr "<i>Sīkāka informācija</i>"
+
+#: bin/win_error.glade:398
+msgid "gtk-close"
+msgstr "gtk-close"
+
+#: bin/dia_survey.glade:32
+msgid ""
+"Please fill in the following form in order to help us to improve <b><span "
+"foreground=\"red\"><i>Open</i></span> ERP</b> and better target new "
+"developments."
+msgstr ""
+
+#: bin/dia_survey.glade:56
+msgid "<b>Your company</b>"
+msgstr ""
+
+#: bin/dia_survey.glade:84
+msgid "Open Source:"
+msgstr "Atvērtais pirmkods"
+
+#: bin/dia_survey.glade:496
+msgid "Your Company:"
+msgstr "Tavs uzņēmums:"
+
+#: bin/dia_survey.glade:507
+msgid "Industry:"
+msgstr "Nozare:"
+
+#: bin/dia_survey.glade:520
+msgid "Your Role:"
+msgstr "Tava loma:"
+
+#: bin/dia_survey.glade:533
+msgid "Employees:"
+msgstr ""
+
+#: bin/dia_survey.glade:546
+msgid "Country:"
+msgstr "Valsts:"
+
+#: bin/dia_survey.glade:559
+msgid "City:"
+msgstr "Pilsēta:"
+
+#: bin/dia_survey.glade:586
+msgid "System:"
+msgstr "Sistēma:"
+
+#: bin/dia_survey.glade:640
+msgid "<b>Your interrest</b>"
+msgstr ""
+
+#: bin/dia_survey.glade:672
+msgid "How did you hear about us:"
+msgstr "Kā uzzināji par mums:"
+
+#: bin/dia_survey.glade:709
+msgid "We plan to use Open ERP"
+msgstr ""
+
+#: bin/dia_survey.glade:723
+msgid "We plan to offer services on Open ERP"
+msgstr ""
+
+#: bin/dia_survey.glade:759
+msgid "Tell us why you try Open ERP and what are your current softwares:"
+msgstr ""
+
+#: bin/dia_survey.glade:790
+msgid "<b>Keep Informed</b>"
+msgstr "<b>Informējiet mani par jaunumiem</b>"
+
+#: bin/dia_survey.glade:818
+msgid "I want to receive the Open ERP ebook (PDF) by email"
+msgstr "Vēlos saņemt Open ERP e-grāmatu (PDF) pa e-pastu"
+
+#: bin/dia_survey.glade:845
+msgid "Phone / Mobile:"
+msgstr "Tālrunis / Mobilais:"
+
+#: bin/dia_survey.glade:858
+msgid "E-mail:"
+msgstr "E-pasts:"
+
+#: bin/dia_survey.glade:891
+msgid "Your Name:"
+msgstr "Tavs vārds:"
+
+#: bin/dia_survey.glade:929
+msgid "gtk-cancel"
+msgstr "Atcelt"
+
+#: bin/dia_survey.glade:939
+msgid "gtk-ok"
+msgstr "OK"
+
+#~ msgid ""
+#~ "Connection error !\n"
+#~ "Bad username or password !"
+#~ msgstr ""
+#~ "Savienojuma kļūda\n"
+#~ "Nepareizs lietotājs un/vai parole!"
+
+#~ msgid "<b>OpenERP Survey</b>"
+#~ msgstr "<b>OpenERP pētījums</b>"
+
+#~ msgid "We plan to use OpenERP"
+#~ msgstr "Mēs plānojam lietot OpenERP"
+
+#~ msgid "We plan to offer services on OpenERP"
+#~ msgstr "Mēs plānojam sniegt ar OpenERP saistītus pakalpojumus"
+
+#~ msgid "OpenERP Survey"
+#~ msgstr "OpenERP pētījums"
+
+#~ msgid "# Employees:"
+#~ msgstr "Darbinieku skaits:"
+
+#~ msgid "<b>Your company:</b>"
+#~ msgstr "<b>Uzņēmuma nosaukums:</b>"
+
+#~ msgid "I want to be contacted for a demonstration"
+#~ msgstr "Vēlos lai ar mani sazinās par demonstrāciju"
+
+#~ msgid "<b>Your interrest:</b>"
+#~ msgstr "<b>Interesējošās tēmas:</b>"
+
+#~ msgid "E-Mail:"
+#~ msgstr "E-pasts:"
+
+#~ msgid "<Shist> + <Tab>"
+#~ msgstr "<Shift> + <Tab>"
+
+#, python-format
+#~ msgid ""
+#~ "Your problem could <u>NOT</u> be sent to the quality team !\n"
+#~ "Please report this error manually at %s"
+#~ msgstr ""
+#~ "Problēmas pieteikums <u>NETIKA</u> nosūtīts kvalitātes kontroles komandai!\n"
+#~ "Lūdzu nosūti kļūdas paziņojumu uz %s"
+
+#~ msgid "specify the log level: INFO, DEBUG, WARNING, ERROR, CRITICAL"
+#~ msgstr "norādi protokolēšanas līmeni: INFO, DEBUG, WARNING, ERROR, CRITICAL"
+
+#~ msgid "specify channels to log"
+#~ msgstr "izvēlies kanālus, kurus protokolēt"
+
+#~ msgid "Tell us why you try OpenERP and what are your current softwares:"
+#~ msgstr ""
+#~ "Pastāsti, kādēļ izmēģini OpenERP un kādu programmatūru lieto pašlaik:"
+
+#~ msgid ""
+#~ "<i>Please fill in the following form in order to help us to improve OpenERP "
+#~ "and better target new developments.</i>"
+#~ msgstr ""
+#~ "<i>Lūdzu aizpildi sekojošos laukus, lai varam uzlabot OpenERP un labāk "
+#~ "plānot turpmāko izstrādes procesu.</i>"
+
+#~ msgid "enable basic debugging"
+#~ msgstr "Iespējot vienkāršo atkļūdošanu"
+
+#, python-format
+#~ msgid ""
+#~ "\n"
+#~ "<b>An unknown error has been reported.</b>\n"
+#~ "\n"
+#~ "Your maintenance contract does not cover all modules installed in your "
+#~ "system !\n"
+#~ "If you are using Open ERP in production, it is highly suggested to upgrade "
+#~ "your\n"
+#~ "contract.\n"
+#~ "\n"
+#~ "If you have developped your own modules or installed third party module, we\n"
+#~ "can provide you an additional maintenance contract for these modules. After\n"
+#~ "having reviewed your modules, our quality team will ensure they will "
+#~ "migrate\n"
+#~ "automatically for all futur stable versions of Open ERP at no extra cost.\n"
+#~ "\n"
+#~ "Here is the list of modules not covered by your maintenance contract:\n"
+#~ "%s\n"
+#~ "\n"
+#~ "You can use the link bellow for more information. The detail of the error\n"
+#~ "is displayed on the second tab."
+#~ msgstr ""
+#~ "\n"
+#~ "<b> Notikusi nezināma kļūda. </b> \n"
+#~ "\n"
+#~ "Jūsu servisa līgums neaptver visus moduļus, kas uzstādīti jūsu sistēmā! \n"
+#~ "\n"
+#~ "Ja jūs izmantojat Open ERP ražošanā, ir ļoti ieteicams uzlabot savu servisa\n"
+#~ "līgumu. \n"
+#~ "\n"
+#~ "Ja jūs esat izstrādājuši savus moduļus vai uzstādījuši trešo personu "
+#~ "moduļus, mēs \n"
+#~ "varam sniegt jums papildus servisa līgumu par šiem moduļiem. Pēc jūsu \n"
+#~ "moduļu pārskatīšanas, mūsu kvalitātes komanda nodrošinās to automātisku "
+#~ "migrāciju \n"
+#~ "uz visām nākotnes stabilajām versijām, bez papildus izmaksām.\n"
+#~ "\n"
+#~ "Šeit ir saraksts ar moduļiem, uz kuriem neattiecas jūsu uzturēšanas līgums: "
+#~ "\n"
+#~ "%s \n"
+#~ "\n"
+#~ "Varat izmantot zemāk esošās saites, lai iegūtu vairāk informācijas. Sīkāka "
+#~ "informācija par šo kļūdu \n"
+#~ "izlasāma otrā lapā."
+
+#~ msgid "The content of the widget or excpetion if not valid"
+#~ msgstr "Miniprogrammas vai izņēmuma saturs, kad rezultāts nav derīgs"

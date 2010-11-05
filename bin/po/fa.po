@@ -1,0 +1,2467 @@
+# Persian translation for openobject-client
+# Copyright (c) 2009 Rosetta Contributors and Canonical Ltd 2009
+# This file is distributed under the same license as the openobject-client package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: openobject-client\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2009-11-25 02:00+0530\n"
+"PO-Revision-Date: 2010-10-25 19:19+0000\n"
+"Last-Translator: Sadegh Ismael Nattaj <nat@sethack.com>\n"
+"Language-Team: Persian <fa@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2010-10-26 04:38+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#: bin/plugins/__init__.py:28
+msgid "Print Workflow"
+msgstr "چاپ کارگردش"
+
+#: bin/plugins/__init__.py:29
+msgid "Print Workflow (with subflows)"
+msgstr "چاپ کارگردش (پیچیده)"
+
+#: bin/plugins/__init__.py:41
+msgid "No available plugin for this resource !"
+msgstr "برای این منبع پلاگین وجود ندارد!"
+
+#: bin/plugins/__init__.py:43
+msgid "Choose a Plugin"
+msgstr "یک پلاگین را برگزینید"
+
+#: bin/translate.py:184
+#, python-format
+msgid "Unable to set locale %s"
+msgstr "زبان %s برپاسازی نمی‌شود."
+
+#: bin/openerp-client.py:139
+msgid "Closing OpenERP, KeyboardInterrupt"
+msgstr "بستن اپن ای‌آر‌پی، KeyboardInterrupt"
+
+#: bin/options.py:108
+#, python-format
+msgid "OpenERP Client %s"
+msgstr "کارپذیر اپن ای‌آر‌پی %s"
+
+#: bin/options.py:109
+msgid "specify alternate config file"
+msgstr "تعیین پرونده پیکربندی دیگر"
+
+#: bin/options.py:110
+msgid "Enable basic debugging. Alias for '--log-level=debug'"
+msgstr "فعال‌سازی دیباگ عادی. استعاره‌ای برای '--log-level=debug'"
+
+#: bin/options.py:111
+#, python-format
+msgid "specify the log level: %s"
+msgstr "سطح لاگ را تعیین کنید: %s"
+
+#: bin/options.py:112
+msgid "specify the user login"
+msgstr "نام کاربری را تعیین کنید"
+
+#: bin/options.py:113
+msgid "specify the server port"
+msgstr "درگاه کارپذیر را تعیین کنید"
+
+#: bin/options.py:114
+msgid "specify the server ip/name"
+msgstr "آی‌پی/نام کارپذیر را تعیین کنید"
+
+#: bin/printer/printer.py:185
+#, python-format
+msgid "Unable to handle %s filetype"
+msgstr "ناتوانی در مدیریت %s نوع پرونده"
+
+#: bin/printer/printer.py:190
+msgid ""
+"Linux Automatic Printing not implemented.\n"
+"Use preview option !"
+msgstr ""
+"چاپ خودکار لینوکس پیاده‌سازی نشده.\n"
+"گزینه پیش‌نمایش را بکارگیرید"
+
+#: bin/printer/printer.py:198
+msgid "Error no report"
+msgstr "خطا! هیچ گزارشی وجود ندارد"
+
+#: bin/printer/printer.py:217 bin/modules/gui/window/win_export.py:289
+#: bin/modules/gui/main.py:1424 bin/widget/view/form_gtk/binary.py:162
+#: bin/widget/view/form_gtk/image.py:119
+msgid "Save As..."
+msgstr "ذخیره باعنوان..."
+
+#: bin/printer/printer.py:225
+msgid "Error writing the file!"
+msgstr "خطای نوشتن پرونده!"
+
+#: bin/common/common.py:212
+msgid ""
+"Thank you for the feedback !\n"
+"Your comments have been sent to OpenERP.\n"
+"You should now start by creating a new database or\n"
+"connecting to an existing server through the \"File\" menu."
+msgstr ""
+"با تشکر از بازخورد شما\n"
+"نظرات شما به اپن ای‌آر‌پی ارسال گردید.\n"
+"شما باید هم‌اکنون یک دادگان نو بسازید یا\n"
+"به یک کارپذیر موجود از طریق منوی \"پرونده\" متصل شوید."
+
+#: bin/common/common.py:222
+msgid ""
+"Thank you for testing OpenERP !\n"
+"You should now start by creating a new database or\n"
+"connecting to an existing server through the \"File\" menu."
+msgstr ""
+"سپاس‌گذار از این که اپن ای‌آرپی را آزمایش کرید! \n"
+"شما اکنون باید آغاز به پدیدآوری یک دادگان نو نمایید یا\n"
+"به یک کارپذیر موجود از طریق منوی \"پرونده\" متصل شوید."
+
+#: bin/common/common.py:325
+msgid "Support request sent !"
+msgstr "درخواست پشتیبانی ارسال شد!"
+
+#: bin/common/common.py:345 bin/common/common.py:388
+msgid ""
+"\n"
+"<b>An unknown error has been reported.</b>\n"
+"\n"
+"<b>You do not have a valid Open ERP maintenance contract !</b>\n"
+"If you are using Open ERP in production, it is highly suggested to "
+"subscribe\n"
+"a maintenance program.\n"
+"\n"
+"The Open ERP maintenance contract provides you a bugfix guarantee and an\n"
+"automatic migration system so that we can fix your problems within a few\n"
+"hours. If you had a maintenance contract, this error would have been sent\n"
+"to the quality team of the Open ERP editor.\n"
+"\n"
+"The maintenance program offers you:\n"
+"* Automatic migrations on new versions,\n"
+"* A bugfix guarantee,\n"
+"* Monthly announces of potential bugs and their fixes,\n"
+"* Security alerts by email and automatic migration,\n"
+"* Access to the customer portal.\n"
+"\n"
+"You can use the link bellow for more information. The detail of the error\n"
+"is displayed on the second tab.\n"
+msgstr ""
+"\n"
+"<b>یک خطای ناشناخته گزارش شده است.</b>\n"
+"\n"
+"<b>شما قرارداد نگهداری معتبر اپن ای‌آر‌پی ندارید!</b>\n"
+"اگر شما از اپن ای‌آر‌پی بصورت کاربردی و فعال سود می‌برید، بسیار پیشنهاد "
+"می‌شود تا مشترک برنامه نگهداری شوید.\n"
+"\n"
+"قرارداد نگهداری اپن ای‌آر‌پی شامل تضمین‌نامه رفع‌خطا و یک سامانه کوچ خودکار "
+"می‌گردد، بنابراین شما می‌توانید مشکلات خود را در کمترین زمان ممکن برطرف "
+"سازید. اگر شما قرارداد نگهداری داشتید این خطا بصورت خودکار برای تیم کیفت "
+"اُپن ای‌آر‌پی ارسال می گردید.\n"
+"\n"
+"برنامه نگهداری این امکانات را به شما می‌دهد:\n"
+"\n"
+"* کوچ خودکار برای نگارش‌های نوتر\n"
+"* اعلان ماهیانه باگ‌ها و وصله‌های آنها\n"
+"* هشدارهای امنیتی توسط ایمیل و کوچ خودکار\n"
+"* دسترسی به درگاهال مشتری\n"
+"\n"
+"شما می‌توانید از لینک پایین برای دریافت آگهگان بیشتر سود برید. جزییات خطا در "
+"زبانه دوم نمایش داده شده است.\n"
+
+#: bin/common/common.py:368
+#, python-format
+msgid ""
+"\n"
+"<b>An unknown error has been reported.</b>\n"
+"\n"
+"Your maintenance contract does not cover all modules installed in your "
+"system !\n"
+"If you are using Open ERP in production, it is highly suggested to upgrade "
+"your\n"
+"contract.\n"
+"\n"
+"If you have developed your own modules or installed third party module, we\n"
+"can provide you an additional maintenance contract for these modules. After\n"
+"having reviewed your modules, our quality team will ensure they will "
+"migrate\n"
+"automatically for all future stable versions of Open ERP at no extra cost.\n"
+"\n"
+"Here is the list of modules not covered by your maintenance contract:\n"
+"%s\n"
+"\n"
+"You can use the link bellow for more information. The detail of the error\n"
+"is displayed on the second tab."
+msgstr ""
+"\n"
+"<b>خطای ناشناخته گزارش شده.</b>\n"
+"\n"
+"قرارداد نگهداری شما شامل تمامی پیمانه‌های برپاسازی شده بروی سامانه شما "
+"نمی‌گردد. \n"
+"اگر شما از اپن ای‌آر‌پی بصورت اجرایی سود می‌برید، پیشنهاد بسیار می‌کنیم تا "
+"قرارداد خود را ارتقا دهید\n"
+"\n"
+"اگر شما پیمانه خود را گسترش داده‌اید یا یک پیمانه طرف ثالث را برپاسازی "
+"کرده‌اید، ما می‌توانیم قرارداد نگهداری اضافه‌ای را برای آن پیمانه‌ها تامین "
+"نماییم. پس از بازبینی پیمانه‌ها، تیم کیفیت شما را از نحوه ارتقای خودکار این "
+"پیمانه‌ها در تمامی نگارش‌های پایدار اپن ای‌آر‌پی بدون هیچ هزینه‌ای مطمئن "
+"می‌سازند.\n"
+"\n"
+"اینجا فهرستی از پیمانه‌هایی که توسط قرارداد نگهداری شما پوشش داده نمی‌شوند "
+"آمده است:\n"
+"%s\n"
+"\n"
+"شما می‌توانید از لینک پایین برای دریافت آگهگان بیشتر سود برید. جزییات خطا در "
+"زبانه دوم نمایش داده شده است."
+
+#: bin/common/common.py:443
+msgid ""
+"Your problem has been sent to the quality team !\n"
+"We will recontact you after analysing the problem."
+msgstr ""
+"مشکل شما برای تیم کیفیت ارسال گردید!\n"
+"ما با شما پس از تحلیل مشکل دوباره تماس خواهیم گرفت."
+
+#: bin/common/common.py:446
+#, python-format
+msgid ""
+"Your problem could *NOT* be sent to the quality team !\n"
+"Please report this error manually at:\n"
+"\t%s"
+msgstr ""
+"مشکل شما برای تیم کیفیت ارسال *نگردید*!nلطفا این خطا را بصورت دستی یه\n"
+"\t %s گزارش نمایید."
+
+#: bin/common/common.py:446
+msgid "Error"
+msgstr "خطا"
+
+#: bin/common/common.py:599
+msgid "Open with..."
+msgstr "بازکردن با..."
+
+#: bin/widget_search/checkbox.py:36 bin/widget_search/checkbox.py:49
+msgid "Yes"
+msgstr "بله"
+
+#: bin/widget_search/checkbox.py:37
+msgid "No"
+msgstr "خیر"
+
+#: bin/widget_search/checkbox.py:55 bin/widget_search/char.py:47
+#: bin/widget_search/reference.py:74 bin/widget_search/spinbutton.py:69
+#: bin/widget_search/calendar.py:117 bin/widget_search/spinint.py:73
+msgid "The content of the widget or ValueError if not valid"
+msgstr "محتوای ابزارک یا خطای مقدار در صورت معتبر نبودن"
+
+#: bin/widget_search/form.py:145
+msgid "Limit :"
+msgstr "محدودیت :"
+
+#: bin/widget_search/form.py:154
+msgid "Offset :"
+msgstr "آفست :"
+
+#: bin/widget_search/form.py:193
+msgid "Parameters :"
+msgstr "پارامترها :"
+
+#: bin/widget_search/form.py:301
+msgid "The content of the form or exception if not valid"
+msgstr "محتوای فرم یا استثنا درصورت عدم اعتبار"
+
+#: bin/widget_search/wid_int.py:44
+msgid "The content of the widget or exception if not valid"
+msgstr "محتوای ابزارک یا استثنا در صورت معتبر نبودن"
+
+#: bin/widget_search/date_widget.py:65
+#: bin/widget/view/form_gtk/date_widget.py:65
+msgid ""
+"You can use special operation by pressing +, - or =.  Plus/minus "
+"adds/decrease the variable to the current selected date. Equals set part of "
+"selected date. Available variables: 12h = 12 hours, 8d = 8 days, 4w = 4 "
+"weeks, 1m = 1 month, 2y = 2 years. Some examples:\n"
+"* +21d : adds 21 days to selected year\n"
+"* =23w : set date to the 23th week of the year\n"
+"* -4m : decrease 4 months to the current date\n"
+"You can also use \"=\" to set the date to the current date/time and '-' to "
+"clear the field."
+msgstr ""
+"شما می توانید از گردانش ویژه بوسیله فشاردادن کلیدهای +، - یا = سود "
+"برید.مثبت/منفی مقدار متغییر تاریخ گزینش شده کنونی را کم/زیاد می‌کند. مساوی "
+"تاریخ گزینش شده راتنظیم می‌کند. متغییرهای موجود: 12h = ۱۲ ساعت، 8d = ۸ روز، "
+"4w = ۴ هفته، 1m = ۱ ماه، 2y = ۲سال. برخی نمونه‌ها:× +21d : ۲۱ روز به تاریخ "
+"گزینش شده اضافه می‌کند\n"
+"× =23w : تاریخ را به بیست و سومین هفته سال می‌برد\n"
+"× -4m : ۴ ماه از تاریخ کنونی کم می‌کند\n"
+"شما می‌توانید از \"=\" برای تنظیم تاریخ کنونی و \"-\" برای پاک کردن فیلد سود "
+"برید."
+
+#: bin/widget_search/calendar.py:55
+msgid "Start date"
+msgstr "تاریخ آغاز"
+
+#: bin/widget_search/calendar.py:59 bin/widget_search/calendar.py:79
+#: bin/widget/view/form_gtk/calendar.py:62
+#: bin/widget/view/form_gtk/calendar.py:184
+msgid "Open the calendar widget"
+msgstr "باز کردن ابزارک گاهشمار"
+
+#: bin/widget_search/calendar.py:75
+msgid "End date"
+msgstr "تاریخ پایان"
+
+#: bin/widget_search/calendar.py:120 bin/widget/view/form_gtk/calendar.py:136
+#: bin/widget/view/form_gtk/calendar.py:266
+msgid "OpenERP - Date selection"
+msgstr "اپن ای‌آر‌پی - گزینش تاریخ"
+
+#: bin/rpc.py:140 bin/modules/gui/main.py:210 bin/modules/action/wizard.py:175
+msgid "Connection refused !"
+msgstr "اتصال قطع شد!"
+
+#: bin/rpc.py:141
+msgid "Connection refused!"
+msgstr "اتصال قطع شد!"
+
+#: bin/rpc.py:171
+msgid ""
+"Unable to reach to OpenERP server !\n"
+"You should check your connection to the network and the OpenERP server."
+msgstr ""
+"اتصال به کارپذیر اپن ای‌آر‌پی انجام نشد!\n"
+"شما باید اتصال خود را با شبکه و کارپذیر اپن ای‌آر‌پی بررسی کنید."
+
+#: bin/rpc.py:171
+msgid "Connection Error"
+msgstr "خطای اتصال"
+
+#: bin/rpc.py:186 bin/rpc.py:188 bin/modules/gui/main.py:218
+#: bin/modules/gui/main.py:224 bin/modules/action/wizard.py:187
+#: bin/modules/action/wizard.py:193 bin/modules/action/wizard.py:195
+msgid "Application Error"
+msgstr "خطای برنامه"
+
+#: bin/rpc.py:188 bin/modules/action/wizard.py:195
+msgid "View details"
+msgstr "دیدن جزییات"
+
+#: bin/modules/gui/window/win_search.py:50
+#: bin/widget/view/form_gtk/one2many_list.py:51
+msgid "OpenERP - Link"
+msgstr "اپن ای‌آر‌پی - پیوند"
+
+#: bin/modules/gui/window/win_search.py:147
+#, python-format
+msgid "OpenERP Search: %s"
+msgstr "جستجوی اپن ای‌آر‌پی: %s"
+
+#: bin/modules/gui/window/win_search.py:148
+#, python-format
+msgid "OpenERP Search: %s (%%d result(s))"
+msgstr "جستجوی اپن ای‌آر‌پی: %s (%%d نمونه)"
+
+#: bin/modules/gui/window/win_import.py:52
+msgid "The file is empty !"
+msgstr "پرونده خالی است!"
+
+#: bin/modules/gui/window/win_import.py:52
+msgid "Importation !"
+msgstr "درونش‌سازی!"
+
+#: bin/modules/gui/window/win_import.py:57
+msgid "XML-RPC error !"
+msgstr "خطای XML-RPC"
+
+#: bin/modules/gui/window/win_import.py:62
+msgid "Imported one object !"
+msgstr "یک شی درونش شد!"
+
+#: bin/modules/gui/window/win_import.py:64
+#, python-format
+msgid "Imported %d objects !"
+msgstr "%d شی درونش گردید!"
+
+#: bin/modules/gui/window/win_import.py:70
+msgid "Importation Error !"
+msgstr "خطای درونش‌سازی!"
+
+#: bin/modules/gui/window/win_import.py:101
+#: bin/modules/gui/window/win_import.py:105
+msgid "Field name"
+msgstr "نام فیلد"
+
+#: bin/modules/gui/window/win_import.py:186
+#, python-format
+msgid "You cannot import this field %s, because we cannot auto-detect it"
+msgstr ""
+"شما نمی‌توانید فیلد %s را درونش کنید، زیرا ما قادر به شناسایی خودکار آن "
+"نیستیم"
+
+#: bin/modules/gui/window/win_import.py:220
+msgid "You have not selected any fields to import"
+msgstr "شما هیچ فیلدی را برای درونش برنگزیده‌اید"
+
+#: bin/modules/gui/window/win_selection.py:52
+msgid "Name"
+msgstr "نام"
+
+#: bin/modules/gui/window/win_selection.py:56
+msgid "Ressource Name"
+msgstr "نام منابع"
+
+#: bin/modules/gui/window/win_selection.py:56
+msgid "Names"
+msgstr "نام‌ها"
+
+#: bin/modules/gui/window/win_export.py:51
+msgid " record(s) saved !"
+msgstr " رکوردها ذخیره شد"
+
+#: bin/modules/gui/window/win_export.py:54
+msgid ""
+"Operation failed !\n"
+"I/O error"
+msgstr ""
+"گردانش ناموفق بود! \n"
+"خطای I/O"
+
+#: bin/modules/gui/window/win_export.py:78
+msgid "Error Opening Excel !"
+msgstr "خطا در باز کردن Excel!"
+
+#: bin/modules/gui/window/win_export.py:80
+msgid ""
+"Function only available for MS Office !\n"
+"Sorry, OOo users :("
+msgstr ""
+"این کارکرد تنها برای MS Office وجود دارد!\n"
+"کاربران OOo متاسفیم :("
+
+#: bin/modules/gui/window/win_export.py:281
+msgid "Exportation Error !"
+msgstr "خطای برونش!"
+
+#: bin/modules/gui/window/form.py:165
+msgid "Resource ID does not exist for this object!"
+msgstr "شناسه منبع برای این شی وجود ندارد"
+
+#: bin/modules/gui/window/form.py:221
+msgid "No record selected ! You can only attach to existing record."
+msgstr ""
+"هیچ رکوردی برگزیده نشد! شما تنها می‌توانید رکوردهای موجود را پیوست نمایید."
+
+#: bin/modules/gui/window/form.py:233
+msgid "You have to select a record !"
+msgstr "شما باید یک رکورد را برگزینید!"
+
+#: bin/modules/gui/window/form.py:239
+#: bin/modules/gui/window/view_tree/view_tree_sc.py:43
+msgid "ID"
+msgstr "شناسه"
+
+#: bin/modules/gui/window/form.py:240
+msgid "Creation User"
+msgstr "کاربر پدیدآورنده"
+
+#: bin/modules/gui/window/form.py:241
+msgid "Creation Date"
+msgstr "تاریخ پدیدن"
+
+#: bin/modules/gui/window/form.py:242
+msgid "Latest Modification by"
+msgstr "تازه‌ترین تغییر توسط"
+
+#: bin/modules/gui/window/form.py:243
+msgid "Latest Modification Date"
+msgstr "تاریخ تازه‌ترین تغییر"
+
+#: bin/modules/gui/window/form.py:254
+msgid ""
+"Record is not saved ! \n"
+" Do You want to Clear Current Record ?"
+msgstr ""
+"رکورد ذخیره نگردید! \n"
+"آیا می‌خواهید رکورد کنونی را پاک نمایید؟"
+
+#: bin/modules/gui/window/form.py:257
+msgid "Are you sure to remove this record ?"
+msgstr "آیا می‌خواهید این رکورد را بردارید؟"
+
+#: bin/modules/gui/window/form.py:259
+msgid "Are you sure to remove those records ?"
+msgstr "آیا می‌خواهید این رکوردها را بردارید؟"
+
+#: bin/modules/gui/window/form.py:263
+msgid "Resources cleared."
+msgstr "منبع پاک شد."
+
+#: bin/modules/gui/window/form.py:265
+msgid "Resources successfully removed."
+msgstr "منابع با موفقیت برداشته‌شد."
+
+#: bin/modules/gui/window/form.py:298
+msgid "Working now on the duplicated document !"
+msgstr "در حال کار به روی سند تکثیر شده!"
+
+#: bin/modules/gui/window/form.py:306
+msgid "Document Saved."
+msgstr "سند ذخیره‌شد"
+
+#: bin/modules/gui/window/form.py:308 bin/modules/gui/window/form.py:309
+#: bin/widget/view/form_gtk/parser.py:137
+#: bin/widget/view/form_gtk/parser.py:138
+msgid "Invalid form, correct red fields !"
+msgstr "فرم نامعتبر، فیلدهای قرمز را تدرست کنید!"
+
+#: bin/modules/gui/window/form.py:308 bin/widget/view/form_gtk/parser.py:137
+msgid "Error !"
+msgstr "خطا!"
+
+#: bin/modules/gui/window/form.py:328 bin/modules/gui/window/form.py:423
+msgid ""
+"This record has been modified\n"
+"do you want to save it ?"
+msgstr ""
+"این رکورد تغییر پیدا کرده است\n"
+"آیا می‌خواهید آن را ذخیره نمایید؟"
+
+#: bin/modules/gui/window/form.py:375
+msgid "You must select one or several records !"
+msgstr "شما باید یک یا چند رکورد را برگزینید!"
+
+#: bin/modules/gui/window/form.py:384
+msgid "Print Screen"
+msgstr "چاپ صفحه"
+
+#: bin/modules/gui/window/form.py:404
+msgid "No record selected"
+msgstr "رکوردی گزینش نشده"
+
+#: bin/modules/gui/window/form.py:409
+msgid "New document"
+msgstr "سند نو"
+
+#: bin/modules/gui/window/form.py:411
+msgid "Editing document (id: "
+msgstr "ویرایش سند (شناسه: "
+
+#: bin/modules/gui/window/form.py:412
+msgid "Record: "
+msgstr "رکورد: "
+
+#: bin/modules/gui/window/form.py:413
+msgid " of "
+msgstr " از "
+
+#: bin/modules/gui/window/view_tree/parse.py:36
+msgid "Tree"
+msgstr "درخت"
+
+#: bin/modules/gui/window/view_tree/view_tree_sc.py:49
+msgid "Description"
+msgstr "توصیف"
+
+#: bin/modules/gui/window/__init__.py:33
+msgid "Unknown Window"
+msgstr "پنجره ناشناس"
+
+#: bin/modules/gui/window/win_extension.py:115
+msgid "This extension is already defined"
+msgstr "این افزونه پیشا تعریف شده"
+
+#: bin/modules/gui/window/tree.py:190 bin/modules/gui/window/tree.py:246
+msgid "No resource selected!"
+msgstr "منبعی گزینش نشده!"
+
+#: bin/modules/gui/window/tree.py:204
+msgid ""
+"Are you sure you want\n"
+"to remove this record?"
+msgstr "آیا می‌خواهید این رکورد را بردارید؟"
+
+#: bin/modules/gui/window/tree.py:209
+msgid "Error removing resource!"
+msgstr "خطا در برداشتن منبع!"
+
+#: bin/modules/gui/window/tree.py:220
+msgid "Unable to chroot: no tree resource selected"
+msgstr "ناتوانی در تغییر ریشه: هیچ منبع درختی گزینش نشده"
+
+#: bin/modules/gui/window/win_preference.py:69
+msgid "Preference"
+msgstr "ترجیح"
+
+#: bin/modules/gui/window/win_preference.py:80
+msgid ""
+"The default language of the interface has been modified, do not forget to "
+"restart the client to have the interface in your language"
+msgstr ""
+"زبان پیش‌فرض رابط کاربری تغییر یافت، فراموش نکنید که باید کارخواه خود را "
+"برای گرفتن تغییرات زبان دلخواه اجرای مجدد کنید."
+
+#: bin/modules/gui/window/win_preference.py:82
+msgid "Default language modified !"
+msgstr "زبان پیش‌فرض تغییر یافت!"
+
+#: bin/modules/gui/main.py:87 bin/modules/gui/main.py:436
+#: bin/modules/gui/main.py:1445
+msgid "Could not connect to server !"
+msgstr "نمی‌توان به کارپذیر متصل شد!"
+
+#: bin/modules/gui/main.py:91 bin/openerp.glade:72 bin/openerp.glade:6272
+#: bin/openerp.glade:6508 bin/openerp.glade:6830 bin/openerp.glade:7475
+msgid "Server:"
+msgstr "کارپذیر:"
+
+#: bin/modules/gui/main.py:102 bin/openerp.glade:98 bin/openerp.glade:6544
+#: bin/openerp.glade:6787 bin/openerp.glade:7084 bin/openerp.glade:7432
+msgid "Change"
+msgstr "تغییر"
+
+#: bin/modules/gui/main.py:109 bin/openerp.glade:7011
+msgid "Super Administrator Password:"
+msgstr "گذرواژه‌ کاربر راهبر:"
+
+#: bin/modules/gui/main.py:172 bin/modules/action/wizard.py:137
+msgid "OpenERP Computing"
+msgstr "محاسبه اپن ای‌آر‌پی"
+
+#: bin/modules/gui/main.py:183 bin/modules/action/wizard.py:147
+msgid "Operation in progress"
+msgstr "گردانش در حال پیش‌روی است"
+
+#: bin/modules/gui/main.py:187 bin/modules/gui/main.py:639
+#: bin/modules/action/wizard.py:151
+msgid ""
+"Please wait,\n"
+"this operation may take a while..."
+msgstr ""
+"لطفا منتظر بمانید،\n"
+"این گردانش ممکن است مدتی به درازا بیانجامد..."
+
+#: bin/modules/gui/main.py:240
+msgid "Migration Scripts"
+msgstr "اسکریپت‌های کوچ"
+
+#: bin/modules/gui/main.py:243
+msgid "Contract ID:"
+msgstr "شناسه قرارداد:"
+
+#: bin/modules/gui/main.py:249
+msgid "Contract Password:"
+msgstr "گذرواژه قرارداد:"
+
+#: bin/modules/gui/main.py:264
+msgid "You already have the latest version"
+msgstr "شما تازه‌ترین نگارش را دارید"
+
+#: bin/modules/gui/main.py:269
+msgid "The following updates are available:"
+msgstr "بروزرسانی‌های زیر موجود هستند:"
+
+#: bin/modules/gui/main.py:281
+msgid "You can now migrate your databases."
+msgstr "شما نمی‌توانید دادگان‌های خود را کوچ دهید."
+
+#: bin/modules/gui/main.py:286
+msgid "Migrate Database"
+msgstr "کوچ دادگان"
+
+#: bin/modules/gui/main.py:315
+msgid "Your database has been upgraded."
+msgstr "دادگان شما بروزآوری شد."
+
+#: bin/modules/gui/main.py:317
+msgid "Your databases have been upgraded."
+msgstr "دادگان‌های شما بروزآوری شد."
+
+#: bin/modules/gui/main.py:432
+msgid "Unknown"
+msgstr "ناشناخته"
+
+#: bin/modules/gui/main.py:443 bin/modules/gui/main.py:1449
+msgid "No database found, you must create one !"
+msgstr "هیچ دادگانی یافت نشد، شما باید یکی پدید آورید!"
+
+#: bin/modules/gui/main.py:467
+#, python-format
+msgid ""
+"The versions of the server (%s) and the client (%s) missmatch. The client "
+"may not work properly. Use it at your own risks."
+msgstr ""
+"نگارش بین کارپذیر (%s) و کارخواه (%s) ناهماهنگ هستند. کارخواه ممکن است درست "
+"کار نکند. عواقب بکارگیری نادرست از آن به عهده شما خواهد بود."
+
+#: bin/modules/gui/main.py:595
+msgid "Sorry,'"
+msgstr "متاسفم، '"
+
+#: bin/modules/gui/main.py:595 bin/modules/gui/main.py:598
+msgid "Bad database name !"
+msgstr "نام نامناسب برای دادگان!"
+
+#: bin/modules/gui/main.py:598
+msgid ""
+"The database name must contain only normal characters or \"_\".\n"
+"You must avoid all accents, space or special characters."
+msgstr ""
+"نام دادگان باید شامل تنها نویسه‌های عادی یا \"_\" باشد.\n"
+"شما باید از تمامی علامات تلفظ، فواصل یا نویسه‌های ویژه دوری کنید."
+
+#: bin/modules/gui/main.py:626
+msgid "OpenERP Database Installation"
+msgstr "برپاسازی دادگان اپن ای‌آر‌پی"
+
+#: bin/modules/gui/main.py:635
+msgid "<b>Operation in progress</b>"
+msgstr "<b>گردانش در حال پیش‌روی است</b>"
+
+#: bin/modules/gui/main.py:658 bin/modules/gui/main.py:660
+#: bin/modules/gui/main.py:662
+msgid "Could not create database."
+msgstr "پدیدن دادگان ممکن نیست."
+
+#: bin/modules/gui/main.py:658
+msgid "Database already exists !"
+msgstr "دادگان از پیش موجود است!"
+
+#: bin/modules/gui/main.py:660 bin/modules/gui/main.py:1342
+#: bin/modules/gui/main.py:1361 bin/modules/gui/main.py:1437
+msgid "Bad database administrator password !"
+msgstr "گذرواژه راهبر دادگان نامناسب است!"
+
+#: bin/modules/gui/main.py:662 bin/modules/gui/main.py:669
+msgid "Error during database creation !"
+msgstr "خطا در حین پدیدآوری دادگان!"
+
+#: bin/modules/gui/main.py:669
+msgid ""
+"The server crashed during installation.\n"
+"We suggest you to drop this database."
+msgstr ""
+"کارپذیر در هنگام برپاسازی از کار افتاد.\n"
+"پیشنهاد می‌کنیم که این دادگان را بیاندازید."
+
+#: bin/modules/gui/main.py:687
+msgid "The following users have been installed on your database:"
+msgstr "کاربران زیر به روی دادگان شما برپاسازی گردیدند:"
+
+#: bin/modules/gui/main.py:687
+msgid "You can now connect to the database as an administrator."
+msgstr "شما هم‌اکنون می‌توانید به دادگان مانند یک راهبر متصل شوید."
+
+#: bin/modules/gui/main.py:731 bin/modules/gui/main.py:1064
+msgid "Press Ctrl+O to login"
+msgstr "برای ورود Ctrl+O را فشار دهید"
+
+#: bin/modules/gui/main.py:906
+msgid "Edit"
+msgstr "ویرایش"
+
+#: bin/modules/gui/main.py:995
+#, python-format
+msgid "%s request(s)"
+msgstr "%s درخواست"
+
+#: bin/modules/gui/main.py:997
+msgid "No request"
+msgstr "بدون درخواست"
+
+#: bin/modules/gui/main.py:999
+#, python-format
+msgid " - %s request(s) sended"
+msgstr " - %s درخواست ارسال شد"
+
+#: bin/modules/gui/main.py:1035
+msgid ""
+"Connection error !\n"
+"Unable to connect to the server !"
+msgstr ""
+"خطای اتصال! \n"
+"امکان اتصال به کارپذیر وجود ندارد!"
+
+#: bin/modules/gui/main.py:1037
+msgid ""
+"Authentication error !\n"
+"Bad Username or Password !"
+msgstr ""
+"خطای تشخیص هویت!\n"
+"گذرواژه یا نام‌کاربری نادرست!"
+
+#: bin/modules/gui/main.py:1062
+msgid "Not logged !"
+msgstr "وارد نشده‌اید!"
+
+#: bin/modules/gui/main.py:1138
+msgid ""
+"You can not log into the system !\n"
+"Ask the administrator to verify\n"
+"you have an action defined for your user."
+msgstr ""
+"شما نمی‌توانید به سامانه وارد شوید!\n"
+"از راهبر بپرسید تا مطمئن شوید که فعالیت‌هایی برای\n"
+"کاربر شما در نظر گرفته شده است."
+
+#: bin/modules/gui/main.py:1170 bin/modules/gui/main.py:1177
+msgid "Do you really want to quit ?"
+msgstr "آیا واقعاً می‌خواهید خارج شوید؟"
+
+#: bin/modules/gui/main.py:1232
+#, python-format
+msgid "Attachments (%d)"
+msgstr "پیوست‌ها (%d)"
+
+#: bin/modules/gui/main.py:1245
+msgid "Attachments"
+msgstr "پیوست‌ها"
+
+#: bin/modules/gui/main.py:1333
+msgid "Delete a database"
+msgstr "ستردن یک دادگان"
+
+#: bin/modules/gui/main.py:1339
+msgid "Database dropped successfully !"
+msgstr "دادگان با موفقیت انداخته شد!"
+
+#: bin/modules/gui/main.py:1342
+msgid "Could not drop database."
+msgstr "نمی‌توان دادگان را انداخت"
+
+#: bin/modules/gui/main.py:1344
+msgid "Couldn't drop database"
+msgstr "نمی‌توان دادگان را انداخت"
+
+#: bin/modules/gui/main.py:1347 bin/widget/view/form_gtk/image.py:112
+#: bin/widget/view/form_gtk/url.py:112 bin/openerp.glade:5895
+msgid "Open..."
+msgstr "بازکردن..."
+
+#: bin/modules/gui/main.py:1358
+msgid "Database restored successfully !"
+msgstr "دادگان با موفقیت بازگردانده شد!"
+
+#: bin/modules/gui/main.py:1361
+msgid "Could not restore database."
+msgstr "بازگردانی دادگان ممکن نیست."
+
+#: bin/modules/gui/main.py:1363
+msgid "Couldn't restore database"
+msgstr "بازگردانی دادگان ممکن نیست"
+
+#: bin/modules/gui/main.py:1402
+msgid ""
+"Confirmation password does not match new password, operation cancelled!"
+msgstr "گردانش لغو شد، گذرواژه تاییدی با گذرواژه نو جور نیست!"
+
+#: bin/modules/gui/main.py:1404
+msgid "Validation Error."
+msgstr "خطای اعتبار."
+
+#: bin/modules/gui/main.py:1412
+msgid "Could not change the Super Admin password."
+msgstr "خطا در تغییر گذرواژه راهبر."
+
+#: bin/modules/gui/main.py:1413
+msgid "Bad password provided !"
+msgstr "گذرواژه‌ نامناسب بکار رفته!"
+
+#: bin/modules/gui/main.py:1415
+msgid "Error, password not changed."
+msgstr "خطا، گذرواژه تغییر داده نشد."
+
+#: bin/modules/gui/main.py:1421 bin/modules/gui/main.py:1441
+msgid "Backup a database"
+msgstr "پشتوانه گیری دادگان"
+
+#: bin/modules/gui/main.py:1434
+msgid "Database backed up successfully !"
+msgstr "دادگان با موفقیت پشتوانه‌سازی گردید."
+
+#: bin/modules/gui/main.py:1437
+msgid "Could not backup the database."
+msgstr "امکان پشتوانه گیری از دادگان وجود ندارد."
+
+#: bin/modules/gui/main.py:1439
+msgid "Couldn't backup database."
+msgstr "امکان پشتوانه گیری دادگان وجود ندارد."
+
+#: bin/modules/action/main.py:46
+msgid "Nothing to print!"
+msgstr "چیزی برای چاپ وجود ندارد!"
+
+#: bin/modules/action/main.py:63
+msgid "Printing aborted, too long delay !"
+msgstr "چاپ به دلیل دیرکرد درازاانی ناتمام ماند!"
+
+#: bin/modules/action/main.py:180
+msgid "Select your action"
+msgstr "کُنش خود را برگزینید"
+
+#: bin/widget/view/gantt_gtk/parser_dummy.py:31
+msgid "Gantt view not yet implemented !"
+msgstr "نمای گَنت هنوز پیاده‌سازی نشده!"
+
+#: bin/widget/view/gantt_gtk/parser_dummy.py:32
+msgid ""
+"The gantt view is not available in this GTK Client, you should use the web "
+"interface or switch to the calendar view."
+msgstr ""
+"نمای گَنت در این مشتری GTK موجود نیست، شما باید رابط کاربری وب را بکار گیرید "
+"یابه نمای گاهشمار سویچ کنید."
+
+#: bin/widget/view/tree_gtk/date_renderer.py:200
+msgid ""
+"Press <i>'+'</i>, <i>'-'</i> or <i>'='</i> for special date operations."
+msgstr ""
+"برای گردانش خاص تاریخ <i>'+'</i>، <i>'-'</i> یا <i>'='</i> را فشار دهید."
+
+#: bin/widget/view/tree_gtk/editabletree.py:124
+#, python-format
+msgid "Shortcut: %s"
+msgstr "میان‌بر: %s"
+
+#: bin/widget/view/tree_gtk/editabletree.py:124
+msgid "F1 New - F2 Open/Search"
+msgstr "F1 نو - F2 بازکردن/جستجو"
+
+#: bin/widget/view/tree_gtk/editabletree.py:189
+#, python-format
+msgid "Warning; field %s is required!"
+msgstr "هشدار: فیلد %s نیاز است!"
+
+#: bin/widget/view/graph_gtk/parser.py:65
+msgid "Can not generate graph !"
+msgstr "نمودار را نمی‌توان ساخت!"
+
+#: bin/widget/view/form.py:170
+msgid "You must save this record to use the relate button !"
+msgstr "شما باید این رکورد را برای بکارگیری از دکمه مرتبط ذخیره کنید!"
+
+#: bin/widget/view/form.py:182
+msgid "You must select a record to use the relate button !"
+msgstr "شما باید یک رکورد را برای بکارگیری دکمه مرتبط برگزینید!"
+
+#: bin/widget/view/form.py:200 bin/widget/view/form_gtk/parser.py:558
+#: bin/widget/view/form_gtk/parser.py:672
+#: bin/widget/view/form_gtk/parser.py:729
+msgid "No other language available!"
+msgstr "زبان دیگری موجود نیست!"
+
+#: bin/widget/view/form.py:207 bin/widget/view/form_gtk/parser.py:574
+#: bin/widget/view/form_gtk/parser.py:678
+#: bin/widget/view/form_gtk/parser.py:735
+msgid "Add Translation"
+msgstr "افزودن برگردان"
+
+#: bin/widget/view/form.py:258 bin/widget/view/form_gtk/parser.py:791
+msgid "Translate label"
+msgstr "برگردانی برچسب"
+
+#: bin/widget/view/widget_parse.py:53
+#, python-format
+msgid "This type (%s) is not supported by the GTK client !"
+msgstr "این نوع (%s) توسط مشتری GTK پشتیبانی نمی‌شود!"
+
+#: bin/widget/view/widget_parse.py:63
+msgid "No valid view found for this object!"
+msgstr "نمای معتبری برای این شی پیدا نشد!"
+
+#: bin/widget/view/form_gtk/wid_common.py:60
+msgid "Always applicable !"
+msgstr "همیشه قابل قبول!"
+
+#: bin/widget/view/form_gtk/reference.py:92 bin/openerp.glade:1247
+msgid "Create a new resource"
+msgstr "ساخت یک منبع نو"
+
+#: bin/widget/view/form_gtk/reference.py:93
+msgid "Search / Open a resource"
+msgstr "جستجو / بازکردن یک منبع"
+
+#: bin/widget/view/form_gtk/many2one.py:156
+msgid "Open this resource"
+msgstr "بازکردن این منبع"
+
+#: bin/widget/view/form_gtk/many2one.py:159
+msgid "Search a resource"
+msgstr "جستجوی یک منبع"
+
+#: bin/widget/view/form_gtk/many2one.py:168 bin/openerp.glade:1389
+msgid "Action"
+msgstr "عمل"
+
+#: bin/widget/view/form_gtk/many2one.py:169
+msgid "Report"
+msgstr "گزارش"
+
+#: bin/widget/view/form_gtk/many2one.py:375 bin/widget/view/list.py:274
+msgid "You must select a record to use the relation !"
+msgstr "شما باید یک رکورد را برای بکارگرفتن رابطه برگزینید!"
+
+#: bin/widget/view/form_gtk/binary.py:77
+msgid "Select"
+msgstr "گزینش"
+
+#: bin/widget/view/form_gtk/binary.py:81
+msgid "Open"
+msgstr "بازکردن"
+
+#: bin/widget/view/form_gtk/binary.py:85 bin/widget/view/form_gtk/image.py:80
+msgid "Save As"
+msgstr "ذخیره مانند"
+
+#: bin/widget/view/form_gtk/binary.py:89 bin/widget/view/form_gtk/image.py:89
+msgid "Clear"
+msgstr "پاک کردن"
+
+#: bin/widget/view/form_gtk/binary.py:114
+#: bin/widget/view/form_gtk/binary.py:158
+msgid "Unable to read the file data"
+msgstr "عدم خواندن پرونده داده‌ای"
+
+#: bin/widget/view/form_gtk/binary.py:124
+#: bin/widget/view/form_gtk/binary.py:150
+#, python-format
+msgid "Error reading the file: %s"
+msgstr "خطا در هنگام خواندن پرونده: %s"
+
+#: bin/widget/view/form_gtk/binary.py:133
+msgid "All Files"
+msgstr "تمام پرونده‌ها"
+
+#: bin/widget/view/form_gtk/binary.py:143
+msgid "Select a file..."
+msgstr "گزینش یک پرونده..."
+
+#: bin/widget/view/form_gtk/binary.py:172
+#, python-format
+msgid "Error writing the file: %s"
+msgstr "خطای هنگام نوشتن پرونده: %s"
+
+#: bin/widget/view/form_gtk/calendar.py:102
+#: bin/widget/view/form_gtk/calendar.py:163
+msgid "Invalid date value! Year must be greater than 1899 !"
+msgstr "مقدار تاریخ نادرست! سال باید از ۱۸۹۹ بزرگتر باشد!"
+
+#: bin/widget/view/form_gtk/calendar.py:130
+#: bin/widget/view/form_gtk/calendar.py:263
+msgid "This widget is readonly !"
+msgstr "این ابزارک فقط خواندنی است!"
+
+#: bin/widget/view/form_gtk/calendar.py:230
+#: bin/widget/view/form_gtk/calendar.py:309
+msgid "Invalid datetime value! Year must be greater than 1899 !"
+msgstr "مقدار نادرست تاریخ-ساعت! سال باید از ۱۸۹۹ بزرگتر باشد!"
+
+#: bin/widget/view/form_gtk/calendar.py:272
+msgid "Hour:"
+msgstr "ساعت:"
+
+#: bin/widget/view/form_gtk/calendar.py:275
+msgid "Minute:"
+msgstr "دقیقه:"
+
+#: bin/widget/view/form_gtk/parser.py:61
+msgid "Wrong icon for the button !"
+msgstr "آیکن برای دکمه اشتباه است!"
+
+#: bin/widget/view/form_gtk/parser.py:541
+msgid "Enter some text to the related field before adding translations!"
+msgstr "پیش از افزودن برگردان‌ها متنی را در فیلد مرتبط وارد کنید!"
+
+#: bin/widget/view/form_gtk/parser.py:548
+msgid "You need to save resource before adding translations!"
+msgstr "شما نیاز دارید تا پیش از افزودن برگردان‌ها منبع را ذخیره کنید!"
+
+#: bin/widget/view/form_gtk/parser.py:797
+msgid "Translate view"
+msgstr "نمای برگردانی"
+
+#: bin/widget/view/form_gtk/image.py:71
+msgid "Set Image"
+msgstr "تنظیم تصویر"
+
+#: bin/widget/view/form_gtk/image.py:102
+msgid "All files"
+msgstr "تمام پرونده‌ها"
+
+#: bin/widget/view/form_gtk/image.py:106
+msgid "Images"
+msgstr "تصاویر"
+
+#: bin/widget/view/form_gtk/interface.py:47
+#: bin/widget/view/form_gtk/one2many_list.py:148
+msgid "Set to default value"
+msgstr "تنظیم به مقدار پیش‌فرض"
+
+#: bin/widget/view/form_gtk/interface.py:48
+msgid "Set as default"
+msgstr "تنظیم به پیش‌فرض"
+
+#: bin/widget/view/form_gtk/one2many_list.py:151
+msgid "Set Default"
+msgstr "تنظیم به پیش‌فرض"
+
+#: bin/widget/view/form_gtk/one2many_list.py:162
+msgid "Create a new entry"
+msgstr "پدیدن یک ورودی نو"
+
+#: bin/widget/view/form_gtk/one2many_list.py:172
+msgid "Edit this entry"
+msgstr "ویرایش این ورودی"
+
+#: bin/widget/view/form_gtk/one2many_list.py:182
+msgid "Remove this entry"
+msgstr "برداشتن این ورودی"
+
+#: bin/widget/view/form_gtk/one2many_list.py:194
+msgid "Previous"
+msgstr "پیش"
+
+#: bin/widget/view/form_gtk/one2many_list.py:207
+msgid "Next"
+msgstr "پس"
+
+#: bin/widget/view/form_gtk/one2many_list.py:219
+msgid "Switch"
+msgstr "جابجایی"
+
+#: bin/widget/view/form_gtk/one2many_list.py:269
+msgid "You have to select a resource !"
+msgstr "شما باید یک منبع را برگزینید!"
+
+#: bin/widget/view/calendar_gtk/parser_dummy.py:31
+msgid "Calendar View Error !"
+msgstr "خطای نمای گاهشمار"
+
+#: bin/widget/view/calendar_gtk/parser_dummy.py:32
+msgid "You must intall the library python-hippocanvas to use calendars."
+msgstr ""
+"شما باید کتابخانه python-hippocanvas را برای بکارگیری از این گاهشمار "
+"برپاسازی کنید."
+
+#: bin/widget/view/calendar_gtk/parser.py:245 bin/openerp.glade:8254
+msgid "Week"
+msgstr "هفته"
+
+#: bin/openerp.glade:6
+msgid "OpenERP - Login"
+msgstr "اپن ای‌آر‌پی - ورود"
+
+#: bin/openerp.glade:116 bin/openerp.glade:6444
+msgid "Database:"
+msgstr "دادگان:"
+
+#: bin/openerp.glade:131
+msgid "User:"
+msgstr "کاربر:"
+
+#: bin/openerp.glade:146 bin/openerp.glade:6430 bin/openerp.glade:6730
+msgid "Password:"
+msgstr "گذرواژه:"
+
+#: bin/openerp.glade:255
+msgid "_File"
+msgstr "_پرونده"
+
+#: bin/openerp.glade:262
+msgid "_Connect..."
+msgstr "_اتصال..."
+
+#: bin/openerp.glade:278
+msgid "_Disconnect"
+msgstr "_قطع اتصال"
+
+#: bin/openerp.glade:298
+msgid "Databases"
+msgstr "دادگان‌ها"
+
+#: bin/openerp.glade:305
+msgid "_New database"
+msgstr "_دادگان‌ نو"
+
+#: bin/openerp.glade:320
+msgid "_Restore database"
+msgstr "_بازگردانی دادگان"
+
+#: bin/openerp.glade:335
+msgid "_Backup database"
+msgstr "_پشتوانه گیری دادگان"
+
+#: bin/openerp.glade:350
+msgid "Dro_p database"
+msgstr "_انداختن دادگان"
+
+#: bin/openerp.glade:370
+msgid "_Download Migrations Code"
+msgstr "_داونلود کدهای کوچ"
+
+#: bin/openerp.glade:385
+msgid "_Migrate Database(s)"
+msgstr "_کوچ دادگان‌(ها)"
+
+#: bin/openerp.glade:405
+msgid "Administrator Password"
+msgstr "گذرواژه راهبر"
+
+#: bin/openerp.glade:450
+msgid "_User"
+msgstr "_کاربر"
+
+#: bin/openerp.glade:458
+msgid "_Preferences"
+msgstr "_ترجیحات"
+
+#: bin/openerp.glade:478
+msgid "_Send a request"
+msgstr "_ارسال یک درخواست"
+
+#: bin/openerp.glade:493
+msgid "_Read my requests"
+msgstr "_خواندن درخواست‌های من"
+
+#: bin/openerp.glade:513
+msgid "_Waiting Requests"
+msgstr "_درخواست‌های در حال انتظار"
+
+#: bin/openerp.glade:526
+msgid "For_m"
+msgstr "_فرم"
+
+#: bin/openerp.glade:534
+msgid "_New"
+msgstr "_نو"
+
+#: bin/openerp.glade:550
+msgid "_Save"
+msgstr "_ذخیره"
+
+#: bin/openerp.glade:566
+msgid "Copy this resource"
+msgstr "بازکردن این منبع"
+
+#: bin/openerp.glade:567
+msgid "_Duplicate"
+msgstr "تک_ثیر"
+
+#: bin/openerp.glade:583
+msgid "_Delete"
+msgstr "_ستردن"
+
+#: bin/openerp.glade:604
+msgid "Find"
+msgstr "پیدا کردن"
+
+#: bin/openerp.glade:620
+msgid "Ne_xt"
+msgstr "ب_عدی"
+
+#: bin/openerp.glade:636
+msgid "Pre_vious"
+msgstr "قب_لی"
+
+#: bin/openerp.glade:652
+msgid "Switch to list/form"
+msgstr "جابجایی به فهرست/فرم"
+
+#: bin/openerp.glade:668
+msgid "_Menu"
+msgstr "_منو"
+
+#: bin/openerp.glade:689
+msgid "_New Home Tab"
+msgstr "_زبانه خانه نو"
+
+#: bin/openerp.glade:705 bin/openerp.glade:5018
+msgid "Close Tab"
+msgstr "بستن زبانه"
+
+#: bin/openerp.glade:721
+msgid "Previous Tab"
+msgstr "زبانه پیشین"
+
+#: bin/openerp.glade:730 bin/openerp.glade:5074
+msgid "Next Tab"
+msgstr "زبانه پسین"
+
+#: bin/openerp.glade:744
+msgid "View _logs"
+msgstr "دیدن _لاگ‌ها"
+
+#: bin/openerp.glade:752
+msgid "_Go to resource ID..."
+msgstr "_رفتن به شناسه منبع..."
+
+#: bin/openerp.glade:766
+msgid "_Open"
+msgstr "_باز کردن"
+
+#: bin/openerp.glade:781
+msgid "Reloa_d / Undo"
+msgstr "_بازخوانی/آندو"
+
+#: bin/openerp.glade:802
+msgid "Repeat latest _action"
+msgstr "_تکرار واپسین کُنش"
+
+#: bin/openerp.glade:816
+msgid "_Preview in PDF"
+msgstr "_پیش‌نمایش"
+
+#: bin/openerp.glade:832
+msgid "Previe_w in editor"
+msgstr "_پیش‌نمایش در ویرایشگر"
+
+#: bin/openerp.glade:852
+msgid "Expor_t data..."
+msgstr "_برونش داده..."
+
+#: bin/openerp.glade:867
+msgid "I_mport data..."
+msgstr "_ورود داده..."
+
+#: bin/openerp.glade:879
+msgid "_Options"
+msgstr "_گزینه‌ها"
+
+#: bin/openerp.glade:886
+msgid "_Extension Manager"
+msgstr "_مدیر افزونه"
+
+#: bin/openerp.glade:894
+msgid "_Menubar"
+msgstr "_نوار منو"
+
+#: bin/openerp.glade:902
+msgid "Text _and Icons"
+msgstr "_متن و شمایل‌"
+
+#: bin/openerp.glade:910
+msgid "_Icons only"
+msgstr "_فقط شمایل‌ها"
+
+#: bin/openerp.glade:919
+msgid "_Text only"
+msgstr "_فقط متن"
+
+#: bin/openerp.glade:932
+msgid "_Forms"
+msgstr "_فرم‌ها"
+
+#: bin/openerp.glade:940
+msgid "Right Toolbar"
+msgstr "نوار ابزار سمت راست"
+
+#: bin/openerp.glade:948
+msgid "Tabs default position"
+msgstr "موقعیت پیش‌فرض زبانه‌ها"
+
+#: bin/openerp.glade:956
+msgid "Top"
+msgstr "بالا"
+
+#: bin/openerp.glade:964
+msgid "Left"
+msgstr "چپ"
+
+#: bin/openerp.glade:973
+msgid "Right"
+msgstr "راست"
+
+#: bin/openerp.glade:982
+msgid "Bottom"
+msgstr "پایین"
+
+#: bin/openerp.glade:995
+msgid "Tabs default orientation"
+msgstr "جهت پیش‌فرض زبانه‌ها"
+
+#: bin/openerp.glade:1003
+msgid "Horizontal"
+msgstr "افقی"
+
+#: bin/openerp.glade:1011
+msgid "Vertical"
+msgstr "عمودی"
+
+#: bin/openerp.glade:1028
+msgid "_Print"
+msgstr "_چاپ"
+
+#: bin/openerp.glade:1035
+msgid "Previe_w before print"
+msgstr "_پیش‌نمایش پیش از چاپ"
+
+#: bin/openerp.glade:1059
+msgid "_Save options"
+msgstr "_ذخیره گزینه‌ها"
+
+#: bin/openerp.glade:1079
+msgid "_Plugins"
+msgstr "_پلاگین‌ها"
+
+#: bin/openerp.glade:1087
+msgid "_Execute a plugin"
+msgstr "_یک پلاگین را اجرا کنید"
+
+#: bin/openerp.glade:1107
+msgid "_Shortcuts"
+msgstr "_میان‌برها"
+
+#: bin/openerp.glade:1115
+msgid "_Help"
+msgstr "_راهنما"
+
+#: bin/openerp.glade:1122 bin/openerp.glade:4389
+msgid "Support Request"
+msgstr "درخواست پشتیبانی"
+
+#: bin/openerp.glade:1142
+msgid "User _Manual"
+msgstr "_کتابچه راهنمای کاربر"
+
+#: bin/openerp.glade:1157
+msgid "_Contextual Help"
+msgstr "_راهنمای زمینه‌ای"
+
+#: bin/openerp.glade:1173
+msgid "_Tips"
+msgstr "_نکته‌ها"
+
+#: bin/openerp.glade:1188
+msgid "Keyboard Shortcuts"
+msgstr "میان‌برهای صفحه‌کلید"
+
+#: bin/openerp.glade:1201
+msgid "_License"
+msgstr "_مجوز"
+
+#: bin/openerp.glade:1216
+msgid "_About..."
+msgstr "_درباره..."
+
+#: bin/openerp.glade:1258
+msgid "Edit / Save this resource"
+msgstr "ویرایش/ذخیره این منبع"
+
+#: bin/openerp.glade:1274
+msgid "Delete this resource"
+msgstr "ستردن این منبع"
+
+#: bin/openerp.glade:1287
+msgid "Go to previous matched search"
+msgstr "رفتن به جستجوی جور پیشین"
+
+#: bin/openerp.glade:1298
+msgid "Go to next matched resource"
+msgstr "رفتن به منبع جور پسین"
+
+#: bin/openerp.glade:1311
+msgid "List"
+msgstr "فهرست"
+
+#: bin/openerp.glade:1323
+msgid "Form"
+msgstr "فرم"
+
+#: bin/openerp.glade:1336
+msgid "Calendar"
+msgstr "گاهشمار"
+
+#: bin/openerp.glade:1346
+msgid "Graph"
+msgstr "نمودار"
+
+#: bin/openerp.glade:1359
+msgid "Gantt"
+msgstr "گانت"
+
+#: bin/openerp.glade:1377
+msgid "Print documents"
+msgstr "چاپ اسناد"
+
+#: bin/openerp.glade:1388
+msgid "Launch actions about this resource"
+msgstr "فعالیت‌های مربوط به این منبع را اجرا کن"
+
+#: bin/openerp.glade:1401
+msgid "Add an attachment to this resource"
+msgstr "افزودن یک پیوست به این منبع"
+
+#: bin/openerp.glade:1402
+msgid "Attachment"
+msgstr "پیوست"
+
+#: bin/openerp.glade:1417 bin/openerp.glade:1418
+msgid "Menu"
+msgstr "منو"
+
+#: bin/openerp.glade:1435 bin/openerp.glade:1436
+msgid "Reload"
+msgstr "بازخوانی"
+
+#: bin/openerp.glade:1453
+msgid "Close this window"
+msgstr "بستن این پنجره"
+
+#: bin/openerp.glade:1497
+msgid "Requests:"
+msgstr "درخواست‌ها:"
+
+#: bin/openerp.glade:1520
+msgid "Read my Requests"
+msgstr "خواندن درخواست‌های من"
+
+#: bin/openerp.glade:1541
+msgid "Send a new request"
+msgstr "ارسال یک درخواست نو"
+
+#: bin/openerp.glade:1581
+msgid "OpenERP - Tree Resources"
+msgstr "اپن ای‌آر‌پی - منابع درختی"
+
+#: bin/openerp.glade:1634
+msgid "Shortcuts"
+msgstr "میان‌برها"
+
+#: bin/openerp.glade:1743
+msgid "OpenERP - Forms"
+msgstr "اپن ای‌آر‌پی - فرم‌ها"
+
+#: bin/openerp.glade:1767
+msgid "State:"
+msgstr "وضعیت:"
+
+#: bin/openerp.glade:1799
+msgid "OpenERP - About"
+msgstr "اپن ای‌آر‌پی - درباره"
+
+#: bin/openerp.glade:1813
+msgid ""
+"<b>About OpenERP</b>\n"
+"<i>The most advanced Open Source ERP &amp; CRM !</i>"
+msgstr ""
+"<b>درباره اپن ای‌آر‌پی</b>\n"
+"<i>پیشرفته‌ترین ERP/CRM بازمتن!</i>"
+
+#: bin/openerp.glade:1852
+msgid ""
+"\n"
+"OpenERP - GTK Client - v%s\n"
+"\n"
+"OpenERP is an Open Source ERP+CRM\n"
+"for small to medium businesses.\n"
+"\n"
+"The whole source code is distributed under\n"
+"the terms of the GNU Public Licence.\n"
+"\n"
+"(c) 2003-TODAY, Tiny sprl\n"
+"\n"
+"More Info on www.openerp.com !"
+msgstr ""
+"\n"
+"اپن ای‌آر‌پی - کارخواه GTK - نگارش %s\n"
+"اپن ای‌آر‌پی یک ERP+CRM بازمتن برای تجارت‌های کوچک\n"
+"و متوسط است.\n"
+"\n"
+"تمامی کدهای مبدا تحت شرایط مجوز GPL منتشر شده اند.\n"
+"\n"
+"حق تکثیر از سال ۲۰۰۳ تا به امروز برای Tiny sprl محفوظ است.\n"
+"\n"
+"آگهگان بیشتر در http://www.openerp.com !"
+
+#: bin/openerp.glade:1880
+msgid "_OpenERP"
+msgstr "اُ_پن ای‌آر‌پی"
+
+#: bin/openerp.glade:1908
+msgid ""
+"\n"
+"(c) 2003-TODAY - Tiny sprl\n"
+"OpenERP is a product of Tiny sprl:\n"
+"\n"
+"Tiny sprl\n"
+"40 Chaussée de Namur\n"
+"1367 Gérompont\n"
+"Belgium\n"
+"\n"
+"Tel : (+32)81.81.37.00\n"
+"Mail: sales@tiny.be\n"
+"Web: http://tiny.be"
+msgstr ""
+"\n"
+"حق تکثیر از سال ۲۰۰۳ تا به امروز برای Tiny sprl محفوظ است\n"
+"اپن ای‌آر‌پی فرآورده Tiny sprl است:\n"
+"\n"
+"Tiny sprl\n"
+"40 Chaussée de Namur\n"
+"1367 Gérompont\n"
+"Belgium\n"
+"\n"
+"Tel : (+32)81.81.37.00\n"
+"Mail: sales@tiny.be\n"
+"Web: http://tiny.be"
+
+#: bin/openerp.glade:1939
+msgid "_Contact"
+msgstr "_تماس"
+
+#: bin/openerp.glade:1991
+msgid "Open ERP - Forms widget"
+msgstr "اپن ای‌آر‌پی - ابزارک فرم‌ها"
+
+#: bin/openerp.glade:2170 bin/openerp.glade:4735
+msgid "OpenERP - Confirmation"
+msgstr "اپن ای‌آر‌پی - تایید"
+
+#: bin/openerp.glade:2249
+msgid "OpenERP - Selection"
+msgstr "اپن ای‌آر‌پی - گزینش"
+
+#: bin/openerp.glade:2263
+msgid "Your selection:"
+msgstr "گزینش‌ شما:"
+
+#: bin/openerp.glade:2343
+msgid "OpenERP - Dialog"
+msgstr "اپن ای‌آر‌پی - محاوره"
+
+#: bin/openerp.glade:2367
+msgid "OpenERP, Field Preference target"
+msgstr "اپن ای‌آر‌پی، هدف ترجیحات فیلد"
+
+#: bin/openerp.glade:2398
+msgid "_only for you"
+msgstr "_تنها برای شما"
+
+#: bin/openerp.glade:2412
+msgid "for _all users"
+msgstr "_برای همه کاربران"
+
+#: bin/openerp.glade:2432
+msgid "<b>Value applicable for:</b>"
+msgstr "<b>مقدار قابل قبول برای:</b>"
+
+#: bin/openerp.glade:2468
+msgid "<b>Value applicable if:</b>"
+msgstr "<b>مقدار قابل قبول است اگر:</b>"
+
+#: bin/openerp.glade:2486
+msgid "Field _Name:"
+msgstr "_نام فیلد:"
+
+#: bin/openerp.glade:2500
+msgid "_Domain:"
+msgstr "_دامنه:"
+
+#: bin/openerp.glade:2559
+msgid "Default _value:"
+msgstr "_مقدار پیش‌فرض:"
+
+#: bin/openerp.glade:2614
+msgid "OpenERP - Export to CSV"
+msgstr "اپن ای‌آر‌پی - برونش به CSV"
+
+#: bin/openerp.glade:2662
+msgid "Save List"
+msgstr "ذخیره فهرست"
+
+#: bin/openerp.glade:2710
+msgid "Remove List"
+msgstr "برداشتن فهرست"
+
+#: bin/openerp.glade:2765
+msgid "<b>Exports List</b>"
+msgstr "<b>فهرست برونش‌ها</b>"
+
+#: bin/openerp.glade:2782
+msgid "<b>Predefined Exports</b>"
+msgstr "<b>برونش‌های از پیش تعریف شده</b>"
+
+#: bin/openerp.glade:2807
+msgid "Import Compatible"
+msgstr "سازگار با درونش"
+
+#: bin/openerp.glade:2824
+msgid "<b>Select an Option to Export</b>"
+msgstr "<b>یک گزینه را برای برونش برگزینید</b>"
+
+#: bin/openerp.glade:2871
+msgid "Available Fields"
+msgstr "فیلدهای موجود"
+
+#: bin/openerp.glade:2914 bin/openerp.glade:5641
+msgid "_Add"
+msgstr "_افزودن"
+
+#: bin/openerp.glade:2961 bin/openerp.glade:5688
+msgid "_Remove"
+msgstr "_برداشتن"
+
+#: bin/openerp.glade:3009
+msgid "_Nothing"
+msgstr "_هیچ چیز"
+
+#: bin/openerp.glade:3064
+msgid "Fields to Export"
+msgstr "فیلدها برای برونش"
+
+#: bin/openerp.glade:3094
+msgid ""
+"Open in Excel\n"
+"Save as CSV"
+msgstr ""
+"بازکردن در Excel \n"
+"ذخیره مانند CSV"
+
+#: bin/openerp.glade:3113
+msgid "Add _field names"
+msgstr "_افزودن نام فیلدها"
+
+#: bin/openerp.glade:3130
+msgid "<b>Opti_ons</b>"
+msgstr "<b>گزینه‌ها_</b>"
+
+#: bin/openerp.glade:3189
+msgid "OpenERP - Search"
+msgstr "اپن ای‌آر‌پی - جستجو"
+
+#: bin/openerp.glade:3301
+msgid "OpenERP - Preferences"
+msgstr "اپن ای‌آر‌پی - ترجیحات"
+
+#: bin/openerp.glade:3315
+msgid "<b>User preferences</b>"
+msgstr "<b>ترجیحات کاربر</b>"
+
+#: bin/openerp.glade:3381
+msgid "Tip of the Day"
+msgstr "نکته روز"
+
+#: bin/openerp.glade:3428
+msgid "_Display a new tip next time?"
+msgstr "_نمایش یک نکته نو در بار پسین؟"
+
+#: bin/openerp.glade:3481
+msgid "Pre_vious Tip"
+msgstr "_نکته قبلی"
+
+#: bin/openerp.glade:3527
+msgid "Ne_xt Tip"
+msgstr "_نکته بعدی"
+
+#: bin/openerp.glade:3573
+msgid "OpenERP - License"
+msgstr "اپن ای‌آر‌پی - مجوز"
+
+#: bin/openerp.glade:3588
+msgid "OpenERP license"
+msgstr "مجوز اپن ای‌آر‌پی"
+
+#: bin/openerp.glade:4286
+msgid "Go to resource ID"
+msgstr "رفتن به شناسه منبع"
+
+#: bin/openerp.glade:4336
+msgid "Search ID:"
+msgstr "جستجوی شناسه:"
+
+#: bin/openerp.glade:4415
+msgid ""
+"<b>Complete this form to submit your bug and/or send a support request.</b>\n"
+"<i>\n"
+"Your request will be sent to the OpenERP team and we will reply shortly.\n"
+"Note that we may not reply if you do not have a support contract with Tiny "
+"or an official partner.</i>"
+msgstr ""
+"<b>این فرم را برای ارسال باگ و/یا درخواست پشتیبانی تکمیل کنید.</b>\n"
+"<i>\n"
+"درخواست شما برای تیم اپن ای‌آر‌پی ارسال خواهد شد و بزودی پاسخ آن را دریافت "
+"خواهید کرد.\n"
+"توجه داشته باشید که ما ممکن است به درخواست شما در صورتی که قرارداد پشتیبانی\n"
+" با Tiny یا یک همکار رسمی آن نداشته باشید، پاسخی ندهیم.\n"
+"</i>"
+
+#: bin/openerp.glade:4474
+msgid "Phone number:"
+msgstr "شماره تلفن:"
+
+#: bin/openerp.glade:4487
+msgid "Emergency:"
+msgstr "فوری:"
+
+#: bin/openerp.glade:4501
+msgid ""
+"Not Urgent\n"
+"Medium\n"
+"Urgent\n"
+"Very Urgent"
+msgstr ""
+"غیر فوری\n"
+"عادی\n"
+"فوری\n"
+"بسیار فوری"
+
+#: bin/openerp.glade:4534
+msgid "<b>Support contract id:</b>"
+msgstr "<b>شناسه قرارداد پشتیبانی:</b>"
+
+#: bin/openerp.glade:4591
+msgid "Other comments:"
+msgstr "نظرهای دیگر:"
+
+#: bin/openerp.glade:4605
+msgid "Explain your problem:"
+msgstr "شرح مشکل شما:"
+
+#: bin/openerp.glade:4644
+msgid "<b>Your email:</b>"
+msgstr "<b>ایمیل شما:</b>"
+
+#: bin/openerp.glade:4658
+msgid "<b>Your Company:</b>"
+msgstr "<b>شرکت شما:</b>"
+
+#: bin/openerp.glade:4672
+msgid "<b>Your name:</b>"
+msgstr "<b>نام شما:</b>"
+
+#: bin/openerp.glade:4763 bin/openerp.glade:6149
+msgid "Hello World!"
+msgstr "سلام بر همه!"
+
+#: bin/openerp.glade:4825
+msgid "Keyboard shortcuts"
+msgstr "میان‌برهای صفحه کلید"
+
+#: bin/openerp.glade:4847
+msgid "<b>Shortcuts for OpenERP</b>"
+msgstr "<b>میان‌برهای اپن ای‌آر‌پی</b>"
+
+#: bin/openerp.glade:4861
+msgid "Close window without saving"
+msgstr "بستن پنجره بدون ذخیره کردن"
+
+#: bin/openerp.glade:4876
+msgid "<Ctrl> + <Esc>"
+msgstr "<Ctrl> + <Esc>"
+
+#: bin/openerp.glade:4890
+msgid "<i>When editing a resource in a popup window</i>"
+msgstr "<i>هنگامی که یک منبع را در یک پنجره کرکره‌ای ویرایش می‌کنید</i>"
+
+#: bin/openerp.glade:4906
+msgid "Save and Close window"
+msgstr "ذخیره و بستن پنجره"
+
+#: bin/openerp.glade:4921
+msgid "<Ctrl> + <Enter>"
+msgstr "<Ctrl> + <Enter>"
+
+#: bin/openerp.glade:4934
+msgid "Switch view mode"
+msgstr "جابجایی حالت نما"
+
+#: bin/openerp.glade:4949
+msgid "<Ctrl> + L"
+msgstr "<Ctrl> + L"
+
+#: bin/openerp.glade:4962
+msgid "Next record"
+msgstr "رکورد پسین"
+
+#: bin/openerp.glade:4977
+msgid "Previous record"
+msgstr "رکورد پیشین"
+
+#: bin/openerp.glade:4992
+msgid "<PgDn>"
+msgstr "<PgDn>"
+
+#: bin/openerp.glade:5005
+msgid "<PgUp>"
+msgstr "<PgUp>"
+
+#: bin/openerp.glade:5033
+msgid "Save"
+msgstr "ذخیره"
+
+#: bin/openerp.glade:5048
+msgid "<Ctrl> + W"
+msgstr "<Ctrl> + W"
+
+#: bin/openerp.glade:5061
+msgid "<Ctrl> + S"
+msgstr "<Ctrl> + S"
+
+#: bin/openerp.glade:5089
+msgid "<Ctrl> + <PgDn>"
+msgstr "<Ctrl> + <PgDn>"
+
+#: bin/openerp.glade:5102
+msgid "Previous tab"
+msgstr "زبانه پیشین"
+
+#: bin/openerp.glade:5117
+msgid "<Ctrl> + <PgUp>"
+msgstr "<Ctrl> + <PgUp>"
+
+#: bin/openerp.glade:5130
+msgid "New"
+msgstr "نو"
+
+#: bin/openerp.glade:5145
+msgid "<Ctrl> + N"
+msgstr "<Ctrl> + N"
+
+#: bin/openerp.glade:5158
+msgid "Delete"
+msgstr "ستردن"
+
+#: bin/openerp.glade:5173
+msgid "<Ctrl> + D"
+msgstr "<Ctrl> + D"
+
+#: bin/openerp.glade:5186
+msgid "Find / Search"
+msgstr "پیدا کردن / جستجو"
+
+#: bin/openerp.glade:5201
+msgid "<Ctrl> + F"
+msgstr "<Ctrl> + F"
+
+#: bin/openerp.glade:5214
+msgid "Connect"
+msgstr "اتصال"
+
+#: bin/openerp.glade:5229
+msgid "<Ctrl> + O"
+msgstr "<Ctrl> + O"
+
+#: bin/openerp.glade:5243
+msgid "Main Shortcuts"
+msgstr "میان‌برهای اصلی"
+
+#: bin/openerp.glade:5260
+msgid "F2"
+msgstr "F2"
+
+#: bin/openerp.glade:5273
+msgid "<b>Shortcuts in relation fields</b>"
+msgstr "<b>میان‌برها در فیلدهای رابطه</b>"
+
+#: bin/openerp.glade:5288
+msgid "<b>Shortcuts in text entries</b>"
+msgstr "<b>میان‌برها در ورودی‌های متنی</b>"
+
+#: bin/openerp.glade:5301
+msgid "Open current field"
+msgstr "بازکردن فیلد کنونی"
+
+#: bin/openerp.glade:5316
+msgid "Add a new line/field"
+msgstr "افزودن یک خط/فیلد نو"
+
+#: bin/openerp.glade:5331
+msgid "F1"
+msgstr "F1"
+
+#: bin/openerp.glade:5344
+msgid "Auto-Complete text field"
+msgstr "تدرست خودکار فیلد متنی"
+
+#: bin/openerp.glade:5359
+msgid "<Enter>"
+msgstr "<Enter>"
+
+#: bin/openerp.glade:5372
+msgid "Previous editable widget"
+msgstr "ابزارک ویرایش‌شدنی پیشین"
+
+#: bin/openerp.glade:5387
+msgid "<Shift> + <Tab>"
+msgstr "<Shift> + <Tab>"
+
+#: bin/openerp.glade:5400
+msgid "Next editable widget"
+msgstr "ابزارک ویرایش‌شدنی پسین"
+
+#: bin/openerp.glade:5415
+msgid "<Tab>"
+msgstr "<Tab>"
+
+#: bin/openerp.glade:5428
+msgid "Paste selected text"
+msgstr "چسباندن متن گزینش شده"
+
+#: bin/openerp.glade:5443
+msgid "Copy selected text"
+msgstr "کپی از متن گزینش شده"
+
+#: bin/openerp.glade:5458
+msgid "Cut selected text"
+msgstr "بریدن متن گزینش شده"
+
+#: bin/openerp.glade:5473
+msgid "<Ctrl> + V"
+msgstr "<Ctrl> + V"
+
+#: bin/openerp.glade:5486
+msgid "<Ctrl> + C"
+msgstr "<Ctrl> + C"
+
+#: bin/openerp.glade:5499
+msgid "<Ctrl> + X"
+msgstr "<Ctrl> + X"
+
+#: bin/openerp.glade:5516
+msgid "Edition Widgets"
+msgstr "ابزارک‌های ویرایش"
+
+#: bin/openerp.glade:5554
+msgid "Import from CSV"
+msgstr "درونش از CSV"
+
+#: bin/openerp.glade:5599
+msgid "<b>All fields</b>"
+msgstr "<b>تمامی فیلدها</b>"
+
+#: bin/openerp.glade:5736
+msgid "N_othing"
+msgstr "_هیچ چیز"
+
+#: bin/openerp.glade:5795
+msgid "Auto-Detect"
+msgstr "شناسایی خودکار"
+
+#: bin/openerp.glade:5850
+msgid "<b>Fields to import</b>"
+msgstr "<b>فیلدها برای درونش</b>"
+
+#: bin/openerp.glade:5885
+msgid "File to Import:"
+msgstr "پرونده برای درونش:"
+
+#: bin/openerp.glade:5959
+msgid "Lines to Skip:"
+msgstr "خطوطی که از قلم می‌افتند:"
+
+#: bin/openerp.glade:5988
+msgid "Text Delimiter:"
+msgstr "جداساز متن:"
+
+#: bin/openerp.glade:6016
+msgid "Encoding:"
+msgstr "کدگذاری:"
+
+#: bin/openerp.glade:6029
+msgid "Field Separater:"
+msgstr "جداساز فیلد:"
+
+#: bin/openerp.glade:6041
+msgid "CSV Parameters"
+msgstr "پارامترهای CSV"
+
+#: bin/openerp.glade:6120
+msgid "OpenERP"
+msgstr "اپن ای‌آر‌پی"
+
+#: bin/openerp.glade:6216
+msgid "Server"
+msgstr "کارپذیر"
+
+#: bin/openerp.glade:6226
+msgid "<b>Connect to a OpenERP server</b>"
+msgstr "<b>اتصال به یک کارپذیر اپن ای‌آر‌پی</b>"
+
+#: bin/openerp.glade:6285
+msgid "Protocol connection:"
+msgstr "پروتکل اتصال:"
+
+#: bin/openerp.glade:6331
+msgid "Port:"
+msgstr "درگاه:"
+
+#: bin/openerp.glade:6383
+msgid "Choose a database..."
+msgstr "برگزیدن دادگان..."
+
+#: bin/openerp.glade:6398
+msgid "<b>Backup a database</b>"
+msgstr "<b>پشتوانه‌گیری از یک دادگان</b>"
+
+#: bin/openerp.glade:6629
+msgid "Restore a database"
+msgstr "بازگردانی یک دادگان"
+
+#: bin/openerp.glade:6642
+msgid "<b>Restore a database</b>"
+msgstr "<b>بازگردانی یک دادگان</b>"
+
+#: bin/openerp.glade:6686
+msgid "(must not contain any special char)"
+msgstr "(نباید دارای هیچ نویسه ویژه‌ای باشد)"
+
+#: bin/openerp.glade:6715
+msgid "New database name:"
+msgstr "نام دادگان نو:"
+
+#: bin/openerp.glade:6815 bin/openerp.glade:6961 bin/openerp.glade:7460
+msgid "http://localhost:8069"
+msgstr "http://localhost:8069"
+
+#: bin/openerp.glade:6889
+msgid "Create a new database"
+msgstr "پدیدن یک دادگان نو"
+
+#: bin/openerp.glade:6902
+msgid "<b>Create a new database</b>"
+msgstr "<b>پدیدن یک دادگان نو</b>"
+
+#: bin/openerp.glade:6973
+msgid ""
+"This is the URL of the OpenERP server. Use 'localhost' if the server is "
+"installed on this computer. Click on 'Change' to change the address."
+msgstr ""
+"این URL  کارپذیر اپن ای‌آر‌پی است. از 'localhost' در صورتی بکار گیرید "
+"کارپذیر به روی رایانه شما برپاسازی شده باشد. روی 'تغییر' برای تغییر نشانی "
+"کلیک کنید."
+
+#: bin/openerp.glade:6977
+msgid "OpenERP Server:"
+msgstr "کارپذیر اپن ای‌آر‌پی:"
+
+#: bin/openerp.glade:7007
+msgid ""
+"This is the password of the user that have the rights to administer "
+"databases. This is not a OpenERP user, just a super administrator. If you "
+"did not changed it, the password is 'admin' after installation."
+msgstr ""
+"این گذرواژه کاربری است که دسترسی‌های مدیریت دادگان را دارد. این یک کاربر "
+"معمولی اپن ای‌آر‌پی نیست بلکه یک کاربر همه‌کاره است. اگر آن را تغییر ندهید، "
+"گذرواژه 'admin' پس از برپاسازی معتبر خواهد بود."
+
+#: bin/openerp.glade:7043
+msgid "(<i>admin</i>, by default)"
+msgstr "(<i>admin</i>، بصورت پیش‌فرض)"
+
+#: bin/openerp.glade:7108
+msgid ""
+"Choose the name of the database that will be created. The name must not "
+"contain any special character. Exemple: 'terp'."
+msgstr ""
+"نام دادگانی که پدید خواهد آمد را برگزینید. نام نباید دارای نویسه‌های ویژه "
+"باشد. نمونه : 'terp'."
+
+#: bin/openerp.glade:7110
+msgid "New Database Name:"
+msgstr "نام دادگان نو:"
+
+#: bin/openerp.glade:7134
+msgid ""
+"Choose the default language that will be installed for this database. You "
+"will be able to install new languages after installation through the "
+"administration menu."
+msgstr ""
+"زبان پیش‌فرضی که برای این دادگان برپاسازی خواهد شد را برگزینید. شما پس از "
+"برپاسازی از طریق منوی راهبری قادر خواهید بود تا زبان نویی را برپاسازی نمایید."
+
+#: bin/openerp.glade:7136
+msgid "Default Language:"
+msgstr "زبان پیش‌فرض:"
+
+#: bin/openerp.glade:7149
+msgid ""
+"This is the password of the '<i>admin</i>' user that will be created in your "
+"new database."
+msgstr "این گذرواژه کاربر '<i>admin</i>' است که در دادگان نو پدید خواهد آمد."
+
+#: bin/openerp.glade:7151
+msgid "Administrator Password:"
+msgstr "گذرواٰژه راهبر:"
+
+#: bin/openerp.glade:7163
+msgid ""
+"This is the password of the '<i>admin</i>' user that will be created in your "
+"new database. It has to be the same than the above field."
+msgstr ""
+"این گذرواژه کاربر '<i>admin</i>' است که در دادگان نو شما برپاسازی خواهد شد. "
+"این باید برابر با فیلد بالایی خود باشد."
+
+#: bin/openerp.glade:7165
+msgid "Confirm Password:"
+msgstr "تایید گذرواژه:"
+
+#: bin/openerp.glade:7256
+msgid ""
+"Check this box if you want demonstration data to be installed on your new "
+"database. These data will help you to understand OpenERP, with predefined "
+"products, partners, etc."
+msgstr ""
+"این جعبه را در صورتی که می‌خواهید داده‌های نمایشی روی دادگان نو شما برپاسازی "
+"گردند، تیک بزنید. این داده‌ها بوسیله فرآورده‌ها یا همکاران تجاری از پیش "
+"تعریف شده به شما کمک می‌کنند تا اپن ای‌آر‌پی را بهتر بفهمید."
+
+#: bin/openerp.glade:7259
+msgid "Load Demonstration Data:"
+msgstr "بارگذاری داده نمایشی:"
+
+#: bin/openerp.glade:7316
+msgid "Change password"
+msgstr "تغییر گذرواژه"
+
+#: bin/openerp.glade:7333
+msgid "<b>Change your super admin password</b>"
+msgstr "<b>گذرواژه راهبر خود را تغییر دهید</b>"
+
+#: bin/openerp.glade:7486
+msgid "Old password:"
+msgstr "گذرواژه قدیمی:"
+
+#: bin/openerp.glade:7499
+msgid "New password:"
+msgstr "گذرواژه نو:"
+
+#: bin/openerp.glade:7512
+msgid "New password confirmation:"
+msgstr "تایید گذرواژه نو:"
+
+#: bin/openerp.glade:7571
+msgid "OpenERP Message"
+msgstr "پیغام اپن ای‌آر‌پی"
+
+#: bin/openerp.glade:7650
+msgid "Database creation"
+msgstr "پدیدن دادگان"
+
+#: bin/openerp.glade:7683
+msgid "<b>Database created successfully!</b>"
+msgstr "<b>دادگان با موفقیت پدید آمد!</b>"
+
+#: bin/openerp.glade:7715
+msgid ""
+"You can connect to the new database using one of the following account:\n"
+"\n"
+"    Administrator: admin / admin "
+msgstr ""
+"شما می‌توانید بوسیله حساب‌های کاربری زیر به دادگان نو متصل شوید:\n"
+"\n"
+"راهبر: admin / admin "
+
+#: bin/openerp.glade:7768
+msgid "Connect Later"
+msgstr "پسا وصل شو"
+
+#: bin/openerp.glade:7812
+msgid "Connect now"
+msgstr "الان وصل شو"
+
+#: bin/openerp.glade:7843
+msgid "Extension Manager"
+msgstr "مدیر افزونه"
+
+#: bin/openerp.glade:7947
+msgid "Concurrency exception"
+msgstr "همزمانی استثنا"
+
+#: bin/openerp.glade:7972
+msgid ""
+"<b>\n"
+"Write concurrency warning:\n"
+"</b>\n"
+"This document has been modified while you were editing it.\n"
+"  Choose:\n"
+"   - \"Cancel\" to cancel saving.\n"
+"   - \"Compare\" to see the modified version.\n"
+"   - \"Write anyway\" to save your current version.\n"
+msgstr ""
+"<b>\n"
+"نوشتن هشدار همزمانی:\n"
+"</b>\n"
+"این سند در حالی که شما داشتید آن را ویرایش می‌کردید تغییر یافته است.\n"
+"یکی از نمونه‌ها زیر را برگزینید:\n"
+"- \"لغو\" برای لغو ذخیرکردن.\n"
+"- \"مقایسه\" برای دیدن نگارش تغییر یافته.\n"
+"- \"نوشتن به هر نحو\" برای ذخیره نگارش کنونی.\n"
+
+#: bin/openerp.glade:8035
+msgid "Compare"
+msgstr "مقایسه"
+
+#: bin/openerp.glade:8081
+msgid "Write anyway"
+msgstr "نوشتن در هر حالتی"
+
+#: bin/openerp.glade:8110
+msgid "window1"
+msgstr "window1"
+
+#: bin/openerp.glade:8182
+msgid "Today"
+msgstr "امروز"
+
+#: bin/openerp.glade:8228
+msgid "September 2008"
+msgstr "سپتامبر ۲۰۰۸"
+
+#: bin/openerp.glade:8242
+msgid "Day"
+msgstr "روز"
+
+#: bin/openerp.glade:8266
+msgid "Month"
+msgstr "ماه"
+
+#: bin/win_error.glade:40
+msgid "label"
+msgstr "برچسب"
+
+#: bin/win_error.glade:102
+msgid "Click here for details about the maintenance proposition"
+msgstr "اینجا را برای دیدن جزییات پیشنهاد نگهداری کلیک کنید"
+
+#: bin/win_error.glade:119
+msgid "<i>_Maintenance</i>"
+msgstr "<i>_نگهداری</i>"
+
+#: bin/win_error.glade:150
+msgid ""
+"<b>Maintenance Contract.</b>\n"
+"<i>\n"
+"Your request will be send to OpenERP and maintenance team will reply you "
+"shortly.\n"
+"</i>"
+msgstr ""
+"<b>قرارداد نگهداری.</b>\n"
+"<i>\n"
+"درخواست شما برای اپن ای‌آر‌پی و تیم نگهداری ارسال خواهد شد و بزودی پاسخ آن "
+"را دریافت خواهید کرد.\n"
+"</i>"
+
+#: bin/win_error.glade:184
+msgid "Explain what you did:"
+msgstr "توضیح دهید که چه کاری انجام داده‌اید:"
+
+#: bin/win_error.glade:196
+msgid "Others Comments:"
+msgstr "سایر نظرها:"
+
+#: bin/win_error.glade:278
+msgid "Send to Maintenance Team"
+msgstr "ارسال برای تیم نگهداری"
+
+#: bin/win_error.glade:326
+msgid "<i>_Support Request</i>"
+msgstr "<i>_درخواست پشتیبانی</i>"
+
+#: bin/win_error.glade:353
+msgid "Details"
+msgstr "جزییات"
+
+#: bin/win_error.glade:369
+msgid "<i>_Details</i>"
+msgstr "<i>_جزییات</i>"
+
+#: bin/win_error.glade:398
+msgid "gtk-close"
+msgstr "بستن"
+
+#: bin/dia_survey.glade:32
+msgid ""
+"Please fill in the following form in order to help us to improve <b><span "
+"foreground=\"red\"><i>Open</i></span> ERP</b> and better target new "
+"developments."
+msgstr ""
+"لطفا این فرم را برای کمک به ما در بهبود <b><span "
+"foreground=\"red\"><i>اپن</i></span> ای‌آر‌پی</b> و پیشبرد اهداف گسترش "
+"نرم‌افزاری آن پر کنید."
+
+#: bin/dia_survey.glade:56
+msgid "<b>Your company</b>"
+msgstr "<b>شرکت شما</b>"
+
+#: bin/dia_survey.glade:84
+msgid "Open Source:"
+msgstr "باز متن:"
+
+#: bin/dia_survey.glade:496
+msgid "Your Company:"
+msgstr "شرکت شما:"
+
+#: bin/dia_survey.glade:507
+msgid "Industry:"
+msgstr "صنعت:"
+
+#: bin/dia_survey.glade:520
+msgid "Your Role:"
+msgstr "نقش شما:"
+
+#: bin/dia_survey.glade:533
+msgid "Employees:"
+msgstr "کارکنان:"
+
+#: bin/dia_survey.glade:546
+msgid "Country:"
+msgstr "کشور:"
+
+#: bin/dia_survey.glade:559
+msgid "City:"
+msgstr "شهر:"
+
+#: bin/dia_survey.glade:586
+msgid "System:"
+msgstr "سیستم:"
+
+#: bin/dia_survey.glade:640
+msgid "<b>Your interrest</b>"
+msgstr "<b>علایق شما</b>"
+
+#: bin/dia_survey.glade:672
+msgid "How did you hear about us:"
+msgstr "از چه راهی با ما آشنا شدید:"
+
+#: bin/dia_survey.glade:709
+msgid "We plan to use Open ERP"
+msgstr "ما در نظر داریم تا اپن ای‌آر‌پی بکار بریم"
+
+#: bin/dia_survey.glade:723
+msgid "We plan to offer services on Open ERP"
+msgstr "ما در نظر داریم تا خدمات اپن ای‌آر‌پی را ارایه دهیم"
+
+#: bin/dia_survey.glade:759
+msgid "Tell us why you try Open ERP and what are your current softwares:"
+msgstr ""
+"به ما بگویید چرا شما اپن ای‌آر‌پی را می‌آزمایید و هم‌اکنون از چه "
+"نرم‌افزارهایی سود می‌برید:"
+
+#: bin/dia_survey.glade:790
+msgid "<b>Keep Informed</b>"
+msgstr "<b>درجریان ماندن</b>"
+
+#: bin/dia_survey.glade:818
+msgid "I want to receive the Open ERP ebook (PDF) by email"
+msgstr "من مایلم تا کتاب‌های الکترونیک (PDF) را از طریق ایمیل دریافت کنم"
+
+#: bin/dia_survey.glade:845
+msgid "Phone / Mobile:"
+msgstr "تلفن ثابت/همراه"
+
+#: bin/dia_survey.glade:858
+msgid "E-mail:"
+msgstr "ایمیل:"
+
+#: bin/dia_survey.glade:891
+msgid "Your Name:"
+msgstr "نام شما:"
+
+#: bin/dia_survey.glade:929
+msgid "gtk-cancel"
+msgstr "لغو"
+
+#: bin/dia_survey.glade:939
+msgid "gtk-ok"
+msgstr "تایید"

@@ -1,0 +1,322 @@
+2010-05-05: 5.0.10
+==================
+
+Bugfixes
+--------
+
+ * https://launchpad.net/bugs/539722
+   * O2M : close button should not remember changes of the record
+ * https://launchpad.net/bugs/571202
+   * Remove the pyc and bak files in the tarballs
+
+
+2010-04-02: 5.0.9
+=================
+
+2010-04-02: 5.0.8
+=================
+
+Bugfixes
+--------
+
+ * Not linked to a bug report:
+   * Reverted wrong change on the exception handling of timezone conversions, to avoid regression.
+   * Return an empty string if the value of the field is null
+   * win32: add mfc71.dll into py2exe setup, because it's needed to get system font
+   * can't save document with selection in tree_gtk view containing accentuated data
+   * accept superadmin password with length > 16 on database creation window
+   * report timeout: really use client.timeout option for max_attends
+   * survey dialog: add window title, react to window 'delete event' (X)
+   * Switch from gtk.Tooltips to gtk.Tooltip API (deprecated as gtk 2.12)
+ * https://launchpad.net/bugs/548932
+   * widget="float_time" rounds off wrong value!
+ * https://launchpad.net/bugs/527800
+ * https://launchpad.net/bugs/531979
+   * setup.py: Correct the setup.py with the last pytz packaging
+   * Use the right format if the timezone is specified
+ * https://launchpad.net/bugs/527795
+   * Import : Quotechar may be set to empty, it should not crash the system
+
+
+Improvements
+------------
+
+ * on win32, try to force font style to system font (look really better!)
+ * Export window opens up with required fields having background blue(similar to import window)
+
+
+2010-03-01: 5.0.7
+=================
+
+Bugfixes
+--------
+
+ * Not linked to a bug report:
+   * loggin: active the "ok" button even if the database list cannot be retrieved
+   * Make an escaping in the case where the string name of the field contains a '&' character
+   * A refrence field must be a tuple or a list in an editable tree view
+   * Switching from form to list should not lose focus
+   * opening of utf-8 url on windows
+   * error when connecting to a server that don't return the list of its databases
+   * fixes a segmentation fault when closing certain windows
+   * Context when contains default_field,can pass id instead of [ids]
+   * Context['__last_update'] was getting passed in listview with state field,Corrected
+   * Add the ids and the model in the context of the action
+   * Problem of search panel corrected when the whole form view is replaced
+   * remove print
+   * printing problems...
+   * Typo corrected
+   * xml view parser: first argument to eval function should always be a string
+   * Buttons behavior corrected in editable tree view
+   * do not crop confirmation messages
+   * Import : Context of the action/screen passed while importing
+   * security
+   * actions.server can return a list of actions to execute...
+ * https://launchpad.net/bugs/479168
+   * Records count was showing wrong value when traversing through last records set  of list view
+ * https://launchpad.net/bugs/373699
+   * Terms made translatable for DB Creation
+ * https://launchpad.net/bugs/417939
+   * Swtiching view :Attributes of fields were getting overwritten
+ * https://launchpad.net/bugs/493992
+   * Search view problem corrected when <form> is replaced
+ * https://launchpad.net/bugs/507422
+   * List View should accept string values 'True'/'False' for readonly/required attribute
+ * https://launchpad.net/bugs/421474
+   * Date Widgets got nonfunctional when something raised an exception
+ * https://launchpad.net/bugs/478996
+   * Button with special='cancel' and type='something' can work in parallel
+ * https://launchpad.net/bugs/435365
+   * Calendar view : New record for a click on any day
+ * https://launchpad.net/bugs/519196
+   * Date widget : focus and input ergonomy improved
+ * https://launchpad.net/bugs/430959
+   * Attrs was reacting late when switching O2M form view to next-previous
+ * https://launchpad.net/bugs/446415
+   * No. of records should be updated after copy/removal of records
+ * https://launchpad.net/bugs/467392
+   * Sum of listed records should behave acc. to field specification of Digits(digits=(16,3)))
+ * https://launchpad.net/bugs/389544
+   * Handle unrecognized server timezones in a more graceful manner
+ * https://launchpad.net/bugs/494496
+   * M2O(Selection widget) on search panel was not counting domain when selection was made by keypress
+ * https://launchpad.net/bugs/479302
+   * Editable List view malfunctioned when its nested O2M
+ * https://launchpad.net/bugs/510002
+   * Text field : setting the text selectable
+ * https://launchpad.net/bugs/479593
+   * Attrs now supports uid
+ * https://launchpad.net/bugs/471226
+   * Corrected translation of About Menu content.
+ * https://launchpad.net/bugs/523140
+   * Status bar should clear any warning after button clicks are validated
+ * https://launchpad.net/bugs/340491
+   * List/O2M View now supports attrs/states
+   * List view : Attrs corrections for Boolean and char field
+   * List View : Made attrs working
+ * https://launchpad.net/bugs/475570
+   * Attrs made working on nested notebooks
+ * https://launchpad.net/bugs/515509
+   * Calendar : Corrected datetime parsing
+ * https://launchpad.net/bugs/481350
+   * Calendar : Caption with hours and minutes
+ * https://launchpad.net/bugs/487836
+   * If field_name contains accented characters,we need to encode/decode.
+ * https://launchpad.net/bugs/490758
+   * Restore DB : Corrected the misguiding message to the user
+
+
+Improvements
+------------
+
+ * handle the case of the server can't give the database list
+ * Add the support of the context for the button tag (type: action & object)
+
+
+2009-09-22: 5.0.6
+=================
+
+Bugfixes
+--------
+
+ * https://bugs.launchpad.net/bugs/356853
+   * import_csv: encoding problem on import and also fixed problem of many2many,many2one import fields
+ * https://launchpad.net/bugs/434068
+   * Date,DateTime widgets handling of values(user may pass rong date/datetime formats)
+ * https://launchpad.net/bugs/434488
+   * Tree_report_options : unicode error corrected
+
+
+2009-09-17: 5.0.5
+=================
+
+Bugfixes
+--------
+
+ * Not linked to a bug report:
+   * Many2One : When value is set, Search button should display full list.
+ * https://launchpad.net/bugs/427447
+ * https://launchpad.net/bugs/415811
+   * Calendar problem for days stripline
+ * https://launchpad.net/bugs/424177
+   * Rounding value problem in float_time widget
+
+
+Improvements
+------------
+
+ * Survey form : Countries display Corrected
+
+
+2009-08-28: 5.0.4
+=================
+
+Bugfixes
+--------
+
+ * Not linked to a bug report:
+   * win_import: remove ID and Database ID from one2many field population and for many2one & many2many field , only add Database ID,ID
+
+ * https://launchpad.net/bugs/416861
+
+
+2009-08-21: 5.0.3
+=================
+
+Bugfixes
+--------
+
+ * https://launchpad.net/bugs/404211
+   * OpenERP Handling any files to be opened through browser
+ * https://launchpad.net/bugs/405332
+   * prevent open search window when exact matching text is available
+ * https://launchpad.net/bugs/393428
+   * KeyError When printing report whose names are translated
+ * https://launchpad.net/bugs/411438
+   * KeyError When printing report whose names are translated
+
+
+Improvements
+------------
+
+ * py2exe: optimize 1
+ * do not use arange
+
+
+2009-08-11: 5.0.2
+=================
+
+Bugfixes
+--------
+
+ * Not linked to a bug report:
+   * Import : fields auto-detect corrected
+   * setup.py: py2exe now adds 'zoneinfo' directory in library.zip
+   * fixed some errors in french translations
+   * translation pop up will be opened only for non-null data
+   * automatically added selection items: encode keys to avoid KeyError in common.selection
+   * common.selection: fixed a KeyError when selection item name contains accented characters
+   * Add the long built-in type for the res_id
+   * closed file pointer
+
+ * https://launchpad.net/bugs/403652
+ * https://launchpad.net/bugs/376449
+   * Dashboard views will accept context
+ * https://launchpad.net/bugs/389795
+   * Many2one : corrected set() method to display blank value
+ * https://launchpad.net/bugs/358063
+   * Print screen respecting context
+ * https://launchpad.net/bugs/403991
+   * Setting default value was not saving the record
+ * https://launchpad.net/bugs/389368
+   * removed inconsistency in notification message.
+ * https://launchpad.net/bugs/408550
+   * default_xxx in context was passed to relational fields,corrected.
+ * https://launchpad.net/bugs/385117
+   * fields.related with type=selection
+ * https://launchpad.net/bugs/400135
+ * https://launchpad.net/bugs/396457
+   * fixed a KeyError when selection item name contains accented characters
+ * https://launchpad.net/bugs/394876
+   * Import : context passed to server for language translation
+ * https://launchpad.net/bugs/393428
+   * fixed a KeyError when selection item name contains accented characters
+ * https://launchpad.net/bugs/380089
+   * Image widget : Attrs/onchanges won't affect image contents
+ * https://launchpad.net/bugs/396997
+   * Reference Field : field updated on moving records
+ * https://launchpad.net/bugs/382182
+   * Text_tag widget : corrected the problem of not accepting non-enlgish characters
+ * https://launchpad.net/bugs/386373
+   * GTK client will not freeze on sql_constraint fail with gtk.dialog
+ * https://launchpad.net/bugs/405332
+   * M2O improved for search button on non-null text issue
+ * https://launchpad.net/bugs/382183
+   * Text_tag widget corrected
+ * https://launchpad.net/bugs/392584
+   * Solved the problem of GTK freezing after constraint failure
+ * https://launchpad.net/bugs/390987
+   * Reset pagging on search
+ * https://launchpad.net/bugs/391101
+   * There was a problem with the refresh and the many2many fields in the client
+
+
+Improvements
+------------
+
+ * update translations
+ * regenerate translation files
+ * show the login_message if available
+ * Added tiff file type opener in printer.py
+ * export window : use context for import compatable option in pass argument instend of added new argemenent
+ * added Database ID/ ID fields in import/export and also add option for import compatable in export window
+ * Set Error Message box readonly
+ * Added new function called get_environment which will return the current environment of the System on which user is using OpenERP (called when report crashes)
+ * Error Message improved
+
+
+2009-05-26: 5.0.1
+=================
+
+TODO
+
+2009-02-12: 5.0.0-3
+===================
+
+TODO
+
+2009-02-08: 5.0.0-2
+===================
+
+TODO
+
+2009-02-06: 5.0.0
+=================
+
+TODO
+
+2009-01-03: 5.0.0-rc3
+=====================
+
+TODO
+
+2008-12-22: 5.0.0-rc2
+=====================
+
+TODO
+
+2008-12-01: 5.0.0-rc1.1
+=======================
+
+TODO
+
+2008-11-28: 5.0.0-rc1
+=====================
+
+TODO
+
+2008-11-03: 5.0.0-alpha
+=======================
+
+TODO
+

@@ -1,0 +1,2552 @@
+# Romanian translation for openobject-client
+# Copyright (c) 2008 Rosetta Contributors and Canonical Ltd 2008
+# This file is distributed under the same license as the openobject-client package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2008.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: openobject-client\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-11-25 02:00+0530\n"
+"PO-Revision-Date: 2010-10-25 18:43+0000\n"
+"Last-Translator: OpenERP Administrators <Unknown>\n"
+"Language-Team: Romanian <ro@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2010-10-26 04:38+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#: bin/plugins/__init__.py:28
+msgid "Print Workflow"
+msgstr "Tipărire Workflow"
+
+#: bin/plugins/__init__.py:29
+msgid "Print Workflow (with subflows)"
+msgstr "Tipărire Workflow (Complex)"
+
+#: bin/plugins/__init__.py:41
+msgid "No available plugin for this resource !"
+msgstr "Nu exist plugin disponibil pentru aceasta resursa !"
+
+#: bin/plugins/__init__.py:43
+msgid "Choose a Plugin"
+msgstr "Alegeţi un Plugin"
+
+#: bin/translate.py:184
+#, python-format
+msgid "Unable to set locale %s"
+msgstr ""
+
+#: bin/openerp-client.py:139
+msgid "Closing OpenERP, KeyboardInterrupt"
+msgstr "Inchidere OpenERP, KeyboardInterrupt"
+
+#: bin/options.py:108
+#, python-format
+msgid "OpenERP Client %s"
+msgstr "OpenERP Client %s"
+
+#: bin/options.py:109
+msgid "specify alternate config file"
+msgstr "specificati un fisier de configurare alternativ"
+
+#: bin/options.py:110
+msgid "Enable basic debugging. Alias for '--log-level=debug'"
+msgstr ""
+
+#: bin/options.py:111
+#, python-format
+msgid "specify the log level: %s"
+msgstr ""
+
+#: bin/options.py:112
+msgid "specify the user login"
+msgstr "specificati user-ul si parola"
+
+#: bin/options.py:113
+msgid "specify the server port"
+msgstr "specificati port-ul serverului"
+
+#: bin/options.py:114
+msgid "specify the server ip/name"
+msgstr "specificati numele/ip-ul serverului"
+
+#: bin/printer/printer.py:185
+#, python-format
+msgid "Unable to handle %s filetype"
+msgstr "Incapabil de atrat fisiere de tip %s"
+
+#: bin/printer/printer.py:190
+msgid ""
+"Linux Automatic Printing not implemented.\n"
+"Use preview option !"
+msgstr ""
+"Tiparire automata linux neimplementata.\n"
+"Utilizati optiunea preview !"
+
+#: bin/printer/printer.py:198
+msgid "Error no report"
+msgstr "Eroare lipseste raportul"
+
+#: bin/printer/printer.py:217 bin/modules/gui/window/win_export.py:289
+#: bin/modules/gui/main.py:1424 bin/widget/view/form_gtk/binary.py:162
+#: bin/widget/view/form_gtk/image.py:119
+msgid "Save As..."
+msgstr "Salvează ca..."
+
+#: bin/printer/printer.py:225
+msgid "Error writing the file!"
+msgstr "Eroare scriere fisier !"
+
+#: bin/common/common.py:212
+msgid ""
+"Thank you for the feedback !\n"
+"Your comments have been sent to OpenERP.\n"
+"You should now start by creating a new database or\n"
+"connecting to an existing server through the \"File\" menu."
+msgstr ""
+"Multumim pentru raspuns !\n"
+"Comentariile dvs. au fost transmise catre OpenERP.\n"
+"Acum trebuie sa creati o baza de date noua sau\n"
+"sa va conectati la un server existent prin intermediul meniului \"File\"."
+
+#: bin/common/common.py:222
+msgid ""
+"Thank you for testing OpenERP !\n"
+"You should now start by creating a new database or\n"
+"connecting to an existing server through the \"File\" menu."
+msgstr ""
+"Vă mulţumim pentru testarea lui OpenERP !\n"
+"Trebuie să începeţi prin crearea unei baze de date sau\n"
+"să vă conectaţi la un server existent accesând meniul \"File\"."
+
+#: bin/common/common.py:325
+msgid "Support request sent !"
+msgstr "Cererea pentru suport a fost transmisa !"
+
+#: bin/common/common.py:345 bin/common/common.py:388
+msgid ""
+"\n"
+"<b>An unknown error has been reported.</b>\n"
+"\n"
+"<b>You do not have a valid Open ERP maintenance contract !</b>\n"
+"If you are using Open ERP in production, it is highly suggested to "
+"subscribe\n"
+"a maintenance program.\n"
+"\n"
+"The Open ERP maintenance contract provides you a bugfix guarantee and an\n"
+"automatic migration system so that we can fix your problems within a few\n"
+"hours. If you had a maintenance contract, this error would have been sent\n"
+"to the quality team of the Open ERP editor.\n"
+"\n"
+"The maintenance program offers you:\n"
+"* Automatic migrations on new versions,\n"
+"* A bugfix guarantee,\n"
+"* Monthly announces of potential bugs and their fixes,\n"
+"* Security alerts by email and automatic migration,\n"
+"* Access to the customer portal.\n"
+"\n"
+"You can use the link bellow for more information. The detail of the error\n"
+"is displayed on the second tab.\n"
+msgstr ""
+"\n"
+"<b>O eroare necunoscuta a fost raportata.</b>\n"
+"\n"
+"<b>Nu aveti un contract de mentenanta valid cu Open ERP  !</b>\n"
+"Daca folositi Open ERP in productie, este de dorit sa incheiati\n"
+"un contract de  mentenanta.\n"
+"\n"
+"Contractul de mentenanta Open ERP va garanteaza repararea bug-urilor si\n"
+"un sistem automat de migrarea astfel incat problemele dvs. sa fie rezolvate\n"
+"in cateva ore. Daca aveati un contract de mentenanta, aceasta eroare ar fi "
+"fost\n"
+"trimisa spre rezolvare catre echipa Open ERP .\n"
+"\n"
+"The maintenance program offers you:\n"
+"* Automatic migrations on new versions,\n"
+"* A bugfix guarantee,\n"
+"* Monthly announces of potential bugs and their fixes,\n"
+"* Security alerts by email and automatic migration,\n"
+"* Access to the customer portal.\n"
+"\n"
+"You can use the link bellow for more information. The detail of the error\n"
+"is displayed on the second tab.\n"
+
+#: bin/common/common.py:368
+#, python-format
+msgid ""
+"\n"
+"<b>An unknown error has been reported.</b>\n"
+"\n"
+"Your maintenance contract does not cover all modules installed in your "
+"system !\n"
+"If you are using Open ERP in production, it is highly suggested to upgrade "
+"your\n"
+"contract.\n"
+"\n"
+"If you have developed your own modules or installed third party module, we\n"
+"can provide you an additional maintenance contract for these modules. After\n"
+"having reviewed your modules, our quality team will ensure they will "
+"migrate\n"
+"automatically for all future stable versions of Open ERP at no extra cost.\n"
+"\n"
+"Here is the list of modules not covered by your maintenance contract:\n"
+"%s\n"
+"\n"
+"You can use the link bellow for more information. The detail of the error\n"
+"is displayed on the second tab."
+msgstr ""
+
+#: bin/common/common.py:443
+msgid ""
+"Your problem has been sent to the quality team !\n"
+"We will recontact you after analysing the problem."
+msgstr ""
+"Problema dvs. a fost trimisa catre echipa OpenERP !\n"
+"Va vom contacta dupa o ce analizam."
+
+#: bin/common/common.py:446
+#, python-format
+msgid ""
+"Your problem could *NOT* be sent to the quality team !\n"
+"Please report this error manually at:\n"
+"\t%s"
+msgstr ""
+
+#: bin/common/common.py:446
+msgid "Error"
+msgstr "Eroare"
+
+#: bin/common/common.py:599
+msgid "Open with..."
+msgstr "Deschide cu..."
+
+#: bin/widget_search/checkbox.py:36 bin/widget_search/checkbox.py:49
+msgid "Yes"
+msgstr "Da"
+
+#: bin/widget_search/checkbox.py:37
+msgid "No"
+msgstr "Nu"
+
+#: bin/widget_search/checkbox.py:55 bin/widget_search/char.py:47
+#: bin/widget_search/reference.py:74 bin/widget_search/spinbutton.py:69
+#: bin/widget_search/calendar.py:117 bin/widget_search/spinint.py:73
+msgid "The content of the widget or ValueError if not valid"
+msgstr "Conținutul controlului sau ValueError dacă nu este valid controlul"
+
+#: bin/widget_search/form.py:145
+msgid "Limit :"
+msgstr "Limită:"
+
+#: bin/widget_search/form.py:154
+msgid "Offset :"
+msgstr "Offset :"
+
+#: bin/widget_search/form.py:193
+msgid "Parameters :"
+msgstr "Parametri :"
+
+#: bin/widget_search/form.py:301
+msgid "The content of the form or exception if not valid"
+msgstr "Continutul formularului sau exceptie daca nu este valid"
+
+#: bin/widget_search/wid_int.py:44
+msgid "The content of the widget or exception if not valid"
+msgstr ""
+
+#: bin/widget_search/date_widget.py:65
+#: bin/widget/view/form_gtk/date_widget.py:65
+msgid ""
+"You can use special operation by pressing +, - or =.  Plus/minus "
+"adds/decrease the variable to the current selected date. Equals set part of "
+"selected date. Available variables: 12h = 12 hours, 8d = 8 days, 4w = 4 "
+"weeks, 1m = 1 month, 2y = 2 years. Some examples:\n"
+"* +21d : adds 21 days to selected year\n"
+"* =23w : set date to the 23th week of the year\n"
+"* -4m : decrease 4 months to the current date\n"
+"You can also use \"=\" to set the date to the current date/time and '-' to "
+"clear the field."
+msgstr ""
+"Puteți folosi operații speciale prin apăsarea +, - sau =. Plus / minus "
+"creşte / descreşte data selectată. Egal setează data selectată. Variabile "
+"disponibile 12h = 12 ore, 8d = 8 zile, 4w = 4 săptămâni, 1m = 1 lună, 2y = 2 "
+"ani. Câteva exemple:\n"
+" * + 21d : adaugă 21 de zile la  anul selectat\n"
+" * =23w : setează data la a 23 săptămână a anului\n"
+" * -4m : scade 4 luni de la data curentă\n"
+"Puteți să folosiți \"=\" pentru a seta la data curentă și \"-\" pentru a "
+"șterge data."
+
+#: bin/widget_search/calendar.py:55
+msgid "Start date"
+msgstr "Dată început"
+
+#: bin/widget_search/calendar.py:59 bin/widget_search/calendar.py:79
+#: bin/widget/view/form_gtk/calendar.py:62
+#: bin/widget/view/form_gtk/calendar.py:184
+msgid "Open the calendar widget"
+msgstr "Deschide widget-ul de tip calendar"
+
+#: bin/widget_search/calendar.py:75
+msgid "End date"
+msgstr "Dată sfârşit"
+
+#: bin/widget_search/calendar.py:120 bin/widget/view/form_gtk/calendar.py:136
+#: bin/widget/view/form_gtk/calendar.py:266
+msgid "OpenERP - Date selection"
+msgstr "OpenERP - Selectare date"
+
+#: bin/rpc.py:140 bin/modules/gui/main.py:210 bin/modules/action/wizard.py:175
+msgid "Connection refused !"
+msgstr "Conexiune refuzată!"
+
+#: bin/rpc.py:141
+msgid "Connection refused!"
+msgstr "Conexiune refuzată!"
+
+#: bin/rpc.py:171
+msgid ""
+"Unable to reach to OpenERP server !\n"
+"You should check your connection to the network and the OpenERP server."
+msgstr ""
+"Nu se poate face legatura cu serverul OpenERP !\n"
+"Trebuie sa va verificati conexiunea la retea si serverul OpenERP."
+
+#: bin/rpc.py:171
+msgid "Connection Error"
+msgstr "Eroare la conectare"
+
+#: bin/rpc.py:186 bin/rpc.py:188 bin/modules/gui/main.py:218
+#: bin/modules/gui/main.py:224 bin/modules/action/wizard.py:187
+#: bin/modules/action/wizard.py:193 bin/modules/action/wizard.py:195
+msgid "Application Error"
+msgstr "Eroare Aplicaţie"
+
+#: bin/rpc.py:188 bin/modules/action/wizard.py:195
+msgid "View details"
+msgstr "Afişare detalii"
+
+#: bin/modules/gui/window/win_search.py:50
+#: bin/widget/view/form_gtk/one2many_list.py:51
+msgid "OpenERP - Link"
+msgstr "OpenERP - Legătură"
+
+#: bin/modules/gui/window/win_search.py:147
+#, python-format
+msgid "OpenERP Search: %s"
+msgstr "OpenERP Caută: %s"
+
+#: bin/modules/gui/window/win_search.py:148
+#, python-format
+msgid "OpenERP Search: %s (%%d result(s))"
+msgstr "OpenERP Caută: %s (%%d rezultate(s))"
+
+#: bin/modules/gui/window/win_import.py:52
+msgid "The file is empty !"
+msgstr "Fișierul este gol !"
+
+#: bin/modules/gui/window/win_import.py:52
+msgid "Importation !"
+msgstr ""
+
+#: bin/modules/gui/window/win_import.py:57
+msgid "XML-RPC error !"
+msgstr "Eroare XML-RPC !"
+
+#: bin/modules/gui/window/win_import.py:62
+msgid "Imported one object !"
+msgstr ""
+
+#: bin/modules/gui/window/win_import.py:64
+#, python-format
+msgid "Imported %d objects !"
+msgstr "%d obiecte importate!"
+
+#: bin/modules/gui/window/win_import.py:70
+msgid "Importation Error !"
+msgstr ""
+
+#: bin/modules/gui/window/win_import.py:101
+#: bin/modules/gui/window/win_import.py:105
+msgid "Field name"
+msgstr "Numele câmpului"
+
+#: bin/modules/gui/window/win_import.py:186
+#, python-format
+msgid "You cannot import this field %s, because we cannot auto-detect it"
+msgstr ""
+
+#: bin/modules/gui/window/win_import.py:220
+msgid "You have not selected any fields to import"
+msgstr ""
+
+#: bin/modules/gui/window/win_selection.py:52
+msgid "Name"
+msgstr "Nume"
+
+#: bin/modules/gui/window/win_selection.py:56
+msgid "Ressource Name"
+msgstr "Nume Resursă"
+
+#: bin/modules/gui/window/win_selection.py:56
+msgid "Names"
+msgstr "Nume"
+
+#: bin/modules/gui/window/win_export.py:51
+msgid " record(s) saved !"
+msgstr " inregistrare(i) salvata(e) !"
+
+#: bin/modules/gui/window/win_export.py:54
+msgid ""
+"Operation failed !\n"
+"I/O error"
+msgstr ""
+"Operaţie eşuată!\n"
+"eroare I/O"
+
+#: bin/modules/gui/window/win_export.py:78
+msgid "Error Opening Excel !"
+msgstr "Eroare deschidere Excel!"
+
+#: bin/modules/gui/window/win_export.py:80
+msgid ""
+"Function only available for MS Office !\n"
+"Sorry, OOo users :("
+msgstr ""
+"Functiune disponibila doar pt. MS Office !\n"
+"Scuze, utilizatori OOo :("
+
+#: bin/modules/gui/window/win_export.py:281
+msgid "Exportation Error !"
+msgstr ""
+
+#: bin/modules/gui/window/form.py:165
+msgid "Resource ID does not exist for this object!"
+msgstr ""
+
+#: bin/modules/gui/window/form.py:221
+msgid "No record selected ! You can only attach to existing record."
+msgstr ""
+"Nu ati selectat nici o inregistrare ! Puteti atasa doar unei inregistrari "
+"existente."
+
+#: bin/modules/gui/window/form.py:233
+msgid "You have to select a record !"
+msgstr "Trebuie să selectaţi o înregistrare!"
+
+#: bin/modules/gui/window/form.py:239
+#: bin/modules/gui/window/view_tree/view_tree_sc.py:43
+msgid "ID"
+msgstr "ID"
+
+#: bin/modules/gui/window/form.py:240
+msgid "Creation User"
+msgstr "Crearea de utilizatori"
+
+#: bin/modules/gui/window/form.py:241
+msgid "Creation Date"
+msgstr "Data creării"
+
+#: bin/modules/gui/window/form.py:242
+msgid "Latest Modification by"
+msgstr "Ultima modificare de"
+
+#: bin/modules/gui/window/form.py:243
+msgid "Latest Modification Date"
+msgstr "Data ultimei modificări"
+
+#: bin/modules/gui/window/form.py:254
+msgid ""
+"Record is not saved ! \n"
+" Do You want to Clear Current Record ?"
+msgstr ""
+"Inregistrarea nu este salvata ! \n"
+" Doriti sa goliti inregistrarea curenta ?"
+
+#: bin/modules/gui/window/form.py:257
+msgid "Are you sure to remove this record ?"
+msgstr "Sigur doriţi eliminarea acestei înregistrări?"
+
+#: bin/modules/gui/window/form.py:259
+msgid "Are you sure to remove those records ?"
+msgstr "Sigur doriţi eliminarea acestor înregistrări?"
+
+#: bin/modules/gui/window/form.py:263
+msgid "Resources cleared."
+msgstr "Resurse sterse."
+
+#: bin/modules/gui/window/form.py:265
+msgid "Resources successfully removed."
+msgstr "Resurse eliminate cu succes."
+
+#: bin/modules/gui/window/form.py:298
+msgid "Working now on the duplicated document !"
+msgstr "Se lucreaza pe documentul duplicat !"
+
+#: bin/modules/gui/window/form.py:306
+msgid "Document Saved."
+msgstr "Document Salvat."
+
+#: bin/modules/gui/window/form.py:308 bin/modules/gui/window/form.py:309
+#: bin/widget/view/form_gtk/parser.py:137
+#: bin/widget/view/form_gtk/parser.py:138
+msgid "Invalid form, correct red fields !"
+msgstr "Formular invalid, corectaţi câmpurile roşii!"
+
+#: bin/modules/gui/window/form.py:308 bin/widget/view/form_gtk/parser.py:137
+msgid "Error !"
+msgstr "Eroare !"
+
+#: bin/modules/gui/window/form.py:328 bin/modules/gui/window/form.py:423
+msgid ""
+"This record has been modified\n"
+"do you want to save it ?"
+msgstr ""
+"Aceasta inregistrare a fost modificata\n"
+"doriti sa salvati modificarile ?"
+
+#: bin/modules/gui/window/form.py:375
+msgid "You must select one or several records !"
+msgstr "Trebuie sa selectati una sau mai multe inregistrari !"
+
+#: bin/modules/gui/window/form.py:384
+msgid "Print Screen"
+msgstr "Tipărire Ecran"
+
+#: bin/modules/gui/window/form.py:404
+msgid "No record selected"
+msgstr "Inregistrare neselectată"
+
+#: bin/modules/gui/window/form.py:409
+msgid "New document"
+msgstr "Document nou"
+
+#: bin/modules/gui/window/form.py:411
+msgid "Editing document (id: "
+msgstr "Editare document (id: "
+
+#: bin/modules/gui/window/form.py:412
+msgid "Record: "
+msgstr "Înregistrarea: "
+
+#: bin/modules/gui/window/form.py:413
+msgid " of "
+msgstr " din "
+
+#: bin/modules/gui/window/view_tree/parse.py:36
+msgid "Tree"
+msgstr "Arbore"
+
+#: bin/modules/gui/window/view_tree/view_tree_sc.py:49
+msgid "Description"
+msgstr "Descriere"
+
+#: bin/modules/gui/window/__init__.py:33
+msgid "Unknown Window"
+msgstr "Fereastră necunoscută"
+
+#: bin/modules/gui/window/win_extension.py:115
+msgid "This extension is already defined"
+msgstr "Această extensie este deja defintă!"
+
+#: bin/modules/gui/window/tree.py:190 bin/modules/gui/window/tree.py:246
+msgid "No resource selected!"
+msgstr "Nici o resursă selectată!"
+
+#: bin/modules/gui/window/tree.py:204
+msgid ""
+"Are you sure you want\n"
+"to remove this record?"
+msgstr ""
+"Sigur doriti sa stergeti\n"
+"aceasta inregistrare ?"
+
+#: bin/modules/gui/window/tree.py:209
+msgid "Error removing resource!"
+msgstr "Eroare la eliminarea resursei!"
+
+#: bin/modules/gui/window/tree.py:220
+msgid "Unable to chroot: no tree resource selected"
+msgstr ""
+"Nu pot configura folderul rădăcină: nicio resursă de tip arbore nu este "
+"selectată"
+
+#: bin/modules/gui/window/win_preference.py:69
+msgid "Preference"
+msgstr "Preferință"
+
+#: bin/modules/gui/window/win_preference.py:80
+msgid ""
+"The default language of the interface has been modified, do not forget to "
+"restart the client to have the interface in your language"
+msgstr ""
+
+#: bin/modules/gui/window/win_preference.py:82
+msgid "Default language modified !"
+msgstr ""
+
+#: bin/modules/gui/main.py:87 bin/modules/gui/main.py:436
+#: bin/modules/gui/main.py:1445
+msgid "Could not connect to server !"
+msgstr "Nu se poate face conexiunea cu server-ul !"
+
+#: bin/modules/gui/main.py:91 bin/openerp.glade:72 bin/openerp.glade:6272
+#: bin/openerp.glade:6508 bin/openerp.glade:6830 bin/openerp.glade:7475
+msgid "Server:"
+msgstr "Server:"
+
+#: bin/modules/gui/main.py:102 bin/openerp.glade:98 bin/openerp.glade:6544
+#: bin/openerp.glade:6787 bin/openerp.glade:7084 bin/openerp.glade:7432
+msgid "Change"
+msgstr "Modifică"
+
+#: bin/modules/gui/main.py:109 bin/openerp.glade:7011
+msgid "Super Administrator Password:"
+msgstr "Parolă super administrator:"
+
+#: bin/modules/gui/main.py:172 bin/modules/action/wizard.py:137
+msgid "OpenERP Computing"
+msgstr ""
+
+#: bin/modules/gui/main.py:183 bin/modules/action/wizard.py:147
+msgid "Operation in progress"
+msgstr "Operațiune în progres"
+
+#: bin/modules/gui/main.py:187 bin/modules/gui/main.py:639
+#: bin/modules/action/wizard.py:151
+msgid ""
+"Please wait,\n"
+"this operation may take a while..."
+msgstr ""
+"Asteptaţi vă rog,\n"
+"acestă operaţie poate dura..."
+
+#: bin/modules/gui/main.py:240
+msgid "Migration Scripts"
+msgstr ""
+
+#: bin/modules/gui/main.py:243
+msgid "Contract ID:"
+msgstr ""
+
+#: bin/modules/gui/main.py:249
+msgid "Contract Password:"
+msgstr ""
+
+#: bin/modules/gui/main.py:264
+msgid "You already have the latest version"
+msgstr ""
+
+#: bin/modules/gui/main.py:269
+msgid "The following updates are available:"
+msgstr ""
+
+#: bin/modules/gui/main.py:281
+msgid "You can now migrate your databases."
+msgstr ""
+
+#: bin/modules/gui/main.py:286
+msgid "Migrate Database"
+msgstr ""
+
+#: bin/modules/gui/main.py:315
+msgid "Your database has been upgraded."
+msgstr ""
+
+#: bin/modules/gui/main.py:317
+msgid "Your databases have been upgraded."
+msgstr ""
+
+#: bin/modules/gui/main.py:432
+msgid "Unknown"
+msgstr "Necunoscut"
+
+#: bin/modules/gui/main.py:443 bin/modules/gui/main.py:1449
+msgid "No database found, you must create one !"
+msgstr "Nu a fost gasita nici o baza de date, trebuie sa creati una !"
+
+#: bin/modules/gui/main.py:467
+#, python-format
+msgid ""
+"The versions of the server (%s) and the client (%s) missmatch. The client "
+"may not work properly. Use it at your own risks."
+msgstr ""
+"Versiunile server (%s) si client (%s) sunt diferite. S-ar putea ca clientul "
+"sa nu ruleze corect. Puteti sa utilizati aceasta versiune pe riscul dvs."
+
+#: bin/modules/gui/main.py:595
+msgid "Sorry,'"
+msgstr "Îmi pare rău,'"
+
+#: bin/modules/gui/main.py:595 bin/modules/gui/main.py:598
+msgid "Bad database name !"
+msgstr "Nume bază de date greşit!"
+
+#: bin/modules/gui/main.py:598
+msgid ""
+"The database name must contain only normal characters or \"_\".\n"
+"You must avoid all accents, space or special characters."
+msgstr ""
+"Numele bazei de date trebuie să conţină caractere obişnuite sau \"_\".\n"
+"Evitaţi folosirea caracterelor speciale sau a spaţiilor."
+
+#: bin/modules/gui/main.py:626
+msgid "OpenERP Database Installation"
+msgstr "OpenERP Instalare bază de date"
+
+#: bin/modules/gui/main.py:635
+msgid "<b>Operation in progress</b>"
+msgstr "<b>Operaţie în desfăşurare</b>"
+
+#: bin/modules/gui/main.py:658 bin/modules/gui/main.py:660
+#: bin/modules/gui/main.py:662
+msgid "Could not create database."
+msgstr "Baza de date nu poate fi creata."
+
+#: bin/modules/gui/main.py:658
+msgid "Database already exists !"
+msgstr "Baza de date deja există!"
+
+#: bin/modules/gui/main.py:660 bin/modules/gui/main.py:1342
+#: bin/modules/gui/main.py:1361 bin/modules/gui/main.py:1437
+msgid "Bad database administrator password !"
+msgstr "Baza de date sau parola administratorului eronata !"
+
+#: bin/modules/gui/main.py:662 bin/modules/gui/main.py:669
+msgid "Error during database creation !"
+msgstr "Eroare în timpul creării bazei de date"
+
+#: bin/modules/gui/main.py:669
+msgid ""
+"The server crashed during installation.\n"
+"We suggest you to drop this database."
+msgstr ""
+"Serverul a generat erori pe parcursul instalării.\n"
+"Vă sugerăm să ştergeţi definitiv această bază de date."
+
+#: bin/modules/gui/main.py:687
+msgid "The following users have been installed on your database:"
+msgstr "Urmatorii utilizatori au fost configurati in baza dvs. de date:"
+
+#: bin/modules/gui/main.py:687
+msgid "You can now connect to the database as an administrator."
+msgstr "Va puteti conecta acum la baza de date ca administrator."
+
+#: bin/modules/gui/main.py:731 bin/modules/gui/main.py:1064
+msgid "Press Ctrl+O to login"
+msgstr "Apăsaţi Ctrl+O pentru logare"
+
+#: bin/modules/gui/main.py:906
+msgid "Edit"
+msgstr "Editare"
+
+#: bin/modules/gui/main.py:995
+#, python-format
+msgid "%s request(s)"
+msgstr "%s cereri"
+
+#: bin/modules/gui/main.py:997
+msgid "No request"
+msgstr "Zero cereri"
+
+#: bin/modules/gui/main.py:999
+#, python-format
+msgid " - %s request(s) sended"
+msgstr " - %s cerere(i) trimisa(e)"
+
+#: bin/modules/gui/main.py:1035
+msgid ""
+"Connection error !\n"
+"Unable to connect to the server !"
+msgstr ""
+"Eroare de conxiune !\n"
+"Nu se poate face conexiunea la server !"
+
+#: bin/modules/gui/main.py:1037
+msgid ""
+"Authentication error !\n"
+"Bad Username or Password !"
+msgstr ""
+
+#: bin/modules/gui/main.py:1062
+msgid "Not logged !"
+msgstr "Nelogat!"
+
+#: bin/modules/gui/main.py:1138
+msgid ""
+"You can not log into the system !\n"
+"Ask the administrator to verify\n"
+"you have an action defined for your user."
+msgstr ""
+"Nu va puteti log-a in sistem !\n"
+"Contactati administratorul pentru a\n"
+"verifica configurarea utilizatorului dvs."
+
+#: bin/modules/gui/main.py:1170 bin/modules/gui/main.py:1177
+msgid "Do you really want to quit ?"
+msgstr "Doriţi întradevăr să terminaţi?"
+
+#: bin/modules/gui/main.py:1232
+#, python-format
+msgid "Attachments (%d)"
+msgstr "Ataşate (%d)"
+
+#: bin/modules/gui/main.py:1245
+msgid "Attachments"
+msgstr "Atașamente"
+
+#: bin/modules/gui/main.py:1333
+msgid "Delete a database"
+msgstr "Şterge o bază de date"
+
+#: bin/modules/gui/main.py:1339
+msgid "Database dropped successfully !"
+msgstr "Bază de date aruncată cu scucces!"
+
+#: bin/modules/gui/main.py:1342
+msgid "Could not drop database."
+msgstr "Nu se poate sterge definitiv baza de date."
+
+#: bin/modules/gui/main.py:1344
+msgid "Couldn't drop database"
+msgstr "Nu se poate sterge definitiv baza de date."
+
+#: bin/modules/gui/main.py:1347 bin/widget/view/form_gtk/image.py:112
+#: bin/widget/view/form_gtk/url.py:112 bin/openerp.glade:5895
+msgid "Open..."
+msgstr "Deschide..."
+
+#: bin/modules/gui/main.py:1358
+msgid "Database restored successfully !"
+msgstr "Bază de date restaurtă cu succes!"
+
+#: bin/modules/gui/main.py:1361
+msgid "Could not restore database."
+msgstr "Nu se poate restaura baza de date."
+
+#: bin/modules/gui/main.py:1363
+msgid "Couldn't restore database"
+msgstr "Nu se poate restaura baza de date."
+
+#: bin/modules/gui/main.py:1402
+msgid ""
+"Confirmation password does not match new password, operation cancelled!"
+msgstr ""
+"Operatie anulata ! Parola confirmata este diferita de noua parola definita."
+
+#: bin/modules/gui/main.py:1404
+msgid "Validation Error."
+msgstr "Eroare Validare."
+
+#: bin/modules/gui/main.py:1412
+msgid "Could not change the Super Admin password."
+msgstr "Parola Super Admin nu poate fi modificata."
+
+#: bin/modules/gui/main.py:1413
+msgid "Bad password provided !"
+msgstr "Parola gresita !"
+
+#: bin/modules/gui/main.py:1415
+msgid "Error, password not changed."
+msgstr "Eroare, parola nu a fost schimbată."
+
+#: bin/modules/gui/main.py:1421 bin/modules/gui/main.py:1441
+msgid "Backup a database"
+msgstr "Backup bază de date"
+
+#: bin/modules/gui/main.py:1434
+msgid "Database backed up successfully !"
+msgstr "Backup-ul bazei de date s-a incheiat cu succes !"
+
+#: bin/modules/gui/main.py:1437
+msgid "Could not backup the database."
+msgstr "Nu se poate face backup la baza de date."
+
+#: bin/modules/gui/main.py:1439
+msgid "Couldn't backup database."
+msgstr "Nu se poate face backup la baza de date."
+
+#: bin/modules/action/main.py:46
+msgid "Nothing to print!"
+msgstr "Nimic de tipărit!"
+
+#: bin/modules/action/main.py:63
+msgid "Printing aborted, too long delay !"
+msgstr "Tiparire intrerupta, intarziere prea lunga !"
+
+#: bin/modules/action/main.py:180
+msgid "Select your action"
+msgstr "Selectati actiunea"
+
+#: bin/widget/view/gantt_gtk/parser_dummy.py:31
+msgid "Gantt view not yet implemented !"
+msgstr "Diagrama Gantt nu este inca implementata !"
+
+#: bin/widget/view/gantt_gtk/parser_dummy.py:32
+msgid ""
+"The gantt view is not available in this GTK Client, you should use the web "
+"interface or switch to the calendar view."
+msgstr ""
+"Diagrama Gantt nu este disponibila in aceasta versiune client GTK, puteti "
+"folosi interfata web pt. a o vedea sau puteti schimba in vizualizare tip "
+"calendar."
+
+#: bin/widget/view/tree_gtk/date_renderer.py:200
+msgid ""
+"Press <i>'+'</i>, <i>'-'</i> or <i>'='</i> for special date operations."
+msgstr ""
+"Apăsați <i>'+'</i>, <i>'-'</i> or <i>'='</i> pentru operații speciale."
+
+#: bin/widget/view/tree_gtk/editabletree.py:124
+#, python-format
+msgid "Shortcut: %s"
+msgstr "Scurtătură: %s"
+
+#: bin/widget/view/tree_gtk/editabletree.py:124
+msgid "F1 New - F2 Open/Search"
+msgstr "F1 Nou- F2 Deschide/Caută"
+
+#: bin/widget/view/tree_gtk/editabletree.py:189
+#, python-format
+msgid "Warning; field %s is required!"
+msgstr "Atenţie; câmpul %s este necesar!"
+
+#: bin/widget/view/graph_gtk/parser.py:65
+msgid "Can not generate graph !"
+msgstr "Nu s-a generat graficul!"
+
+#: bin/widget/view/form.py:170
+msgid "You must save this record to use the relate button !"
+msgstr "Trebuie să salvaţi acestă înregistrare pentru a utiliza butonul!"
+
+#: bin/widget/view/form.py:182
+msgid "You must select a record to use the relate button !"
+msgstr "Trebuie să selectaţi o înregistrare pentru a utiliza butonul!"
+
+#: bin/widget/view/form.py:200 bin/widget/view/form_gtk/parser.py:558
+#: bin/widget/view/form_gtk/parser.py:672
+#: bin/widget/view/form_gtk/parser.py:729
+msgid "No other language available!"
+msgstr "Nici o altă limbă disponibilă!"
+
+#: bin/widget/view/form.py:207 bin/widget/view/form_gtk/parser.py:574
+#: bin/widget/view/form_gtk/parser.py:678
+#: bin/widget/view/form_gtk/parser.py:735
+msgid "Add Translation"
+msgstr "Adaugă Traducere"
+
+#: bin/widget/view/form.py:258 bin/widget/view/form_gtk/parser.py:791
+msgid "Translate label"
+msgstr "Traduce eticheta"
+
+#: bin/widget/view/widget_parse.py:53
+#, python-format
+msgid "This type (%s) is not supported by the GTK client !"
+msgstr "Acest tip (%s) nu este suportat de clientul GTK !"
+
+#: bin/widget/view/widget_parse.py:63
+msgid "No valid view found for this object!"
+msgstr "Nu s-a gasit un view valid pentru acest obiect !"
+
+#: bin/widget/view/form_gtk/wid_common.py:60
+msgid "Always applicable !"
+msgstr "Aplicabil intotdeauna !"
+
+#: bin/widget/view/form_gtk/reference.py:92 bin/openerp.glade:1247
+msgid "Create a new resource"
+msgstr "Creare resursă nouă"
+
+#: bin/widget/view/form_gtk/reference.py:93
+msgid "Search / Open a resource"
+msgstr "Caută / Deschide resursă"
+
+#: bin/widget/view/form_gtk/many2one.py:156
+msgid "Open this resource"
+msgstr "Deschide acestă resursă"
+
+#: bin/widget/view/form_gtk/many2one.py:159
+msgid "Search a resource"
+msgstr "Caută o resursă"
+
+#: bin/widget/view/form_gtk/many2one.py:168 bin/openerp.glade:1389
+msgid "Action"
+msgstr "Acțiune"
+
+#: bin/widget/view/form_gtk/many2one.py:169
+msgid "Report"
+msgstr "Raport"
+
+#: bin/widget/view/form_gtk/many2one.py:375 bin/widget/view/list.py:274
+msgid "You must select a record to use the relation !"
+msgstr "Trebuie sa selectati o inregistrare !"
+
+#: bin/widget/view/form_gtk/binary.py:77
+msgid "Select"
+msgstr "Alege"
+
+#: bin/widget/view/form_gtk/binary.py:81
+msgid "Open"
+msgstr "Deschide"
+
+#: bin/widget/view/form_gtk/binary.py:85 bin/widget/view/form_gtk/image.py:80
+msgid "Save As"
+msgstr "Salvează ca"
+
+#: bin/widget/view/form_gtk/binary.py:89 bin/widget/view/form_gtk/image.py:89
+msgid "Clear"
+msgstr "Curăță"
+
+#: bin/widget/view/form_gtk/binary.py:114
+#: bin/widget/view/form_gtk/binary.py:158
+msgid "Unable to read the file data"
+msgstr "Ne se pot citi datele din fişier"
+
+#: bin/widget/view/form_gtk/binary.py:124
+#: bin/widget/view/form_gtk/binary.py:150
+#, python-format
+msgid "Error reading the file: %s"
+msgstr "Eroare la citirea fişierului: %s"
+
+#: bin/widget/view/form_gtk/binary.py:133
+msgid "All Files"
+msgstr "Toate fișierele"
+
+#: bin/widget/view/form_gtk/binary.py:143
+msgid "Select a file..."
+msgstr "Selectaţi un fişier..."
+
+#: bin/widget/view/form_gtk/binary.py:172
+#, python-format
+msgid "Error writing the file: %s"
+msgstr "Eroare la scrierea fişierului: %s"
+
+#: bin/widget/view/form_gtk/calendar.py:102
+#: bin/widget/view/form_gtk/calendar.py:163
+msgid "Invalid date value! Year must be greater than 1899 !"
+msgstr ""
+
+#: bin/widget/view/form_gtk/calendar.py:130
+#: bin/widget/view/form_gtk/calendar.py:263
+msgid "This widget is readonly !"
+msgstr "Widget-ul nu poat fi modificat !"
+
+#: bin/widget/view/form_gtk/calendar.py:230
+#: bin/widget/view/form_gtk/calendar.py:309
+msgid "Invalid datetime value! Year must be greater than 1899 !"
+msgstr ""
+
+#: bin/widget/view/form_gtk/calendar.py:272
+msgid "Hour:"
+msgstr "Oră:"
+
+#: bin/widget/view/form_gtk/calendar.py:275
+msgid "Minute:"
+msgstr "Minut:"
+
+#: bin/widget/view/form_gtk/parser.py:61
+msgid "Wrong icon for the button !"
+msgstr "Icon greşit pentru buton!"
+
+#: bin/widget/view/form_gtk/parser.py:541
+msgid "Enter some text to the related field before adding translations!"
+msgstr ""
+
+#: bin/widget/view/form_gtk/parser.py:548
+msgid "You need to save resource before adding translations!"
+msgstr "Trebuie salvată resursa înaintea adăugării traducerilor!"
+
+#: bin/widget/view/form_gtk/parser.py:797
+msgid "Translate view"
+msgstr "Traduce view"
+
+#: bin/widget/view/form_gtk/image.py:71
+msgid "Set Image"
+msgstr "Setează imagine"
+
+#: bin/widget/view/form_gtk/image.py:102
+msgid "All files"
+msgstr "Toate fișierele"
+
+#: bin/widget/view/form_gtk/image.py:106
+msgid "Images"
+msgstr "Imagini"
+
+#: bin/widget/view/form_gtk/interface.py:47
+#: bin/widget/view/form_gtk/one2many_list.py:148
+msgid "Set to default value"
+msgstr "Alege valoare implicită"
+
+#: bin/widget/view/form_gtk/interface.py:48
+msgid "Set as default"
+msgstr "Setează ca implicit"
+
+#: bin/widget/view/form_gtk/one2many_list.py:151
+msgid "Set Default"
+msgstr "Setează ca Implicit"
+
+#: bin/widget/view/form_gtk/one2many_list.py:162
+msgid "Create a new entry"
+msgstr "Creare intrare nouă"
+
+#: bin/widget/view/form_gtk/one2many_list.py:172
+msgid "Edit this entry"
+msgstr "Editaţi această intrare"
+
+#: bin/widget/view/form_gtk/one2many_list.py:182
+msgid "Remove this entry"
+msgstr "Elimină această intrare"
+
+#: bin/widget/view/form_gtk/one2many_list.py:194
+msgid "Previous"
+msgstr "Precedent"
+
+#: bin/widget/view/form_gtk/one2many_list.py:207
+msgid "Next"
+msgstr "Următor"
+
+#: bin/widget/view/form_gtk/one2many_list.py:219
+msgid "Switch"
+msgstr "Schimbă"
+
+#: bin/widget/view/form_gtk/one2many_list.py:269
+msgid "You have to select a resource !"
+msgstr "Trebuie sa selectati o resursa !"
+
+#: bin/widget/view/calendar_gtk/parser_dummy.py:31
+msgid "Calendar View Error !"
+msgstr "Eroare in vizualizare tip calendar !"
+
+#: bin/widget/view/calendar_gtk/parser_dummy.py:32
+msgid "You must intall the library python-hippocanvas to use calendars."
+msgstr ""
+"Pentru a putea utiliza calendare trebuie sa instalati biblioteca python-"
+"hippocanvas."
+
+#: bin/widget/view/calendar_gtk/parser.py:245 bin/openerp.glade:8254
+msgid "Week"
+msgstr "Săptămână"
+
+#: bin/openerp.glade:6
+msgid "OpenERP - Login"
+msgstr "OpenERP - Logare"
+
+#: bin/openerp.glade:116 bin/openerp.glade:6444
+msgid "Database:"
+msgstr "Bază de date:"
+
+#: bin/openerp.glade:131
+msgid "User:"
+msgstr "Utilizator:"
+
+#: bin/openerp.glade:146 bin/openerp.glade:6430 bin/openerp.glade:6730
+msgid "Password:"
+msgstr "Parolă:"
+
+#: bin/openerp.glade:255
+msgid "_File"
+msgstr "_Fișier"
+
+#: bin/openerp.glade:262
+msgid "_Connect..."
+msgstr "_Conectare.."
+
+#: bin/openerp.glade:278
+msgid "_Disconnect"
+msgstr "_Deconectare"
+
+#: bin/openerp.glade:298
+msgid "Databases"
+msgstr "Baze de date"
+
+#: bin/openerp.glade:305
+msgid "_New database"
+msgstr "Bază date _nouă"
+
+#: bin/openerp.glade:320
+msgid "_Restore database"
+msgstr "_Restore bază de date"
+
+#: bin/openerp.glade:335
+msgid "_Backup database"
+msgstr "_Backup  bază de date"
+
+#: bin/openerp.glade:350
+msgid "Dro_p database"
+msgstr "Dro_p bază de date"
+
+#: bin/openerp.glade:370
+msgid "_Download Migrations Code"
+msgstr ""
+
+#: bin/openerp.glade:385
+msgid "_Migrate Database(s)"
+msgstr ""
+
+#: bin/openerp.glade:405
+msgid "Administrator Password"
+msgstr "Parolă administrator"
+
+#: bin/openerp.glade:450
+msgid "_User"
+msgstr "_Utilizator"
+
+#: bin/openerp.glade:458
+msgid "_Preferences"
+msgstr "_Preferințe"
+
+#: bin/openerp.glade:478
+msgid "_Send a request"
+msgstr "_Se trimite o cerere"
+
+#: bin/openerp.glade:493
+msgid "_Read my requests"
+msgstr "Citeşte ce_rerile mele"
+
+#: bin/openerp.glade:513
+msgid "_Waiting Requests"
+msgstr "Cereri în aşteptare"
+
+#: bin/openerp.glade:526
+msgid "For_m"
+msgstr "For_mular"
+
+#: bin/openerp.glade:534
+msgid "_New"
+msgstr "_Nou"
+
+#: bin/openerp.glade:550
+msgid "_Save"
+msgstr "_Salvează"
+
+#: bin/openerp.glade:566
+msgid "Copy this resource"
+msgstr "Copie acestă resursă"
+
+#: bin/openerp.glade:567
+msgid "_Duplicate"
+msgstr "_Duplică"
+
+#: bin/openerp.glade:583
+msgid "_Delete"
+msgstr "Șt_erge"
+
+#: bin/openerp.glade:604
+msgid "Find"
+msgstr "Caută"
+
+#: bin/openerp.glade:620
+msgid "Ne_xt"
+msgstr "Continuă"
+
+#: bin/openerp.glade:636
+msgid "Pre_vious"
+msgstr "Înapo_i"
+
+#: bin/openerp.glade:652
+msgid "Switch to list/form"
+msgstr "Schimbă din listă / formular"
+
+#: bin/openerp.glade:668
+msgid "_Menu"
+msgstr "_Meniu"
+
+#: bin/openerp.glade:689
+msgid "_New Home Tab"
+msgstr "Filă iniţială nouă"
+
+#: bin/openerp.glade:705 bin/openerp.glade:5018
+msgid "Close Tab"
+msgstr "Închide file"
+
+#: bin/openerp.glade:721
+msgid "Previous Tab"
+msgstr "Fila precedent"
+
+#: bin/openerp.glade:730 bin/openerp.glade:5074
+msgid "Next Tab"
+msgstr "Fila următoare"
+
+#: bin/openerp.glade:744
+msgid "View _logs"
+msgstr "Afişare _loguri"
+
+#: bin/openerp.glade:752
+msgid "_Go to resource ID..."
+msgstr "Du-te la resursa cu ID.."
+
+#: bin/openerp.glade:766
+msgid "_Open"
+msgstr "_Deschide"
+
+#: bin/openerp.glade:781
+msgid "Reloa_d / Undo"
+msgstr "Reincar_ca / Undo"
+
+#: bin/openerp.glade:802
+msgid "Repeat latest _action"
+msgstr "Repetă ultima _actiune"
+
+#: bin/openerp.glade:816
+msgid "_Preview in PDF"
+msgstr "_Previzualizare în PDF"
+
+#: bin/openerp.glade:832
+msgid "Previe_w in editor"
+msgstr "Previe_w in editor"
+
+#: bin/openerp.glade:852
+msgid "Expor_t data..."
+msgstr "Expor_tă datele..."
+
+#: bin/openerp.glade:867
+msgid "I_mport data..."
+msgstr "I_mportă datele..."
+
+#: bin/openerp.glade:879
+msgid "_Options"
+msgstr "_Opțiuni"
+
+#: bin/openerp.glade:886
+msgid "_Extension Manager"
+msgstr "_Gestionar de extensii"
+
+#: bin/openerp.glade:894
+msgid "_Menubar"
+msgstr "Bară _Meniu"
+
+#: bin/openerp.glade:902
+msgid "Text _and Icons"
+msgstr "Text și icoane"
+
+#: bin/openerp.glade:910
+msgid "_Icons only"
+msgstr "Doar _iconiţe"
+
+#: bin/openerp.glade:919
+msgid "_Text only"
+msgstr "Doar _text"
+
+#: bin/openerp.glade:932
+msgid "_Forms"
+msgstr "_Formulare"
+
+#: bin/openerp.glade:940
+msgid "Right Toolbar"
+msgstr "Bara de unelte din dreapta"
+
+#: bin/openerp.glade:948
+msgid "Tabs default position"
+msgstr "Poziţie file"
+
+#: bin/openerp.glade:956
+msgid "Top"
+msgstr "Sus"
+
+#: bin/openerp.glade:964
+msgid "Left"
+msgstr "Stânga"
+
+#: bin/openerp.glade:973
+msgid "Right"
+msgstr "Dreapta"
+
+#: bin/openerp.glade:982
+msgid "Bottom"
+msgstr "Jos"
+
+#: bin/openerp.glade:995
+msgid "Tabs default orientation"
+msgstr "Orientare file"
+
+#: bin/openerp.glade:1003
+msgid "Horizontal"
+msgstr "Orizontal"
+
+#: bin/openerp.glade:1011
+msgid "Vertical"
+msgstr "Vertical"
+
+#: bin/openerp.glade:1028
+msgid "_Print"
+msgstr "Ti_părește"
+
+#: bin/openerp.glade:1035
+msgid "Previe_w before print"
+msgstr "Previe_w inainte de tiparire"
+
+#: bin/openerp.glade:1059
+msgid "_Save options"
+msgstr "Opţiuni _Salvare"
+
+#: bin/openerp.glade:1079
+msgid "_Plugins"
+msgstr "_Module"
+
+#: bin/openerp.glade:1087
+msgid "_Execute a plugin"
+msgstr "_Execute un modul"
+
+#: bin/openerp.glade:1107
+msgid "_Shortcuts"
+msgstr "_Scurtături"
+
+#: bin/openerp.glade:1115
+msgid "_Help"
+msgstr "_Ajutor"
+
+#: bin/openerp.glade:1122 bin/openerp.glade:4389
+msgid "Support Request"
+msgstr "Cerere suport"
+
+#: bin/openerp.glade:1142
+msgid "User _Manual"
+msgstr "_Manual utilizator"
+
+#: bin/openerp.glade:1157
+msgid "_Contextual Help"
+msgstr "Help _contextual"
+
+#: bin/openerp.glade:1173
+msgid "_Tips"
+msgstr "Sfa_turi"
+
+#: bin/openerp.glade:1188
+msgid "Keyboard Shortcuts"
+msgstr "Combinații de taste"
+
+#: bin/openerp.glade:1201
+msgid "_License"
+msgstr "_Licență"
+
+#: bin/openerp.glade:1216
+msgid "_About..."
+msgstr "_Despre..."
+
+#: bin/openerp.glade:1258
+msgid "Edit / Save this resource"
+msgstr "Editează / Salvează această resursă"
+
+#: bin/openerp.glade:1274
+msgid "Delete this resource"
+msgstr "Şterge acestă resursă"
+
+#: bin/openerp.glade:1287
+msgid "Go to previous matched search"
+msgstr "Du-te la cautarea anterioara corespunzatoare criteriilor"
+
+#: bin/openerp.glade:1298
+msgid "Go to next matched resource"
+msgstr "Du-te la urmatoarea resursa ce corespunde"
+
+#: bin/openerp.glade:1311
+msgid "List"
+msgstr "Listă"
+
+#: bin/openerp.glade:1323
+msgid "Form"
+msgstr "Formular"
+
+#: bin/openerp.glade:1336
+msgid "Calendar"
+msgstr "Calendar"
+
+#: bin/openerp.glade:1346
+msgid "Graph"
+msgstr "Grafic"
+
+#: bin/openerp.glade:1359
+msgid "Gantt"
+msgstr "Gantt"
+
+#: bin/openerp.glade:1377
+msgid "Print documents"
+msgstr "Tipărire documente"
+
+#: bin/openerp.glade:1388
+msgid "Launch actions about this resource"
+msgstr "Lanseaza actiuni legate la acesta resursa"
+
+#: bin/openerp.glade:1401
+msgid "Add an attachment to this resource"
+msgstr "Adauga un atasament la aceasta resursa"
+
+#: bin/openerp.glade:1402
+msgid "Attachment"
+msgstr "Ataşament"
+
+#: bin/openerp.glade:1417 bin/openerp.glade:1418
+msgid "Menu"
+msgstr "Meniu"
+
+#: bin/openerp.glade:1435 bin/openerp.glade:1436
+msgid "Reload"
+msgstr "Reîncarcă"
+
+#: bin/openerp.glade:1453
+msgid "Close this window"
+msgstr "Închide această fereastră"
+
+#: bin/openerp.glade:1497
+msgid "Requests:"
+msgstr "Cereri:"
+
+#: bin/openerp.glade:1520
+msgid "Read my Requests"
+msgstr "Citeşte cererile mele"
+
+#: bin/openerp.glade:1541
+msgid "Send a new request"
+msgstr "Trimite o nouă cerinţă"
+
+#: bin/openerp.glade:1581
+msgid "OpenERP - Tree Resources"
+msgstr "OpenERP - Resurse arbore"
+
+#: bin/openerp.glade:1634
+msgid "Shortcuts"
+msgstr "Scurtături"
+
+#: bin/openerp.glade:1743
+msgid "OpenERP - Forms"
+msgstr "OpenERP - Formulare"
+
+#: bin/openerp.glade:1767
+msgid "State:"
+msgstr "Stare:"
+
+#: bin/openerp.glade:1799
+msgid "OpenERP - About"
+msgstr "OpenERP - Despre"
+
+#: bin/openerp.glade:1813
+msgid ""
+"<b>About OpenERP</b>\n"
+"<i>The most advanced Open Source ERP &amp; CRM !</i>"
+msgstr ""
+"<b>Despre OpenERP</b>\n"
+"<i>Cel mai avansat sistem Open Source ERP &amp; CRM !</i>"
+
+#: bin/openerp.glade:1852
+msgid ""
+"\n"
+"OpenERP - GTK Client - v%s\n"
+"\n"
+"OpenERP is an Open Source ERP+CRM\n"
+"for small to medium businesses.\n"
+"\n"
+"The whole source code is distributed under\n"
+"the terms of the GNU Public Licence.\n"
+"\n"
+"(c) 2003-TODAY, Tiny sprl\n"
+"\n"
+"More Info on www.openerp.com !"
+msgstr ""
+"\n"
+"OpenERP - GTK Client - v%s\n"
+"\n"
+"OpenERP este un sistem Open Source ERP+CRM\n"
+"pentru afaceri mici si mijlocii.\n"
+"\n"
+"Codul sursa este distribuit sub\n"
+"GNU Public Licence.\n"
+"\n"
+"(c) 2003-TODAY, Tiny sprl\n"
+"Informatii suplimentare pe  www.openerp.com !"
+
+#: bin/openerp.glade:1880
+msgid "_OpenERP"
+msgstr "_OpenERP"
+
+#: bin/openerp.glade:1908
+msgid ""
+"\n"
+"(c) 2003-TODAY - Tiny sprl\n"
+"OpenERP is a product of Tiny sprl:\n"
+"\n"
+"Tiny sprl\n"
+"40 Chaussée de Namur\n"
+"1367 Gérompont\n"
+"Belgium\n"
+"\n"
+"Tel : (+32)81.81.37.00\n"
+"Mail: sales@tiny.be\n"
+"Web: http://tiny.be"
+msgstr ""
+"\n"
+"(c) 2003-TODAY - Tiny sprl\n"
+"OpenERP este un produs al Tiny sprl:\n"
+"\n"
+"Tiny sprl\n"
+"40 Chaussée de Namur\n"
+"1367 Gérompont\n"
+"Belgia\n"
+"\n"
+"Tel : (+32)81.81.37.00\n"
+"Mail: sales@tiny.be\n"
+"Web: http://tiny.be"
+
+#: bin/openerp.glade:1939
+msgid "_Contact"
+msgstr "_Contact"
+
+#: bin/openerp.glade:1991
+msgid "Open ERP - Forms widget"
+msgstr ""
+
+#: bin/openerp.glade:2170 bin/openerp.glade:4735
+msgid "OpenERP - Confirmation"
+msgstr "OpenERP - Confirmare"
+
+#: bin/openerp.glade:2249
+msgid "OpenERP - Selection"
+msgstr "OpenERP - Selecţie"
+
+#: bin/openerp.glade:2263
+msgid "Your selection:"
+msgstr "Selecţia dumneavoastră:"
+
+#: bin/openerp.glade:2343
+msgid "OpenERP - Dialog"
+msgstr "OpenERP - Dialog"
+
+#: bin/openerp.glade:2367
+msgid "OpenERP, Field Preference target"
+msgstr ""
+
+#: bin/openerp.glade:2398
+msgid "_only for you"
+msgstr "numai pentru tine"
+
+#: bin/openerp.glade:2412
+msgid "for _all users"
+msgstr "pentru toţi oper_atorii"
+
+#: bin/openerp.glade:2432
+msgid "<b>Value applicable for:</b>"
+msgstr "<b>Valoare aplicabilă pentru:</b>"
+
+#: bin/openerp.glade:2468
+msgid "<b>Value applicable if:</b>"
+msgstr "<b>Valoare aplicabilă dacă:</b>"
+
+#: bin/openerp.glade:2486
+msgid "Field _Name:"
+msgstr "_Nume câmp:"
+
+#: bin/openerp.glade:2500
+msgid "_Domain:"
+msgstr "_Domeniu:"
+
+#: bin/openerp.glade:2559
+msgid "Default _value:"
+msgstr "_Valoare implicită:"
+
+#: bin/openerp.glade:2614
+msgid "OpenERP - Export to CSV"
+msgstr "OpenERP - Exportă în CSV"
+
+#: bin/openerp.glade:2662
+msgid "Save List"
+msgstr "Salvează lista"
+
+#: bin/openerp.glade:2710
+msgid "Remove List"
+msgstr "Elimină lista"
+
+#: bin/openerp.glade:2765
+msgid "<b>Exports List</b>"
+msgstr "<b>Listă Export</b>"
+
+#: bin/openerp.glade:2782
+msgid "<b>Predefined Exports</b>"
+msgstr "<b>Exporturi predefinite</b>"
+
+#: bin/openerp.glade:2807
+msgid "Import Compatible"
+msgstr ""
+
+#: bin/openerp.glade:2824
+msgid "<b>Select an Option to Export</b>"
+msgstr ""
+
+#: bin/openerp.glade:2871
+msgid "Available Fields"
+msgstr "Câmpuri disponibile"
+
+#: bin/openerp.glade:2914 bin/openerp.glade:5641
+msgid "_Add"
+msgstr "_Adaugă"
+
+#: bin/openerp.glade:2961 bin/openerp.glade:5688
+msgid "_Remove"
+msgstr "Ște_rge"
+
+#: bin/openerp.glade:3009
+msgid "_Nothing"
+msgstr "_Nimic"
+
+#: bin/openerp.glade:3064
+msgid "Fields to Export"
+msgstr "Câmpuri de exportat"
+
+#: bin/openerp.glade:3094
+msgid ""
+"Open in Excel\n"
+"Save as CSV"
+msgstr ""
+"Deschide în Excel\n"
+"Salvează ca CSV"
+
+#: bin/openerp.glade:3113
+msgid "Add _field names"
+msgstr "Adaugă nume câmpuri"
+
+#: bin/openerp.glade:3130
+msgid "<b>Opti_ons</b>"
+msgstr "<b>_Opţiuni</b>"
+
+#: bin/openerp.glade:3189
+msgid "OpenERP - Search"
+msgstr "OpenERP - Caută"
+
+#: bin/openerp.glade:3301
+msgid "OpenERP - Preferences"
+msgstr "penERP - Preferinţe"
+
+#: bin/openerp.glade:3315
+msgid "<b>User preferences</b>"
+msgstr "<b>Preferinţe utilizator</b>"
+
+#: bin/openerp.glade:3381
+msgid "Tip of the Day"
+msgstr "Sfatul zilei"
+
+#: bin/openerp.glade:3428
+msgid "_Display a new tip next time?"
+msgstr "_Afisez un nou pont data viitoare?"
+
+#: bin/openerp.glade:3481
+msgid "Pre_vious Tip"
+msgstr "Pont An_terior"
+
+#: bin/openerp.glade:3527
+msgid "Ne_xt Tip"
+msgstr "Pont Ur_mator"
+
+#: bin/openerp.glade:3573
+msgid "OpenERP - License"
+msgstr "OpenERP - Licenţă"
+
+#: bin/openerp.glade:3588
+msgid "OpenERP license"
+msgstr "OpenERP licenţă"
+
+#: bin/openerp.glade:4286
+msgid "Go to resource ID"
+msgstr "Du-te la resursa ID"
+
+#: bin/openerp.glade:4336
+msgid "Search ID:"
+msgstr "Caută ID:"
+
+#: bin/openerp.glade:4415
+msgid ""
+"<b>Complete this form to submit your bug and/or send a support request.</b>\n"
+"<i>\n"
+"Your request will be sent to the OpenERP team and we will reply shortly.\n"
+"Note that we may not reply if you do not have a support contract with Tiny "
+"or an official partner.</i>"
+msgstr ""
+"<b>Completati acest formular pentru a transmite defectul (bug) si/sau pentru "
+"a cre suport.</b>\n"
+"<i>\n"
+"Cererea dvs. va fi trimisa echipei OpenERP care va raspunde in cel mai scurt "
+"timp.\n"
+"De retinut ca s-ar putea sa nu raspundem daca nu aveti un contract pentru "
+"suport cu Tiny sau cu un partener oficial.</i>"
+
+#: bin/openerp.glade:4474
+msgid "Phone number:"
+msgstr "Număr Telefon:"
+
+#: bin/openerp.glade:4487
+msgid "Emergency:"
+msgstr "Urgenta:"
+
+#: bin/openerp.glade:4501
+msgid ""
+"Not Urgent\n"
+"Medium\n"
+"Urgent\n"
+"Very Urgent"
+msgstr ""
+"Neurgent\n"
+"Mesiu\n"
+"Urgent\n"
+"Foarte Urgent"
+
+#: bin/openerp.glade:4534
+msgid "<b>Support contract id:</b>"
+msgstr "<b>Id contract pentru suport:</b>"
+
+#: bin/openerp.glade:4591
+msgid "Other comments:"
+msgstr "Alte Comentarii:"
+
+#: bin/openerp.glade:4605
+msgid "Explain your problem:"
+msgstr "Explicaţi problema:"
+
+#: bin/openerp.glade:4644
+msgid "<b>Your email:</b>"
+msgstr "<b>Adresa email:</b>"
+
+#: bin/openerp.glade:4658
+msgid "<b>Your Company:</b>"
+msgstr "<b>Compania dvs.:</b>"
+
+#: bin/openerp.glade:4672
+msgid "<b>Your name:</b>"
+msgstr "<b>Numele dvs.:</b>"
+
+#: bin/openerp.glade:4763 bin/openerp.glade:6149
+msgid "Hello World!"
+msgstr "Hello World!"
+
+#: bin/openerp.glade:4825
+msgid "Keyboard shortcuts"
+msgstr "Scurtături de tastatură"
+
+#: bin/openerp.glade:4847
+msgid "<b>Shortcuts for OpenERP</b>"
+msgstr "<b>Scurtaturi pt. OpenERP</b>"
+
+#: bin/openerp.glade:4861
+msgid "Close window without saving"
+msgstr "Închide fereastra fără salvare"
+
+#: bin/openerp.glade:4876
+msgid "<Ctrl> + <Esc>"
+msgstr "<Ctrl> + <Esc>"
+
+#: bin/openerp.glade:4890
+msgid "<i>When editing a resource in a popup window</i>"
+msgstr "<i>La editarea unei resurse intr-o fereastra popup</i>"
+
+#: bin/openerp.glade:4906
+msgid "Save and Close window"
+msgstr "Salvează şi Închide fereastra"
+
+#: bin/openerp.glade:4921
+msgid "<Ctrl> + <Enter>"
+msgstr "<Ctrl> + <Enter>"
+
+#: bin/openerp.glade:4934
+msgid "Switch view mode"
+msgstr "Schimba modul de afisare"
+
+#: bin/openerp.glade:4949
+msgid "<Ctrl> + L"
+msgstr "<Ctrl> + L"
+
+#: bin/openerp.glade:4962
+msgid "Next record"
+msgstr "Înregistrarea următoare"
+
+#: bin/openerp.glade:4977
+msgid "Previous record"
+msgstr "Înregistrarea anterioară"
+
+#: bin/openerp.glade:4992
+msgid "<PgDn>"
+msgstr "<PgDn>"
+
+#: bin/openerp.glade:5005
+msgid "<PgUp>"
+msgstr "<PgUp>"
+
+#: bin/openerp.glade:5033
+msgid "Save"
+msgstr "Salvează"
+
+#: bin/openerp.glade:5048
+msgid "<Ctrl> + W"
+msgstr "<Ctrl> + W"
+
+#: bin/openerp.glade:5061
+msgid "<Ctrl> + S"
+msgstr "<Ctrl> + S"
+
+#: bin/openerp.glade:5089
+msgid "<Ctrl> + <PgDn>"
+msgstr "<Ctrl> + <PgDn>"
+
+#: bin/openerp.glade:5102
+msgid "Previous tab"
+msgstr "Fila precedentă"
+
+#: bin/openerp.glade:5117
+msgid "<Ctrl> + <PgUp>"
+msgstr "<Ctrl> + <PgUp>"
+
+#: bin/openerp.glade:5130
+msgid "New"
+msgstr "Nou"
+
+#: bin/openerp.glade:5145
+msgid "<Ctrl> + N"
+msgstr "<Ctrl> + N"
+
+#: bin/openerp.glade:5158
+msgid "Delete"
+msgstr "Şterge"
+
+#: bin/openerp.glade:5173
+msgid "<Ctrl> + D"
+msgstr "<Ctrl> + D"
+
+#: bin/openerp.glade:5186
+msgid "Find / Search"
+msgstr "Caută"
+
+#: bin/openerp.glade:5201
+msgid "<Ctrl> + F"
+msgstr "<Ctrl> + F"
+
+#: bin/openerp.glade:5214
+msgid "Connect"
+msgstr "Conectează"
+
+#: bin/openerp.glade:5229
+msgid "<Ctrl> + O"
+msgstr "<Ctrl> + O"
+
+#: bin/openerp.glade:5243
+msgid "Main Shortcuts"
+msgstr "Scurtaturi principale"
+
+#: bin/openerp.glade:5260
+msgid "F2"
+msgstr "F2"
+
+#: bin/openerp.glade:5273
+msgid "<b>Shortcuts in relation fields</b>"
+msgstr ""
+
+#: bin/openerp.glade:5288
+msgid "<b>Shortcuts in text entries</b>"
+msgstr "<b>Scurtaturi in inregistrarile text</b>"
+
+#: bin/openerp.glade:5301
+msgid "Open current field"
+msgstr "Deschide câmpul curent"
+
+#: bin/openerp.glade:5316
+msgid "Add a new line/field"
+msgstr "Adauga un camp/linie nou(a)"
+
+#: bin/openerp.glade:5331
+msgid "F1"
+msgstr "F1"
+
+#: bin/openerp.glade:5344
+msgid "Auto-Complete text field"
+msgstr "Auto-Completeaza un camp text"
+
+#: bin/openerp.glade:5359
+msgid "<Enter>"
+msgstr "<Enter>"
+
+#: bin/openerp.glade:5372
+msgid "Previous editable widget"
+msgstr "Widgetul editabil precedent"
+
+#: bin/openerp.glade:5387
+msgid "<Shift> + <Tab>"
+msgstr ""
+
+#: bin/openerp.glade:5400
+msgid "Next editable widget"
+msgstr "Urmatorul widget editabil"
+
+#: bin/openerp.glade:5415
+msgid "<Tab>"
+msgstr "<Tab>"
+
+#: bin/openerp.glade:5428
+msgid "Paste selected text"
+msgstr "Lipeşte textul selectat"
+
+#: bin/openerp.glade:5443
+msgid "Copy selected text"
+msgstr "Copie text selectat"
+
+#: bin/openerp.glade:5458
+msgid "Cut selected text"
+msgstr "Taie textul selectat"
+
+#: bin/openerp.glade:5473
+msgid "<Ctrl> + V"
+msgstr "<Ctrl> + V"
+
+#: bin/openerp.glade:5486
+msgid "<Ctrl> + C"
+msgstr "<Ctrl> + C"
+
+#: bin/openerp.glade:5499
+msgid "<Ctrl> + X"
+msgstr "<Ctrl> + X"
+
+#: bin/openerp.glade:5516
+msgid "Edition Widgets"
+msgstr ""
+
+#: bin/openerp.glade:5554
+msgid "Import from CSV"
+msgstr "Importă din CSV"
+
+#: bin/openerp.glade:5599
+msgid "<b>All fields</b>"
+msgstr "<b>Toate câmpurile</b>"
+
+#: bin/openerp.glade:5736
+msgid "N_othing"
+msgstr "Nimic"
+
+#: bin/openerp.glade:5795
+msgid "Auto-Detect"
+msgstr "Detectează automat"
+
+#: bin/openerp.glade:5850
+msgid "<b>Fields to import</b>"
+msgstr "<b>Câmpuri de importat</b>"
+
+#: bin/openerp.glade:5885
+msgid "File to Import:"
+msgstr "Fişier de importat:"
+
+#: bin/openerp.glade:5959
+msgid "Lines to Skip:"
+msgstr "Linii de sărit:"
+
+#: bin/openerp.glade:5988
+msgid "Text Delimiter:"
+msgstr "Delimitator Text:"
+
+#: bin/openerp.glade:6016
+msgid "Encoding:"
+msgstr "Codarea:"
+
+#: bin/openerp.glade:6029
+msgid "Field Separater:"
+msgstr "Separator Câmpuri:"
+
+#: bin/openerp.glade:6041
+msgid "CSV Parameters"
+msgstr "Parametri CSV"
+
+#: bin/openerp.glade:6120
+msgid "OpenERP"
+msgstr "OpenERP"
+
+#: bin/openerp.glade:6216
+msgid "Server"
+msgstr "Server"
+
+#: bin/openerp.glade:6226
+msgid "<b>Connect to a OpenERP server</b>"
+msgstr "<b>Conectare la un server OpenERP</b>"
+
+#: bin/openerp.glade:6285
+msgid "Protocol connection:"
+msgstr "Protocol conexiune:"
+
+#: bin/openerp.glade:6331
+msgid "Port:"
+msgstr "Port:"
+
+#: bin/openerp.glade:6383
+msgid "Choose a database..."
+msgstr "Alegeţi o bază de date..."
+
+#: bin/openerp.glade:6398
+msgid "<b>Backup a database</b>"
+msgstr "<b>Backup o bază de date</b>"
+
+#: bin/openerp.glade:6629
+msgid "Restore a database"
+msgstr "Restaurare bază de date"
+
+#: bin/openerp.glade:6642
+msgid "<b>Restore a database</b>"
+msgstr "<b>Restaurarea unei baze de date</b>"
+
+#: bin/openerp.glade:6686
+msgid "(must not contain any special char)"
+msgstr "(nu trebuie sa contina nici un caracter special)"
+
+#: bin/openerp.glade:6715
+msgid "New database name:"
+msgstr "Nume baza date nouă:"
+
+#: bin/openerp.glade:6815 bin/openerp.glade:6961 bin/openerp.glade:7460
+msgid "http://localhost:8069"
+msgstr "http://localhost:8069"
+
+#: bin/openerp.glade:6889
+msgid "Create a new database"
+msgstr "Crare o bază de date nouă"
+
+#: bin/openerp.glade:6902
+msgid "<b>Create a new database</b>"
+msgstr "<b>Crează o bază de date nouă</b>"
+
+#: bin/openerp.glade:6973
+msgid ""
+"This is the URL of the OpenERP server. Use 'localhost' if the server is "
+"installed on this computer. Click on 'Change' to change the address."
+msgstr ""
+"Acesta este URL-ul serverului OpenERP. Folositi 'localhost' daca serverul "
+"este instalat pe acest calculator. Click pe 'Schimba' pentru a modifica "
+"adresa."
+
+#: bin/openerp.glade:6977
+msgid "OpenERP Server:"
+msgstr "OpenERP Server:"
+
+#: bin/openerp.glade:7007
+msgid ""
+"This is the password of the user that have the rights to administer "
+"databases. This is not a OpenERP user, just a super administrator. If you "
+"did not changed it, the password is 'admin' after installation."
+msgstr ""
+"Aceasta este parola utilizatorului care are drepturile de administrare ale "
+"bazelor de date. Acesta nu este un utilizator OpenERP, doar un super "
+"administrator. Daca  nu o schimbati, parola dupa instalare este 'admin'."
+
+#: bin/openerp.glade:7043
+msgid "(<i>admin</i>, by default)"
+msgstr "(<i>admin</i>, implict)"
+
+#: bin/openerp.glade:7108
+msgid ""
+"Choose the name of the database that will be created. The name must not "
+"contain any special character. Exemple: 'terp'."
+msgstr ""
+"Alegeti numele bazei de date ce va fi creata. Numele nu trebuie sa contina "
+"nici un caracter special. Exemplu: 'terp'."
+
+#: bin/openerp.glade:7110
+msgid "New Database Name:"
+msgstr "Nume bază date nouă:"
+
+#: bin/openerp.glade:7134
+msgid ""
+"Choose the default language that will be installed for this database. You "
+"will be able to install new languages after installation through the "
+"administration menu."
+msgstr ""
+"Alegeti limba implicita ce va fi instalata pentru aceasta baza de date. Veti "
+"avea posibilitatea de a instala alte limbi ulterior din meniul administrare."
+
+#: bin/openerp.glade:7136
+msgid "Default Language:"
+msgstr "Limba implicită:"
+
+#: bin/openerp.glade:7149
+msgid ""
+"This is the password of the '<i>admin</i>' user that will be created in your "
+"new database."
+msgstr ""
+"Aceasta este parola utilizatorului '<i>admin</i>' care va fi creat in noua "
+"baza de date."
+
+#: bin/openerp.glade:7151
+msgid "Administrator Password:"
+msgstr "Parolă administrator:"
+
+#: bin/openerp.glade:7163
+msgid ""
+"This is the password of the '<i>admin</i>' user that will be created in your "
+"new database. It has to be the same than the above field."
+msgstr ""
+"Aceasta este parola utilizatorului '<i>admin</i>' care va fi creat in noua "
+"baza de date. Trebuie sa fie la fel cu campul anterior."
+
+#: bin/openerp.glade:7165
+msgid "Confirm Password:"
+msgstr "Confirmă parola:"
+
+#: bin/openerp.glade:7256
+msgid ""
+"Check this box if you want demonstration data to be installed on your new "
+"database. These data will help you to understand OpenERP, with predefined "
+"products, partners, etc."
+msgstr ""
+"Bifati aceasta optiune daca doriti ca baza de date noua sa contina date "
+"demonstrative. Aceste date va vor ajuta sa intelegeti OpenERP, cu produse "
+"predefinite, parteneri predefiniti, etc."
+
+#: bin/openerp.glade:7259
+msgid "Load Demonstration Data:"
+msgstr "Încarcă date demonstrative:"
+
+#: bin/openerp.glade:7316
+msgid "Change password"
+msgstr "Schimbă parola"
+
+#: bin/openerp.glade:7333
+msgid "<b>Change your super admin password</b>"
+msgstr "<b>Modificati parola super administratorului</b>"
+
+#: bin/openerp.glade:7486
+msgid "Old password:"
+msgstr "Parolă veche:"
+
+#: bin/openerp.glade:7499
+msgid "New password:"
+msgstr "Parolă nouă:"
+
+#: bin/openerp.glade:7512
+msgid "New password confirmation:"
+msgstr "Confimă noua parolă:"
+
+#: bin/openerp.glade:7571
+msgid "OpenERP Message"
+msgstr "OpenERP Mesaj"
+
+#: bin/openerp.glade:7650
+msgid "Database creation"
+msgstr "Creare baza de date"
+
+#: bin/openerp.glade:7683
+msgid "<b>Database created successfully!</b>"
+msgstr "<b>Bază de date creată cu succes!</b>"
+
+#: bin/openerp.glade:7715
+msgid ""
+"You can connect to the new database using one of the following account:\n"
+"\n"
+"    Administrator: admin / admin "
+msgstr ""
+"Puteti sa va conectati la noua baza de date folosind unul din urmatoarele "
+"conturi:\n"
+"\n"
+"    Administrator:admin / admin "
+
+#: bin/openerp.glade:7768
+msgid "Connect Later"
+msgstr ""
+
+#: bin/openerp.glade:7812
+msgid "Connect now"
+msgstr ""
+
+#: bin/openerp.glade:7843
+msgid "Extension Manager"
+msgstr "Gestionar de extensii"
+
+#: bin/openerp.glade:7947
+msgid "Concurrency exception"
+msgstr "Excepție a sistemului de tranzacții concurențial"
+
+#: bin/openerp.glade:7972
+msgid ""
+"<b>\n"
+"Write concurrency warning:\n"
+"</b>\n"
+"This document has been modified while you were editing it.\n"
+"  Choose:\n"
+"   - \"Cancel\" to cancel saving.\n"
+"   - \"Compare\" to see the modified version.\n"
+"   - \"Write anyway\" to save your current version.\n"
+msgstr ""
+"<b>\n"
+"Afiseaza avertizare concurenta:\n"
+"</b>\n"
+"Acest document a fost modificat in timp ce l-ati editat.\n"
+"  Alegeti:\n"
+"   - \"Cancel\" pentru a anula salvarea.\n"
+"   - \"Compara\" pentru a vedea versiunea modificata.\n"
+"   - \"Salveaza oricum\" pentru a salva versiunea curenta.\n"
+
+#: bin/openerp.glade:8035
+msgid "Compare"
+msgstr "Compară"
+
+#: bin/openerp.glade:8081
+msgid "Write anyway"
+msgstr "Scrie oricum"
+
+#: bin/openerp.glade:8110
+msgid "window1"
+msgstr "fereastra1"
+
+#: bin/openerp.glade:8182
+msgid "Today"
+msgstr "Astăzi"
+
+#: bin/openerp.glade:8228
+msgid "September 2008"
+msgstr "Septembrie 2008"
+
+#: bin/openerp.glade:8242
+msgid "Day"
+msgstr "Zi"
+
+#: bin/openerp.glade:8266
+msgid "Month"
+msgstr "Lună"
+
+#: bin/win_error.glade:40
+msgid "label"
+msgstr "etichetă"
+
+#: bin/win_error.glade:102
+msgid "Click here for details about the maintenance proposition"
+msgstr "Click aici pentru detalii privind propunerea de mentenanta"
+
+#: bin/win_error.glade:119
+msgid "<i>_Maintenance</i>"
+msgstr "<i>_Mentenanţă</i>"
+
+#: bin/win_error.glade:150
+msgid ""
+"<b>Maintenance Contract.</b>\n"
+"<i>\n"
+"Your request will be send to OpenERP and maintenance team will reply you "
+"shortly.\n"
+"</i>"
+msgstr ""
+"<b>Contract de mentenanta</b>\n"
+"<i>\n"
+"Cererea dvs. va fi transmisa la OpenERP si echipa de mentenanta va raspunde "
+"in cel mai scurt timp.\n"
+"</i>"
+
+#: bin/win_error.glade:184
+msgid "Explain what you did:"
+msgstr "Explicati ce ati facut:"
+
+#: bin/win_error.glade:196
+msgid "Others Comments:"
+msgstr "Alte comentarii:"
+
+#: bin/win_error.glade:278
+msgid "Send to Maintenance Team"
+msgstr "Trimite la echipa de mentenenţă"
+
+#: bin/win_error.glade:326
+msgid "<i>_Support Request</i>"
+msgstr "<i>Cerere de _Suport</i>"
+
+#: bin/win_error.glade:353
+msgid "Details"
+msgstr "Detalii"
+
+#: bin/win_error.glade:369
+msgid "<i>_Details</i>"
+msgstr "<i>_Detalii</i>"
+
+#: bin/win_error.glade:398
+msgid "gtk-close"
+msgstr "gtk-close"
+
+#: bin/dia_survey.glade:32
+msgid ""
+"Please fill in the following form in order to help us to improve <b><span "
+"foreground=\"red\"><i>Open</i></span> ERP</b> and better target new "
+"developments."
+msgstr ""
+
+#: bin/dia_survey.glade:56
+msgid "<b>Your company</b>"
+msgstr ""
+
+#: bin/dia_survey.glade:84
+msgid "Open Source:"
+msgstr "Surse Libere:"
+
+#: bin/dia_survey.glade:496
+msgid "Your Company:"
+msgstr "Compania dumneavoastră:"
+
+#: bin/dia_survey.glade:507
+msgid "Industry:"
+msgstr "Industrie:"
+
+#: bin/dia_survey.glade:520
+msgid "Your Role:"
+msgstr "Rolul Dumneavoastră:"
+
+#: bin/dia_survey.glade:533
+msgid "Employees:"
+msgstr ""
+
+#: bin/dia_survey.glade:546
+msgid "Country:"
+msgstr "Țara:"
+
+#: bin/dia_survey.glade:559
+msgid "City:"
+msgstr ""
+
+#: bin/dia_survey.glade:586
+msgid "System:"
+msgstr "Sistem:"
+
+#: bin/dia_survey.glade:640
+msgid "<b>Your interrest</b>"
+msgstr ""
+
+#: bin/dia_survey.glade:672
+msgid "How did you hear about us:"
+msgstr "Cum ati aflat de noi:"
+
+#: bin/dia_survey.glade:709
+msgid "We plan to use Open ERP"
+msgstr ""
+
+#: bin/dia_survey.glade:723
+msgid "We plan to offer services on Open ERP"
+msgstr ""
+
+#: bin/dia_survey.glade:759
+msgid "Tell us why you try Open ERP and what are your current softwares:"
+msgstr ""
+
+#: bin/dia_survey.glade:790
+msgid "<b>Keep Informed</b>"
+msgstr "<b>Tinut la curent</b>"
+
+#: bin/dia_survey.glade:818
+msgid "I want to receive the Open ERP ebook (PDF) by email"
+msgstr ""
+
+#: bin/dia_survey.glade:845
+msgid "Phone / Mobile:"
+msgstr "Telefon / Mobil:"
+
+#: bin/dia_survey.glade:858
+msgid "E-mail:"
+msgstr ""
+
+#: bin/dia_survey.glade:891
+msgid "Your Name:"
+msgstr "Numele Dumneavoastră:"
+
+#: bin/dia_survey.glade:929
+msgid "gtk-cancel"
+msgstr ""
+
+#: bin/dia_survey.glade:939
+msgid "gtk-ok"
+msgstr ""
+
+#~ msgid "# Employees:"
+#~ msgstr "Nr. Angajaţi:"
+
+#~ msgid "E-Mail:"
+#~ msgstr "Email:"
+
+#~ msgid "<Shist> + <Tab>"
+#~ msgstr "<Shist> + <Tab>"
+
+#~ msgid ""
+#~ "Connection error !\n"
+#~ "Bad username or password !"
+#~ msgstr ""
+#~ "Eroare conectare!\n"
+#~ "Nume sau parola incorectă!"
+
+#~ msgid "<b>Your company:</b>"
+#~ msgstr "<b>Companie dumneavoastră:</b>"
+
+#, python-format
+#~ msgid ""
+#~ "Your problem could <u>NOT</u> be sent to the quality team !\n"
+#~ "Please report this error manually at %s"
+#~ msgstr ""
+#~ "Problema dvsd <u>NU</u> poate fi trimisa catre echipa OpenERP !\n"
+#~ "Raportati aceasta eroare manua la %s"
+
+#~ msgid "enable basic debugging"
+#~ msgstr "permite depanarea de baza"
+
+#~ msgid "The content of the widget or excpetion if not valid"
+#~ msgstr "Continutul widget-ului sau exceptie daca nu este valid"
+
+#~ msgid "We plan to use OpenERP"
+#~ msgstr "Planuim sa utilizam OpenERP"
+
+#~ msgid "Tell us why you try OpenERP and what are your current softwares:"
+#~ msgstr ""
+#~ "Spuneti-ne de ce incercati OpenERP si care sunt sistemele dvs. software "
+#~ "actuale:"
+
+#~ msgid "We plan to offer services on OpenERP"
+#~ msgstr "Planuim sa oferim servicii legate de OpenERP"
+
+#~ msgid "I want to be contacted for a demonstration"
+#~ msgstr "Doresc sa fiu contactat pentru o demonstratie"
+
+#~ msgid "<b>Your interrest:</b>"
+#~ msgstr "<b>Interesul dvs.:</b>"
+
+#, python-format
+#~ msgid ""
+#~ "\n"
+#~ "<b>An unknown error has been reported.</b>\n"
+#~ "\n"
+#~ "Your maintenance contract does not cover all modules installed in your "
+#~ "system !\n"
+#~ "If you are using Open ERP in production, it is highly suggested to upgrade "
+#~ "your\n"
+#~ "contract.\n"
+#~ "\n"
+#~ "If you have developped your own modules or installed third party module, we\n"
+#~ "can provide you an additional maintenance contract for these modules. After\n"
+#~ "having reviewed your modules, our quality team will ensure they will "
+#~ "migrate\n"
+#~ "automatically for all futur stable versions of Open ERP at no extra cost.\n"
+#~ "\n"
+#~ "Here is the list of modules not covered by your maintenance contract:\n"
+#~ "%s\n"
+#~ "\n"
+#~ "You can use the link bellow for more information. The detail of the error\n"
+#~ "is displayed on the second tab."
+#~ msgstr ""
+#~ "\n"
+#~ "<b>O eroare necunoscuta a fost raportata.</b>\n"
+#~ "\n"
+#~ "Contractul dvs. de mantenanta nu acopera toate modulele instalate pe "
+#~ "sistemul dvs.!\n"
+#~ "Daca utilizati Open ERP pentru activitate de productie, este recomandabil sa "
+#~ "faceti\n"
+#~ "upgrade la contract.\n"
+#~ "\n"
+#~ "Daca ati dezvoltat module proprii sau ati instalat module de la terti, va "
+#~ "putem oferi\n"
+#~ "un contract aditional de mentenanta pentru aceste module. Dupa ce studiaza "
+#~ "modulele\n"
+#~ "dvs., echipa noastra va asigura migrarea automata in toate versiunile "
+#~ "stabile viitoare ale\n"
+#~ "Open ERP fara costuri suplimentare pt. dvs.\n"
+#~ "\n"
+#~ "Aveti aici lista modulelor pe care contractul de mentenanta nu le acopera:\n"
+#~ "%s\n"
+#~ "\n"
+#~ "Puteti folosi link-ul de mai jos pentru informatii suplimentare. Detaliile "
+#~ "erorii\n"
+#~ "sunt afisate in al doilea tab."
+
+#~ msgid "specify channels to log"
+#~ msgstr "specifică canalele către log"
+
+#~ msgid "specify the log level: INFO, DEBUG, WARNING, ERROR, CRITICAL"
+#~ msgstr "specifică nivelul de log: INFO, DEBUG, WARNING, ERROR, CRITICAL"
+
+#~ msgid "<b>OpenERP Survey</b>"
+#~ msgstr "<b>Chestionar OpenERP</b>"

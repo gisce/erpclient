@@ -1,0 +1,29 @@
+OpenERP Client Quick Installation Guide
+----------------------------------------
+
+This file contains a quick guide to what needs to be done to configure and
+install the OpenERP client.
+
+Required dependecies:
+---------------------
+
+You need the following software installed:
+
+    - Python 2.3 or above
+    - GTK2.4 for python2.3
+    - Glade2 for python2.3
+    - Xpdf viewer or Acrobat Reader
+
+For Debian-based distributions you may install the required packages using the
+following command:
+
+    apt-get install python2.3 python2.3-gtk2 python2.3-glade2 xpdf
+
+For RedHat-based distributions you need to install the followong packages:
+
+    TODO
+
+For Gentoo-based distributions you need to install the followong packages:
+
+    TODO
+
