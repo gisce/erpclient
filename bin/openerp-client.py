@@ -133,9 +133,9 @@ try:
     if os.name == 'nt':
         from tools.win32 import get_systemfont_style
         gtk.rc_parse_string(get_systemfont_style())
-    if not common.terp_survey():
-        if options.options.rcexist:
-            win.sig_login()
+    #if not common.terp_survey():
+    if options.options.rcexist:
+        win.sig_login()
     gtk.main()
 except KeyboardInterrupt, e:
     log = logging.getLogger('common')
