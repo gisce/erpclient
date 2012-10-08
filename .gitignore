@@ -2,3 +2,12 @@
 .pydevproject
 .settings
 *.pyc
+build
+dist
+dlls
+log
+setup_new.py
+setup_old.py
+setup_tryton.py
+*.exe
+openerp-client
