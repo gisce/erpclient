@@ -557,12 +557,13 @@ def ask(question, parent=None):
     win.set_icon(OPENERP_ICON)
 
     response = win.run()
+    name = entry.get_text()
     parent.present()
     win.destroy()
     if response == gtk.RESPONSE_CANCEL:
         return None
     else:
-        return entry.get_text()
+        return name
 
 def concurrency(resource, id, context, parent=None):
     dia = glade.XML(common.terp_path("openerp.glade"),'dialog_concurrency_exception',gettext.textdomain())
