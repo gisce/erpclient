@@ -37,9 +37,11 @@
 ;--------------------------------
 ;General
 
+!define VERSION "5.0.19-gisce"
+
 ;Name and file
 Name "OpenERP Client"
-OutFile "openerp-client-setup-5.0.18-gisce.exe"
+OutFile "openerp-client-setup-${VERSION}.exe"
 SetCompressor lzma
 SetCompress auto
 
