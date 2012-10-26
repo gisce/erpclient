@@ -501,7 +501,7 @@ def message_box(title, msg, parent=None):
 def warning(msg, title=None, parent=None):
     return message(msg=msg, title=title, type=gtk.MESSAGE_WARNING, parent=parent)
 
-def sur(msg, parent=None):
+def sur(msg, parent=None, stock_icon=None):
     if not parent:
         parent=service.LocalService('gui.main').window
     sur = glade.XML(terp_path("openerp.glade"), "win_sur",gettext.textdomain())
@@ -510,6 +510,10 @@ def sur(msg, parent=None):
     win.show_all()
     l = sur.get_widget('lab_question')
     l.set_text(msg)
+    l.set_use_markup(True)
+    if stock_icon and hasattr(gtk, stock_icon):
+        icon = sur.get_widget('image144')
+        icon.set_from_stock(getattr(gtk, stock_icon), gtk.ICON_SIZE_DIALOG)
 
     if not parent:
         parent=service.LocalService('gui.main').window

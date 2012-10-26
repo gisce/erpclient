@@ -255,11 +255,15 @@ class form(object):
         if not self.id_get():
             msg = _('Record is not saved ! \n Do You want to Clear Current Record ?')
         else:
-            if self.screen.current_view.view_type == 'form':
-                msg = _('Are you sure to remove this record ?')
+            name = self.screen.current_model.name_get()[1]
+            ids = self.screen.current_view.sel_ids_get()
+            if len(self.screen.current_view.sel_ids_get()) > 1:
+                msg = _('Are you sure to remove <b>%(name)s</b> and %(num)i '
+                        'records more?') % {'name': name, 'num': len(ids) - 1}
             else:
-                msg = _('Are you sure to remove those records ?')
-        if common.sur(msg):
+                msg = _('Are you sure to remove <b>%(name)s</b> '
+                        'record?') % {'name': name}
+        if common.sur(msg, stock_icon='STOCK_DELETE'):
             id = self.screen.remove(unlink=True)
             if not id:
                 self.message_state(_('Resources cleared.'), color='darkgreen')

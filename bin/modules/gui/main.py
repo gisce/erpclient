@@ -494,7 +494,7 @@ class db_login(object):
         if _refresh_dblist(db_widget, entry_db, label, butconnect, url):
             is_same_version, server_version, client_version = check_server_version(url)
             if not is_same_version:
-                common.warning(_('The versions of the server (%s) and the client (%s) missmatch. The client may not work properly. Use it at your own risks.') % (server_version, client_version,))
+                common.warning(_('The versions of the server (%(server_version)s) and the client (%(client_version)s) missmatch. The client may not work properly. Use it at your own risks.') % {'server_version': server_version, 'client_version':client_version})
 
     def refreshlist_ask(self,widget, server_widget, db_widget, entry_db, label, butconnect = False, url=False, parent=None):
         url = _server_ask(server_widget, parent) or url

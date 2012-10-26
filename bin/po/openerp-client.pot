@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-10-08 16:48+0200\n"
+"POT-Creation-Date: 2012-10-26 17:41+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -274,40 +274,40 @@ msgid "Wrong icon for the button !"
 msgstr ""
 
 #: bin/widget/view/form_gtk/parser.py:166
-#: bin/widget/view/form_gtk/parser.py:167 bin/modules/gui/window/form.py:312
-#: bin/modules/gui/window/form.py:313
+#: bin/widget/view/form_gtk/parser.py:167 bin/modules/gui/window/form.py:316
+#: bin/modules/gui/window/form.py:317
 msgid "Invalid form, correct red fields !"
 msgstr ""
 
-#: bin/widget/view/form_gtk/parser.py:166 bin/modules/gui/window/form.py:312
+#: bin/widget/view/form_gtk/parser.py:166 bin/modules/gui/window/form.py:316
 msgid "Error !"
 msgstr ""
 
-#: bin/widget/view/form_gtk/parser.py:566
+#: bin/widget/view/form_gtk/parser.py:570
 msgid "Enter some text to the related field before adding translations!"
 msgstr ""
 
-#: bin/widget/view/form_gtk/parser.py:573
+#: bin/widget/view/form_gtk/parser.py:577
 msgid "You need to save resource before adding translations!"
 msgstr ""
 
-#: bin/widget/view/form_gtk/parser.py:582
-#: bin/widget/view/form_gtk/parser.py:696
-#: bin/widget/view/form_gtk/parser.py:753 bin/widget/view/form.py:200
+#: bin/widget/view/form_gtk/parser.py:586
+#: bin/widget/view/form_gtk/parser.py:700
+#: bin/widget/view/form_gtk/parser.py:757 bin/widget/view/form.py:200
 msgid "No other language available!"
 msgstr ""
 
-#: bin/widget/view/form_gtk/parser.py:598
-#: bin/widget/view/form_gtk/parser.py:702
-#: bin/widget/view/form_gtk/parser.py:759 bin/widget/view/form.py:207
+#: bin/widget/view/form_gtk/parser.py:602
+#: bin/widget/view/form_gtk/parser.py:706
+#: bin/widget/view/form_gtk/parser.py:763 bin/widget/view/form.py:207
 msgid "Add Translation"
 msgstr ""
 
-#: bin/widget/view/form_gtk/parser.py:815 bin/widget/view/form.py:258
+#: bin/widget/view/form_gtk/parser.py:819 bin/widget/view/form.py:258
 msgid "Translate label"
 msgstr ""
 
-#: bin/widget/view/form_gtk/parser.py:821
+#: bin/widget/view/form_gtk/parser.py:825
 msgid "Translate view"
 msgstr ""
 
@@ -515,7 +515,7 @@ msgstr ""
 msgid "Error"
 msgstr ""
 
-#: bin/common/common.py:600
+#: bin/common/common.py:604
 msgid "Open with..."
 msgstr ""
 
@@ -641,61 +641,63 @@ msgid ""
 " Do You want to Clear Current Record ?"
 msgstr ""
 
-#: bin/modules/gui/window/form.py:259
-msgid "Are you sure to remove this record ?"
-msgstr ""
-
 #: bin/modules/gui/window/form.py:261
-msgid "Are you sure to remove those records ?"
+#, python-format
+msgid "Are you sure to remove <b>%(name)s</b> and %(num)i records more?"
 msgstr ""
 
-#: bin/modules/gui/window/form.py:265
+#: bin/modules/gui/window/form.py:264
+#, python-format
+msgid "Are you sure to remove <b>%(name)s</b> record?"
+msgstr ""
+
+#: bin/modules/gui/window/form.py:269
 msgid "Resources cleared."
 msgstr ""
 
-#: bin/modules/gui/window/form.py:267
+#: bin/modules/gui/window/form.py:271
 msgid "Resources successfully removed."
 msgstr ""
 
-#: bin/modules/gui/window/form.py:301
+#: bin/modules/gui/window/form.py:305
 msgid "Working now on the duplicated document !"
 msgstr ""
 
-#: bin/modules/gui/window/form.py:310
+#: bin/modules/gui/window/form.py:314
 msgid "Document Saved."
 msgstr ""
 
-#: bin/modules/gui/window/form.py:332 bin/modules/gui/window/form.py:429
+#: bin/modules/gui/window/form.py:336 bin/modules/gui/window/form.py:433
 msgid ""
 "This record has been modified\n"
 "do you want to save it ?"
 msgstr ""
 
-#: bin/modules/gui/window/form.py:379
+#: bin/modules/gui/window/form.py:383
 msgid "You must select one or several records !"
 msgstr ""
 
-#: bin/modules/gui/window/form.py:388
+#: bin/modules/gui/window/form.py:392
 msgid "Print Screen"
 msgstr ""
 
-#: bin/modules/gui/window/form.py:408
+#: bin/modules/gui/window/form.py:412
 msgid "No record selected"
 msgstr ""
 
-#: bin/modules/gui/window/form.py:413
+#: bin/modules/gui/window/form.py:417
 msgid "New document"
 msgstr ""
 
-#: bin/modules/gui/window/form.py:415
+#: bin/modules/gui/window/form.py:419
 msgid "Editing document (id: "
 msgstr ""
 
-#: bin/modules/gui/window/form.py:418
+#: bin/modules/gui/window/form.py:422
 msgid "Record: "
 msgstr ""
 
-#: bin/modules/gui/window/form.py:419
+#: bin/modules/gui/window/form.py:423
 msgid " of "
 msgstr ""
 
@@ -857,8 +859,9 @@ msgstr ""
 #: bin/modules/gui/main.py:497
 #, python-format
 msgid ""
-"The versions of the server (%s) and the client (%s) missmatch. The client "
-"may not work properly. Use it at your own risks."
+"The versions of the server (%(server_version)s) and the client (%"
+"(client_version)s) missmatch. The client may not work properly. Use it at "
+"your own risks."
 msgstr ""
 
 #: bin/modules/gui/main.py:630
