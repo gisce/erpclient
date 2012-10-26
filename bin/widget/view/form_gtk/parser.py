@@ -254,6 +254,7 @@ class _container(object):
             colspan = 2
         if name:
             label = gtk.Label(name)
+            label.set_use_markup(True)
             eb = gtk.EventBox()
             eb.set_events(gtk.gdk.BUTTON_PRESS_MASK)
             self.trans_box_label.append((eb, name, fname))
@@ -438,10 +439,13 @@ class parser_form(widget.view.interface.parser_interface):
                 label = None
                 if not int(attrs.get('nolabel', 0)):
                     # TODO space before ':' depends of lang (ex: english no space)
+                    label = fields[name]['string']
+                    if int(attrs.get('bold', 0)):
+                        label = '<b>%s</b>' % label
                     if gtk.widget_get_default_direction() == gtk.TEXT_DIR_RTL:
-                        label = ': '+fields[name]['string']
+                        label = ': %s' % label
                     else:
-                        label = fields[name]['string']+' :'
+                        label += ': '
                 dict_widget[name] = widget_act
                 size = int(attrs.get('colspan', widgets_type[ type ][1]))
                 expand = widgets_type[ type ][2]
