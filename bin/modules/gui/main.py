@@ -772,6 +772,7 @@ class terp_main(service.Service):
         window.connect("delete_event", self.sig_delete)
         self.window = window
         self.window.set_icon(common.OPENERP_ICON)
+        self.window.set_title(options.options.get('client.title', 'OpenERP'))
 
         self.notebook = gtk.Notebook()
         self.notebook.set_scrollable(True)

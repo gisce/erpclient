@@ -98,6 +98,7 @@ class configmanager(object):
             'form.toolbar': True,
             'client.form_tab': 'top',
             'client.form_tab_orientation': 0,
+            'client.title': 'OpenERP',
             'client.lang': False,
             'client.filetype': {},
             'help.index': 'http://doc.openerp.com/',
