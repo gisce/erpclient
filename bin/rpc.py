@@ -37,6 +37,13 @@ import pytz
 
 CONCURRENCY_CHECK_FIELD = '__last_update'
 
+
+class VirtualHostTransport(xmlrpclib.Transport):
+
+    def send_host(self, connection, host):
+        connection.putheader("Host", host)
+
+
 class rpc_exception(Exception):
     def __init__(self, code, backtrace):
 
@@ -78,7 +85,8 @@ class xmlrpc_gw(gw_inter):
     __slots__ = ('_url', '_db', '_uid', '_passwd', '_sock', '_obj')
     def __init__(self, url, db, uid, passwd, obj='/object'):
         gw_inter.__init__(self, url, db, uid, passwd, obj)
-        self._sock = xmlrpclib.ServerProxy(url+obj)
+        vh = VirtualHostTransport()
+        self._sock = xmlrpclib.ServerProxy(url+obj, transport=vh)
     def exec_auth(self, method, *args):
         logging.getLogger('rpc.request').debug_rpc(str((method, self._db, self._uid, self._passwd, args)))
         res = self.execute(method, self._uid, self._passwd, *args)
@@ -196,7 +204,8 @@ class rpc_session(object):
         _protocol = protocol
         if _protocol == 'http://' or _protocol == 'https://':
             _url = _protocol + url+':'+str(port)+'/xmlrpc'
-            _sock = xmlrpclib.ServerProxy(_url+'/common')
+            vh = VirtualHostTransport()
+            _sock = xmlrpclib.ServerProxy(_url+'/common', transport=vh)
             self._gw = xmlrpc_gw
             try:
                 res = _sock.login(db or '', uname or '', passwd or '')
@@ -266,7 +275,8 @@ class rpc_session(object):
     def exec_no_except(self, url, resource, method, *args):
         m = re.match('^(http[s]?://|socket://)([\w.\-]+):(\d{1,5})$', url or '')
         if m.group(1) == 'http://' or m.group(1) == 'https://':
-            sock = xmlrpclib.ServerProxy(url + '/xmlrpc/' + resource)
+            vh = VirtualHostTransport()
+            sock = xmlrpclib.ServerProxy(url + '/xmlrpc/' + resource, transport=vh)
             return getattr(sock, method)(*args)
         else:
             sock = tiny_socket.mysocket()
