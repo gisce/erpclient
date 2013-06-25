@@ -353,10 +353,23 @@ class ViewList(parser_view):
     def update_children(self):
         ids = self.sel_ids_get()
         for c in self.children:
-            value = 0.0
+            to_operate = []
+            operation = self.children[c][5]
             for model in self.screen.models.models:
                 if model.id in ids or not ids:
-                    value += model.fields_get()[self.children[c][0]].get(model, check_load=False)
+                    value = model.fields_get()[self.children[c][0]].get(
+                        model, check_load=False
+                    )
+                    to_operate.append(value)
+            if operation == 'sum':
+                value = sum(to_operate)
+            elif operation == 'avg':
+                if len(to_operate):
+                    value = sum(to_operate) / len(to_operate)
+                else:
+                    value = 0.0
+            elif operation == 'count':
+                value = len(to_operate)
             label_str = tools.locale_format('%.' + str(self.children[c][3]) + 'f', value)
             if self.children[c][4]:
                 self.children[c][2].set_markup('<b>%s</b>' % label_str)
