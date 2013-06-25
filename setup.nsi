@@ -23,9 +23,11 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 ###############################################################################
-!ifndef VERSION
-    !error "Do not forget to specify the version of OpenERP - /DVERSION=<VERSION>"
-!endif 
+
+
+;!ifndef VERSION
+;    !error "Do not forget to specify the version of OpenERP - /DVERSION=<VERSION>"
+;!endif 
 
 ;--------------------------------
 ;Include Modern UI
@@ -37,7 +39,7 @@
 
 ;Name and file
 Name "OpenERP Client"
-OutFile "openerp-client-setup-${VERSION}.exe"
+OutFile "openerp-client-setup-5.0.17-gisce.exe"
 SetCompressor lzma
 SetCompress auto
 
@@ -139,8 +141,9 @@ Section "OpenERP Client" SecOpenERPClient
 	;ADD YOUR OWN FILES HERE...
 	File /r "dist\*"
 
-	SetOutPath "$INSTDIR\GTK"
-	File /r "C:\GTK\*"
+	;SetOutPath "$INSTDIR\GTK"
+	;File /r "C:\Python27\Lib\site-packages\gtk-2.0\runtime\*"
+	;File /r "C:\GTK\*"
 
 	SetOutPath "$INSTDIR\doc"
 	File "doc\*"
