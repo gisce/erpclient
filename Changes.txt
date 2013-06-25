@@ -1,0 +1,10 @@
+5.0.21
+======
+
+Updated libraries to last version:
+  Python 2.7.5
+  pywin32 218
+  pytz 2013b
+  mx-base 3.2.6
+  matplotlib 1.2.1
+  numpy 1.7.1
