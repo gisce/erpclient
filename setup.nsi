@@ -37,7 +37,7 @@
 ;--------------------------------
 ;General
 
-!define VERSION "5.0.19-gisce"
+!define VERSION "5.0.22-gisce"
 
 ;Name and file
 Name "OpenERP Client"
