@@ -49,6 +49,8 @@ import gobject
 import pango
 import pytz
 
+TREE_OPS = ('sum', 'count', 'avg')
+
 def send_keys(renderer, editable, position, treeview):
     editable.connect('key_press_event', treeview.on_keypressed)
     editable.editing_done_id = editable.connect('editing_done', treeview.on_editing_done)
@@ -162,20 +164,33 @@ class parser_tree(interface.parser_interface):
                 visval = eval(str(fields[fname].get('invisible', 'False')), {'context':self.screen.context})
                 col.set_visible(not visval)
                 n = treeview.append_column(col)
-                if 'sum' in fields[fname] and fields[fname]['type'] \
-                        in ('integer', 'float', 'float_time'):
-                    label = gtk.Label()
-                    label.set_use_markup(True)
-                    label_str = fields[fname]['sum'] + ': '
-                    label_bold = bool(int(fields[fname].get('sum_bold', 0)))
-                    if label_bold:
-                        label.set_markup('<b>%s</b>' % label_str)
-                    else:
-                        label.set_markup(label_str)
-                    label_sum = gtk.Label()
-                    label_sum.set_use_markup(True)
-                    dict_widget[n] = (fname, label, label_sum,
-                            fields[fname].get('digits', (16,2))[1], label_bold)
+                for tree_op in TREE_OPS:
+                    if tree_op in fields[fname]:
+                        if tree_op in ('sum', 'avg') \
+                            and fields[fname]['type'] not in ('integer',
+                                                              'float',
+                                                              'float_time'):
+                            continue
+                        label = gtk.Label()
+                        label.set_use_markup(True)
+                        label_str = fields[fname][tree_op] + ': '
+                        label_bold = bool(int(fields[fname].get(
+                            '%s_bold' % tree_op, 0))
+                        )
+                        if label_bold:
+                            label.set_markup('<b>%s</b>' % label_str)
+                        else:
+                            label.set_markup(label_str)
+                        label_wid = gtk.Label()
+                        label_wid.set_use_markup(True)
+                        dict_widget[n] = (
+                            fname,
+                            label,
+                            label_wid,
+                            fields[fname].get('digits', (16,2))[1],
+                            label_bold,
+                            tree_op
+                        )
         for btn in btn_list:
             treeview.append_column(btn)
         return treeview, dict_widget, [], on_write

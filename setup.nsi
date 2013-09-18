@@ -41,7 +41,7 @@
 
 ;Name and file
 Name "OpenERP Client"
-OutFile "openerp-client-setup-${VERSION}.exe"
+OutFile "openerp-client-setup-5.0.17-gisce.exe"
 SetCompressor lzma
 SetCompress auto
 
