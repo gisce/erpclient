@@ -23,12 +23,12 @@ import time
 import datetime
 import locale
 
-import win32ui
-import win32con
-try:
-    import winxpgui as win32gui
-except:
-    import win32gui
+#import win32ui
+#import win32con
+#try:
+#    import winxpgui as win32gui
+#except:
+#    import win32gui
 
 if not hasattr(locale, 'nl_langinfo'):
     def nl_langinfo(param):

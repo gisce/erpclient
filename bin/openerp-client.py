@@ -130,9 +130,9 @@ for fname in os.listdir(pix_file):
 
 try:
     win = modules.gui.main.terp_main()
-    if os.name == 'nt':
-        from tools.win32 import get_systemfont_style
-        gtk.rc_parse_string(get_systemfont_style())
+    #if os.name == 'nt':
+    #    from tools.win32 import get_systemfont_style
+    #    gtk.rc_parse_string(get_systemfont_style())
     #if not common.terp_survey():
     if options.options.rcexist:
         win.sig_login()

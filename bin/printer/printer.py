@@ -191,8 +191,9 @@ def print_linux_filename(filename):
     common.message(_('Linux Automatic Printing not implemented.\nUse preview option !'))
 
 def print_w32_filename(filename):
-    import win32api
-    win32api.ShellExecute (0, "print", filename, None, ".", 0)
+    pass
+    #import win32api
+    #win32api.ShellExecute (0, "print", filename, None, ".", 0)
 
 def print_data(data):
     if 'result' not in data:
