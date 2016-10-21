@@ -23,10 +23,12 @@ import common
 import re
 
 import workflow_print
+import test_plugin
 
 plugins_repository = {
     'workflow_print_simple': {'model':'.*', 'string':_('Print Workflow'), 'action': workflow_print.wkf_print_simple },
     'workflow_print': {'model':'.*', 'string':_('Print Workflow (Complex)'), 'action': workflow_print.wkf_print },
+    'test_plugin': {'model': '.*', 'string': _('Test plugin'), 'action': test_plugin.test_plugin}
 }
 
 def execute(datas):
