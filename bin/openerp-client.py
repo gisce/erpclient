@@ -130,6 +130,16 @@ for fname in os.listdir(pix_file):
 
 try:
     win = modules.gui.main.terp_main()
+    color = options.options.get('client.color', None)
+    if color:
+        eb = gtk.EventBox()
+        eb.modify_bg(gtk.STATE_NORMAL, gtk.gdk.color_parse(color))
+        vbox = win.glade.get_widget('vbox_main')
+        vbox.set_border_width(5)
+        win.window.remove(vbox)
+        eb.add(vbox)
+        eb.show()
+        win.window.add(eb)
     if os.name == 'nt':
         from tools.win32 import get_systemfont_style
         gtk.rc_parse_string(get_systemfont_style())
