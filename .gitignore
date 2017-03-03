@@ -1,3 +1,7 @@
+build
+dist
+.idea
+openerp-client
 .project
 .pydevproject
 .settings
