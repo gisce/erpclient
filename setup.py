@@ -157,6 +157,12 @@ options = {
             "libgtk-win32-2.0-0.dll","libpango-1.0-0.dll",
             "libpangowin32-1.0-0.dll",
             "wxmsw26uh_vc.dll",
+            "api-ms-win-core-processthreads-l1-1-2.dll",
+            "api-ms-win-core-sysinfo-l1-2-1.dll",
+            "api-ms-win-core-errorhandling-l1-1-1.dll",
+            "api-ms-win-core-profile-l1-1-0.dll",
+            "api-ms-win-core-libraryloader-l1-2-0.dll",
+            "libgio-2.0-0.dll"
         ],
     }
 }
