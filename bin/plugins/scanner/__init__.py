@@ -36,19 +36,24 @@ def scan(datas):
                         socket_client.close()
                         break
                     elif datas['id']:
-                        content = recv.rsplit('/', 1)[1] #  recive document name
+                        try:
+                            content = recv.rsplit('/', 1)[1] #  recive document name
 
-                        with open(recv, 'rb') as f:
-                            lines = f.read()
-                        res = rpc.session.rpc_exec_auth(
-                            '/object', 'execute', 'ir.attachment', 'create',
-                            {
-                                'name': content,
-                                'res_model': datas['model'],
-                                'res_id': datas['id'],
-                                'datas': base64.b64encode(lines)
-                            }
-                        )
+                            with open(recv, 'rb') as f:
+                                lines = f.read()
+                            res = rpc.session.rpc_exec_auth(
+                                '/object', 'execute', 'ir.attachment', 'create',
+                                {
+                                    'name': content,
+                                    'res_model': datas['model'],
+                                    'res_id': datas['id'],
+                                    'datas': base64.b64encode(lines)
+                                }
+                            )
+                            socket_client.send('attached ok')
+                        except Exception:
+                            socket_client.send('error while attaching')
+
         else:
             common.warning('You must resource a object', 'Warning')
     except Exception:
