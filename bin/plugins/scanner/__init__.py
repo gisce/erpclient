@@ -6,6 +6,11 @@ import errno
 from time import sleep
 import traceback
 import common
+import subprocess
+import os
+
+CONNECTOR_PATH = os.environ['PROGRAMFILES'] + '\\ScannerApp'
+EXECUTABLE_PATH = os.environ['PROGRAMFILES'] + '\\ScannerApp\\connector.exe'
 
 def scan(datas):
 
@@ -56,5 +61,10 @@ def scan(datas):
 
         else:
             common.warning('You must resource a object', 'Warning')
+    except socket.error, code:
+        if code[0] == errno.ECONNREFUSED:
+            os.chdir(CONNECTOR_PATH)
+            subprocess.Popen(EXECUTABLE_PATH)
+        traceback.print_exc()
     except Exception:
         traceback.print_exc()
