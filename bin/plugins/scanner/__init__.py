@@ -42,14 +42,21 @@ def scan(datas):
                         break
                     elif datas['id']:
                         try:
-                            content = recv.rsplit('/', 1)[1] #  recive document name
+                            try:  # notes support
+                                document, notes = recv.split(' # ')
+                                document_name = document.rsplit('/', 1)[1]  # document name
+                            except Exception:
+                                document_name = recv.rsplit('/', 1)[1]  # name
+                                document = recv
+                                notes = ''
 
-                            with open(recv, 'rb') as f:
+                            with open(document, 'rb') as f:
                                 lines = f.read()
                             res = rpc.session.rpc_exec_auth(
                                 '/object', 'execute', 'ir.attachment', 'create',
                                 {
-                                    'name': content,
+                                    'name': document_name,
+                                    'description': notes,
                                     'res_model': datas['model'],
                                     'res_id': datas['id'],
                                     'datas': base64.b64encode(lines)
