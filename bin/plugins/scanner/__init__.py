@@ -24,6 +24,11 @@ def scan(datas):
             socket_client.setblocking(0)
 
             socket_client.send('open')
+            categories_ids = rpc.session.rpc_exec_auth('/object', 'execute', 'ir.attachment.category', 'search', [])
+            categories = rpc.session.rpc_exec_auth('/object', 'execute', 'ir.attachment.category', 'read',
+                                                   categories_ids, ['code', 'name'], rpc.session.context)
+            socket_client.send(str(categories))
+
             while True:
                 try:
                     recv = socket_client.recv(buffer)
@@ -42,24 +47,19 @@ def scan(datas):
                         break
                     elif datas['id']:
                         try:
-                            try:  # notes support
-                                document, notes = recv.split(' # ')
-                                document_name = document.rsplit('/', 1)[1]  # document name
-                            except Exception:
-                                document_name = recv.rsplit('/', 1)[1]  # name
-                                document = recv
-                                notes = ''
-
-                            with open(document, 'rb') as f:
-                                lines = f.read()
+                            attachment = eval(recv)
+                            document_name = attachment['attachment'].rsplit('/', 1)[1]  # document name
+                            with open(attachment['attachment'], 'rb') as f:
+                                content = f.read()
                             res = rpc.session.rpc_exec_auth(
                                 '/object', 'execute', 'ir.attachment', 'create',
                                 {
                                     'name': document_name,
-                                    'description': notes,
+                                    'description': attachment['notes'],
+                                    'category_id': attachment['category'][:2],
                                     'res_model': datas['model'],
                                     'res_id': datas['id'],
-                                    'datas': base64.b64encode(lines)
+                                    'datas': base64.b64encode(content)
                                 }
                             )
                             socket_client.send('attached ok')
@@ -71,6 +71,7 @@ def scan(datas):
     except socket.error, code:
         if code[0] == errno.ECONNREFUSED:
             os.chdir(CONNECTOR_PATH)
+
             subprocess.Popen(EXECUTABLE_PATH)
         traceback.print_exc()
     except Exception:
