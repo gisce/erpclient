@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from __future__ import with_statement
 import rpc
 import base64
@@ -73,6 +74,7 @@ def scan(datas):
             os.chdir(CONNECTOR_PATH)
 
             subprocess.Popen(EXECUTABLE_PATH)
+            scan(datas)
         traceback.print_exc()
     except Exception:
         traceback.print_exc()
