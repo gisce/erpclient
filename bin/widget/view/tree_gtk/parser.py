@@ -246,7 +246,8 @@ class Char(object):
             self.state_set(model, model.value.get('state','draft'))
         self.attrs_set(model, cell)
         color = self.get_color(model)
-        cell.set_property('foreground', str(color))
+        if color :
+            cell.set_property('foreground', str(color))
         if self.attrs['type'] in ('float', 'integer', 'boolean'):
             align = 1
         else:
@@ -272,7 +273,7 @@ class Char(object):
             if model.expr_eval(expr, check_load=False):
                 to_display = color
                 break
-        return to_display or 'black'
+        return to_display or None #'black'
 
     def open_remote(self, model, create, changed=False, text=None):
         raise NotImplementedError
