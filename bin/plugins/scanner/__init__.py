@@ -72,8 +72,9 @@ def scan(datas):
     except socket.error, code:
         if code[0] == errno.ECONNREFUSED:
             os.chdir(CONNECTOR_PATH)
-
+            
             subprocess.Popen(EXECUTABLE_PATH)
+            sleep(3) # wait reopen subprocess
             scan(datas)
         traceback.print_exc()
     except Exception:
