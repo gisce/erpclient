@@ -301,7 +301,13 @@ class one2many_list(interface.widget_interface):
 
     def _sig_edit(self, *args):
         if self.screen.current_model:
-            dia = dialog(self.attrs['relation'], parent=self._view.model,  model=self.screen.current_model, attrs=self.attrs, window=self._window, readonly=self._readonly)
+            dia = dialog(
+                self.attrs['relation'],
+                parent=self._view.model,
+                model=self.screen.current_model,
+                attrs=self.attrs,
+                window=self._window,
+                readonly=self._readonly)
             ok, value = dia.run()
             dia.destroy()
 
