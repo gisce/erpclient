@@ -13,7 +13,17 @@ import os
 CONNECTOR_PATH = os.environ['PROGRAMFILES'] + '\\ScannerApp'
 EXECUTABLE_PATH = os.environ['PROGRAMFILES'] + '\\ScannerApp\\connector.exe'
 
-def scan(datas):
+def waiting_server(socket_client, host, port):
+    connected = False
+    while not connected:
+        try:
+            socket_client.connect((host, port))
+            connected = True
+        except:
+            pass
+    return socket_client
+
+def scan(datas, wait_server=False):
 
     try:
         if datas['id']:
@@ -21,10 +31,13 @@ def scan(datas):
             port = 5772
             buffer = 4096
             socket_client = socket.socket(socket.AF_INET, type=socket.SOCK_STREAM, proto=0)
-            socket_client.connect((host, port))
+            if wait_server:
+                waiting_server(socket_client, host, port)
+            else:
+                socket_client.connect((host, port))
             socket_client.setblocking(0)
+            socket_client.send('SYN')
 
-            socket_client.send('open')
             categories_ids = rpc.session.rpc_exec_auth('/object', 'execute', 'ir.attachment.category', 'search', [])
             categories = rpc.session.rpc_exec_auth('/object', 'execute', 'ir.attachment.category', 'read',
                                                    categories_ids, ['code', 'name'], rpc.session.context)
@@ -66,16 +79,13 @@ def scan(datas):
                             socket_client.send('attached ok')
                         except Exception:
                             socket_client.send('error while attaching')
-
         else:
             common.warning('You must resource a object', 'Warning')
     except socket.error, code:
         if code[0] == errno.ECONNREFUSED:
             os.chdir(CONNECTOR_PATH)
-            
             subprocess.Popen(EXECUTABLE_PATH)
-            sleep(3) # wait reopen subprocess
-            scan(datas)
+            scan(datas, wait_server=True)
         traceback.print_exc()
     except Exception:
         traceback.print_exc()
