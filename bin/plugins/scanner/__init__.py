@@ -36,7 +36,7 @@ def scan(datas, wait_server=False):
             else:
                 socket_client.connect((host, port))
             socket_client.setblocking(0)
-            socket_client.send('SYN')
+            socket_client.send('open')
 
             categories_ids = rpc.session.rpc_exec_auth('/object', 'execute', 'ir.attachment.category', 'search', [])
             categories = rpc.session.rpc_exec_auth('/object', 'execute', 'ir.attachment.category', 'read',
