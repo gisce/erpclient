@@ -14,14 +14,17 @@ CONNECTOR_PATH = os.environ['PROGRAMFILES'] + '\\ScannerApp'
 EXECUTABLE_PATH = os.environ['PROGRAMFILES'] + '\\ScannerApp\\connector.exe'
 
 def waiting_server(socket_client, host, port):
-    try:
-        socket_client.settimeout(10)
-        socket_client.connect((host, port))
-        socket_client.settimeout(None)
-    except socket.error:
-        traceback.print_exc()
-
-    return socket_client
+    interval = 0.001
+    timeout = time() + 10
+    while True:
+        try:
+            socket_client.connect((host, port))
+            return socket_client
+        except:
+            sleep(interval)
+            if time() > timeout:
+                break
+    traceback.print_exc()
 
 def scan(datas, wait_server=False):
 
