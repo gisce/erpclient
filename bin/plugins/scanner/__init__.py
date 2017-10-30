@@ -4,7 +4,7 @@ import rpc
 import base64
 import socket
 import errno
-from time import sleep
+from time import sleep, time
 import traceback
 import common
 import subprocess
@@ -15,12 +15,17 @@ EXECUTABLE_PATH = os.environ['PROGRAMFILES'] + '\\ScannerApp\\connector.exe'
 
 def waiting_server(socket_client, host, port):
     connected = False
+    timeout = time() + 10
     while not connected:
         try:
             socket_client.connect((host, port))
             connected = True
         except:
-            pass
+            sleep(0.001)
+            if time() > timeout:
+                traceback.print_exc()
+            else:
+                pass
     return socket_client
 
 def scan(datas, wait_server=False):
