@@ -246,8 +246,9 @@ class Char(object):
             self.state_set(model, model.value.get('state','draft'))
         self.attrs_set(model, cell)
         color = self.get_color(model)
-        if color :
-            cell.set_property('foreground', str(color))
+        if color is not None:
+            color = str(color)
+        cell.set_property('foreground', color)
         if self.attrs['type'] in ('float', 'integer', 'boolean'):
             align = 1
         else:
