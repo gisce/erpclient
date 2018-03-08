@@ -511,9 +511,6 @@ def sur(msg, parent=None):
     l = sur.get_widget('lab_question')
     l.set_text(msg)
 
-    if not parent:
-        parent=service.LocalService('gui.main').window
-    win.set_transient_for(parent)
     win.set_icon(OPENERP_ICON)
 
     response = win.run()
