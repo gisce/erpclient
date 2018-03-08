@@ -68,6 +68,38 @@ def scan(datas, wait_server=False):
                             document_name = attachment['attachment'].rsplit('/', 1)[1]  # document name
                             with open(attachment['attachment'], 'rb') as f:
                                 content = f.read()
+                            # Set attachment to resource
+                            if attachment['resource'] != 'Por defecto' and datas['model'] == 'giscedata.polissa':
+                                if attachment['resource'] == 'Titular':
+                                    datas['id'] = rpc.session.rpc_exec_auth(
+                                        '/object', 'execute', 'giscedata.polissa', 'read', datas['id'], ['titular'],
+                                        rpc.session.context
+                                    )['titular'][0]
+                                    datas['model'] = 'res.partner'
+                                elif attachment['resource'] == 'CUPS':
+                                    datas['id'] = rpc.session.rpc_exec_auth(
+                                        '/object', 'execute', 'giscedata.polissa', 'read', datas['id'], ['cups'],
+                                        rpc.session.context
+                                    )['cups'][0]
+                                    datas['model'] = 'giscedata.cups.ps'
+                            elif attachment['resource'] != 'Por defecto' and datas['model'] == 'giscedata.cups.ps':
+                                if attachment['resource'] == 'Titular':
+                                    pol_id = rpc.session.rpc_exec_auth(
+                                        '/object', 'execute', 'giscedata.cups.ps', 'read', datas['id'], ['polisses'],
+                                        rpc.session.context
+                                    )['polisses'][0]
+                                    datas['id'] = rpc.session.rpc_exec_auth(
+                                        '/object', 'execute', 'giscedata.polissa', 'read', pol_id, ['titular'],
+                                        rpc.session.context
+                                    )['titular'][0]
+                                    datas['model'] = 'res.partner'
+                                elif attachment['resource'] == 'Contrato':
+                                    datas['id'] = rpc.session.rpc_exec_auth(
+                                        '/object', 'execute', 'giscedata.cups.ps', 'read', datas['id'], ['polisses'],
+                                        rpc.session.context
+                                    )['polisses'][0]
+                                    datas['model'] = 'giscedata.polissa'
+
                             res = rpc.session.rpc_exec_auth(
                                 '/object', 'execute', 'ir.attachment', 'create',
                                 {
