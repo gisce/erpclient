@@ -163,12 +163,21 @@ class BinaryField(CharField):
     def __check_model(self, model):
         assert self.name in model.mgroup.mfields
     
-    def __check_load(self, model, modified, bin_size):
+    def __check_load(self, model, modified, bin_size, origin=None):
         if model.id and (self.name not in model.value or (model.value[self.name] is None)):
             c = rpc.session.context.copy()
             c.update(model.context_get())
             c['bin_size'] = bin_size
-            value = model.rpc.read([model.id], [self.name], c)[0][self.name]
+            chunks_content = []
+            if origin == 'binary':
+                for foo_active_ids in list(self.chunks(c['active_ids'], 3)):
+                    c['active_ids'] = foo_active_ids
+                    _content = model.rpc.read([model.id], [self.name], c)[0][self.name]
+                    chunks_content.append(_content)
+                    value = chunks_content
+            else:
+                value = model.rpc.read([model.id], [self.name], c)[0][self.name]
+
             self.set(model, value, modified=modified, get_binary_size=bin_size)
 
     def get_size_name(self):
@@ -199,9 +208,9 @@ class BinaryField(CharField):
             model.modified_fields.setdefault(self.name)
         return True
 
-    def get(self, model, check_load=True, readonly=True, modified=False):
+    def get(self, model, check_load=True, readonly=True, modified=False, origin=None):
         self.__check_model(model)
-        self.__check_load(model, modified, False)
+        self.__check_load(model, modified, False, origin=origin)
         if not model.value.get(self.name, False):
             return model.value.get(self.get_size_name(), False) or False
         return model.value.get(self.name, False) or False
