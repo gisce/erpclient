@@ -164,10 +164,17 @@ class wid_binary(interface.widget_interface):
                 action=gtk.FILE_CHOOSER_ACTION_SAVE,
                 filename=self._get_filename()
             )
+
             if filename:
+                # toDo: go throw chunks list and write content
                 fp = file(filename,'wb+')
-                fp.write(base64.decodestring(data))
+                if isinstance(data, list):
+                    for chunk in data:
+                        fp.write(base64.decodestring(chunk))
+                else:
+                    fp.write(base64.decodestring(data))
                 fp.close()
+
         except Exception, ex:
             common.message(_('Error writing the file: %s') % str(ex))
 

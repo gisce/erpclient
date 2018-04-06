@@ -107,10 +107,13 @@ class ModelRecord(signal_event.signal_event):
             self._check_load()
         value = []
         for name, field in self.mgroup.mfields.items():
+            origin = None
             if (get_readonly or not field.get_state_attrs(self).get('readonly', False)) \
                 and (not get_modifiedonly or (field.name in self.modified_fields or isinstance(field, O2MField))):
+                    if 'result' in name:
+                        origin = 'binary'
                     value.append((name, field.get(self, readonly=get_readonly,
-                        modified=get_modifiedonly)))
+                        modified=get_modifiedonly, origin)))
         value = dict(value)
         if includeid:
             value['id'] = self.id
