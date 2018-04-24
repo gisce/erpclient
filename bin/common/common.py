@@ -425,7 +425,13 @@ is displayed on the second tab.
     if show_message:
         xmlGlade.get_widget('maintenance_explanation').set_markup(maintenance_contract_message)
 
-    xmlGlade.get_widget('notebook').remove_page(int(show_message))
+    notebook = xmlGlade.get_widget('notebook')
+    # Pages
+    # 0 - Manteniance
+    # 1 - Support Request
+    # 2 - Details
+    notebook.remove_page(1)  # Support Request
+    notebook.do_change_current_page(notebook, 1)  # Change current tab to Details
 
     if not show_message:
         def send(widget):
