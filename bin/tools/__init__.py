@@ -110,7 +110,7 @@ def call_log(fun):
             r = fun(*args, **kwargs)
             print repr(r)
             return r
-        except Exception, ex:
+        except Exception as ex:
             print "Exception: %r" % (ex,)
             raise
     return f
