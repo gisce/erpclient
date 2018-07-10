@@ -34,6 +34,8 @@ import os
 
 import re
 import pytz
+import msgpack
+import urllib2
 
 CONCURRENCY_CHECK_FIELD = '__last_update'
 
@@ -136,6 +138,28 @@ class tinySocket_gw(gw_inter):
         self._sock.disconnect()
         return res
 
+
+class msgpack_gw(gw_inter):
+    __slots__ = ('_url', '_db', '_uid', '_passwd', '_sock', '_obj')
+
+    def __init__(self, url, db, uid, passwd, obj='/object'):
+        super(msgpack_gw, self).__init__(url, db, uid, passwd, obj)
+        self._sock = tiny_socket.mysocket()
+
+    def exec_auth(self, method, *args):
+        res = self.execute(method, self._uid, self._passwd, *args)
+        return res
+
+    def execute(self, method, *args):
+        endpoint = '{}/{}'.format(self._url, self._obj)
+        m = msgpack.packb([method, self._db] + list(args))
+        u = urllib2.urlopen(endpoint, m)
+        s = u.read()
+        u.close()
+        res = msgpack.unpackb(s)
+        return res
+
+
 class rpc_session(object):
     __slots__ = ('_open', '_url', 'uid', 'uname', '_passwd', '_gw', 'db', 'context', 'timezone')
     def __init__(self):
@@ -222,6 +246,22 @@ class rpc_session(object):
                 self._open=False
                 self.uid=False
                 return -2
+        elif _protocol == 'http+msgpack://':
+            _url = 'http://{}:{}'.format(url, port)
+            self._gw = msgpack_gw
+            try:
+                m = msgpack.packb(['login', db or '', uname or '', passwd or ''])
+                u = urllib2.urlopen('http://{}:{}/common'.format(url, port), m)
+                s = u.read()
+                u.close()
+                res = msgpack.unpackb(s)
+
+            except socket.error,e:
+                return -1
+            if not res:
+                self._open=False
+                self.uid=False
+                return -2
         else:
             _url = _protocol+url+':'+str(port)
             _sock = tiny_socket.mysocket()
@@ -280,10 +320,18 @@ class rpc_session(object):
         return self.exec_no_except(url, 'db', method, *args)
 
     def exec_no_except(self, url, resource, method, *args):
-        m = re.match('^(http[s]?://|socket://)([\w.\-]+):(\d{1,5})$', url or '')
+        m = re.match('^(http[s]?://|http[s]?\+msgpack://|socket://)([\w.-]+):(\d{1,5})$', url or '')
         if m.group(1) == 'http://' or m.group(1) == 'https://':
             sock = xmlrpclib.ServerProxy(url + '/xmlrpc/' + resource)
             return getattr(sock, method)(*args)
+        elif m.group(1) == 'http+msgpack://':
+            endpoint = '{}/{}'.format(url.replace('+msgpack', ''), resource)
+            m = msgpack.packb([method] + list(args))
+            u = urllib2.urlopen(endpoint, m)
+            s = u.read()
+            u.close()
+            res = msgpack.unpackb(s)
+            return res
         else:
             sock = tiny_socket.mysocket()
             sock.connect(m.group(2), int(m.group(3)))
