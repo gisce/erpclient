@@ -134,10 +134,13 @@ class wid_binary(interface.widget_interface):
                 filter_file.add_pattern('*')
                 filters.append(filter_file)
             else:
-                for pat in self.filters:
+                filter_file = None
+                if self.filters:
                     filter_file = gtk.FileFilter()
-                    filter_file.set_name(str(pat))
-                    filter_file.add_pattern(pat)
+                    for pat in self.filters:
+                        filter_file.set_name(str(pat))
+                        filter_file.add_pattern(pat)
+                if filter_file is not None:
                     filters.append(filter_file)
 
             filename = common.file_selection(_('Select a file...'), parent=self._window,filters=filters)

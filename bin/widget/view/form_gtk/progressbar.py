@@ -35,13 +35,16 @@ class progressbar(interface.widget_interface):
             return False
 
         super(progressbar, self).display(model, model_field)
+        format_float = self.attrs.get('format_float', '%.4f')
         value = model_field.get(model) or 0.0
-        self.widget.set_text('%.2f %%' % (value,) )
         if value<=0.0:
             value = 0.0
-        if value>=100.0:
+            format_float = '%.2f'
+        elif value>=100.0:
             value = 100.0
+            format_float = '%.2f'
         self.widget.set_fraction(value / 100.0)
+        self.widget.set_text(format_float % (value,) + ' %')
 
     def set_value(self, *args, **argv):
         pass
