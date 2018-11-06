@@ -1198,6 +1198,7 @@ class terp_main(service.Service):
         pn = self.notebook.get_current_page()
         datas = {'model': self.pages[pn].model, 'ids':self.pages[pn].ids_get(), 'id' : self.pages[pn].id_get()}
         plugins.execute(datas)
+        self._sig_child_call(widget=self.toolbar, button_name=self.buttons['but_reload'].name)
 
     def sig_quit(self, widget):
         options.options.save()
