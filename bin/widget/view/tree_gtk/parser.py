@@ -609,9 +609,15 @@ class ProgressBar(object):
     def setter(self, column, cell, store, iter):
         model = store.get_value(iter, 0)
         text = self.get_textual_value(model) or 0.0
-        cell.set_property('text', '%.2f %%' % (text,))
-        if text<0: text = 0.0
-        if text>100.0: text = 100.0
+        format_float = self.attrs.get('format_float', '%.4f')
+
+        if text <= 0:
+            text = 0.0
+            format_float = '%.2f'
+        elif text >= 100.0:
+            text = 100.0
+            format_float = '%.2f'
+        cell.set_property('text', format_float % (text,) + ' %')
         cell.set_property('value', text)
 
     def open_remote(self, model, create, changed=False, text=None):
