@@ -20,7 +20,7 @@
 #
 
 name = 'openerp-client'
-version = '5.1.1-pre'
+version = '5.1.1'
 description = 'OpenERP Client'
 long_desc = '''OpenERP is a complete ERP and CRM. The main features are accounting (analytic
 and financial), stock management, sales and purchases management, tasks
