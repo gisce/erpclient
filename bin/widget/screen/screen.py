@@ -552,7 +552,7 @@ class Screen(signal_event.signal_event):
     def load(self, ids):
         if not isinstance(ids,list):
             ids = [ids]
-        self.models.load(ids, display=False)
+        self.models.load(ids, display=False, fetch_fields=self.fields.keys())
         self.current_view.reset()
         if ids:
             self.display(ids[0])
