@@ -120,7 +120,7 @@ def scan(datas, wait_server=False):
                             attachment_name = attachment
                             if 'attachment' in attachment:
                                 attachment_name = attachment['attachment']
-                            common.message(msg=attachment_name, title='Error Attaching!', type=MESSAGE_ERROR)
+                            common.warning(msg=attachment_name, title='Error Attaching!')
 
         else:
             common.warning('You must resource a object', 'Warning')
