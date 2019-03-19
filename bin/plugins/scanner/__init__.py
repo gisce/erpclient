@@ -9,6 +9,7 @@ import traceback
 import common
 import subprocess
 import os
+from gtk import MESSAGE_ERROR
 
 CONNECTOR_PATH = os.environ['PROGRAMFILES'] + '\\ScannerApp'
 EXECUTABLE_PATH = os.environ['PROGRAMFILES'] + '\\ScannerApp\\connector.exe'
@@ -119,7 +120,7 @@ def scan(datas, wait_server=False):
                             attachment_name = attachment
                             if 'attachment' in attachment:
                                 attachment_name = attachment['attachment']
-                            common.warning(msg=attachment_name, title='Error Attaching!')
+                            common.message(msg=attachment_name, title='Error Attaching!', type=MESSAGE_ERROR)
 
         else:
             common.warning('You must resource a object', 'Warning')
