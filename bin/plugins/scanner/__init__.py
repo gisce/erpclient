@@ -116,6 +116,11 @@ def scan(datas, wait_server=False):
                             socket_client.send('attached ok')
                         except Exception:
                             socket_client.send('error while attaching')
+                            attachment_name = attachment
+                            if 'attachment' in attachment:
+                                attachment_name = attachment['attachment']
+                            common.warning(msg=attachment_name, title='Error Attaching!')
+
         else:
             common.warning('You must resource a object', 'Warning')
     except socket.error, code:
