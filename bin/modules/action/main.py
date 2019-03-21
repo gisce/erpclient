@@ -37,7 +37,9 @@ class main(service.Service):
     def __init__(self, name='action.main'):
         service.Service.__init__(self, name)
 
-    def exec_report(self, name, data, context={}):
+    def exec_report(self, name, data, context=None):
+        if context is None:
+            context = {}
         datas = data.copy()
         ids = datas['ids']
         del datas['ids']
@@ -67,7 +69,9 @@ class main(service.Service):
         printer.print_data(val)
         return True
 
-    def execute(self, act_id, datas, type=None, context={}):
+    def execute(self, act_id, datas, type=None, context=None):
+        if context is None:
+            context = {}
         act_id = int(act_id)
         ctx = rpc.session.context.copy()
         ctx.update(context)
@@ -80,10 +84,13 @@ class main(service.Service):
         res = rpc.session.rpc_exec_auth('/object', 'execute', type, 'read', act_id, False, ctx)
         self._exec_action(res,datas,context)
 
-    def _exec_action(self, action, datas, context={}):
+    def _exec_action(self, action, datas, context=None):
+        if context is None:
+            context = {}
         if isinstance(action, bool) or 'type' not in action:
             return
         # Update context, adding the dynamic context of the action
+        context = context.copy()
         context.update(tools.expr_eval(action.get('context','{}'), context.copy()))
         if action['type']=='ir.actions.act_window':
             for key in ('res_id', 'res_model', 'view_type', 'view_mode',
@@ -166,7 +173,13 @@ class main(service.Service):
         elif action['type']=='ir.actions.act_url':
             tools.launch_browser(action.get('url',''))
 
-    def exec_keyword(self, keyword, data={}, adds={}, context={}, warning=True):
+    def exec_keyword(self, keyword, data=None, adds=None, context=None, warning=True):
+        if data is None:
+            data = {}
+        if adds is None:
+            adds = {}
+        if context is None:
+            context = {}
         actions = None
         if 'id' in data:
             try:
