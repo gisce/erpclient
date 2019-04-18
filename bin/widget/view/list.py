@@ -33,12 +33,12 @@ from interface import parser_view
 
 class AdaptModelGroup(gtk.GenericTreeModel):
 
-    def __init__(self, model_group):
+    def __init__(self, model_group, order='asc'):
         super(AdaptModelGroup, self).__init__()
         self.model_group = model_group
         self.models = model_group.models
         self.last_sort = None
-        self.sort_asc = True
+        self.sort_asc = order == 'asc'
         self.set_property('leak_references', False)
 
     def added(self, modellist, position):
@@ -74,7 +74,8 @@ class AdaptModelGroup(gtk.GenericTreeModel):
         self.invalidate_iters()
 
     def sort(self, name):
-        self.sort_asc = not (self.sort_asc and (self.last_sort == name))
+        if self.last_sort is not None:
+            self.sort_asc = not (self.sort_asc and (self.last_sort == name))
         self.last_sort = name
         if self.sort_asc:
             f = lambda x,y: cmp(x[name].get_client(x), y[name].get_client(y))
@@ -150,6 +151,7 @@ class ViewList(parser_view):
         super(ViewList, self).__init__(window, screen, widget, children,
                 buttons, toolbar)
         self.store = None
+        self.sort_by = {'column': None, 'order': None}
         self.view_type = 'tree'
         self.model_add_new = True
         self.widget = gtk.VBox()
@@ -337,7 +339,20 @@ class ViewList(parser_view):
     #
     def display(self):
         if self.reload or (not self.widget_tree.get_model()) or self.screen.models<>self.widget_tree.get_model().model_group:
-            self.store = AdaptModelGroup(self.screen.models)
+
+            if self.store is not None:
+                self.sort_by.update({
+                    'column': self.store.last_sort,
+                    'order': 'asc' if self.store.sort_asc else 'desc'
+                })
+
+            self.store = AdaptModelGroup(
+                self.screen.models, order=self.sort_by['order']
+            )
+
+            if self.sort_by['column'] is not None:
+                self.store.sort(self.sort_by['column'])
+
             if self.store:
                 self.widget_tree.set_model(self.store)
         self.reload = False
