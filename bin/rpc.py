@@ -151,13 +151,29 @@ class msgpack_gw(gw_inter):
         return res
 
     def execute(self, method, *args):
-        endpoint = '{}/{}'.format(self._url, self._obj)
+        endpoint = '%s/%s' % (self._url, self._obj)
         m = msgpack.packb([method, self._db] + list(args))
         u = urllib2.urlopen(endpoint, m)
         s = u.read()
         u.close()
         res = msgpack.unpackb(s)
-        return res
+        return self.__convert(res)
+
+    def __convert(self, result):
+        if isinstance(result, tuple):
+            result = list(result)
+            return map(self.__convert, result)
+        if type(result)==type(u''):
+            return result.encode('utf-8')
+        elif type(result)==type([]):
+            return map(self.__convert, result)
+        elif type(result)==type({}):
+            newres = {}
+            for i in result.keys():
+                newres[i] = self.__convert(result[i])
+            return newres
+        else:
+            return result
 
 
 class rpc_session(object):
@@ -247,11 +263,11 @@ class rpc_session(object):
                 self.uid=False
                 return -2
         elif _protocol == 'http+msgpack://':
-            _url = 'http://{}:{}'.format(url, port)
+            _url = 'http://%s:%s' % (url, port)
             self._gw = msgpack_gw
             try:
                 m = msgpack.packb(['login', db or '', uname or '', passwd or ''])
-                u = urllib2.urlopen('http://{}:{}/common'.format(url, port), m)
+                u = urllib2.urlopen('http://%s:%s/common' % (url, port), m)
                 s = u.read()
                 u.close()
                 res = msgpack.unpackb(s)
@@ -325,7 +341,7 @@ class rpc_session(object):
             sock = xmlrpclib.ServerProxy(url + '/xmlrpc/' + resource)
             return getattr(sock, method)(*args)
         elif m.group(1) == 'http+msgpack://':
-            endpoint = '{}/{}'.format(url.replace('+msgpack', ''), resource)
+            endpoint = '%s/%s' % (url.replace('+msgpack', ''), resource)
             m = msgpack.packb([method] + list(args))
             u = urllib2.urlopen(endpoint, m)
             s = u.read()
