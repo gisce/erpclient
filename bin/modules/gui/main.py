@@ -441,6 +441,7 @@ def _server_ask(server_widget, parent=None):
     protocol = {
         'XML-RPC': 'http://',
         'NET-RPC (faster)': 'socket://',
+        'MsgPack': 'http+msgpack://'
     }
 
     if check_ssl():
@@ -449,7 +450,7 @@ def _server_ask(server_widget, parent=None):
     listprotocol = gtk.ListStore(str)
     protocol_widget.set_model(listprotocol)
 
-    m = re.match('^(http[s]?://|socket://)([\w.-]+):(\d{1,5})$', server_widget.get_text())
+    m = re.match('^(http[s]?://|http[s]?\+msgpack://|socket://)([\w.-]+):(\d{1,5})$', server_widget.get_text())
     if m:
         host_widget.set_text(m.group(2))
         port_widget.set_text(m.group(3))
@@ -547,7 +548,7 @@ class db_login(object):
                 iter = liststore.iter_next(iter)
 
         res = win.run()
-        m = re.match('^(http[s]?://|socket://)([\w.\-]+):(\d{1,5})$', server_widget.get_text() or '')
+        m = re.match('^(http[s]?://|http[s]?\+msgpack://|socket://)([\w.\-]+):(\d{1,5})$', server_widget.get_text() or '')
         if m:
             if combo_db.flags() & gtk.VISIBLE:
                 dbname = combo_db.get_active_text()
