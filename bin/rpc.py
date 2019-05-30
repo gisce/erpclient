@@ -100,7 +100,7 @@ class xmlrpc_gw(gw_inter):
     def __init__(self, url, db, uid, passwd, obj='/object'):
         gw_inter.__init__(self, url, db, uid, passwd, obj)
         self._sock = xmlrpclib.ServerProxy(url+obj)
-        t = self._sock.__call__('transport')
+        t = self._sock._ServerProxy__transport
         t.user_agent = '%s %s/%s (Python %s)' % (
             release.description, release.name, release.version, sys.version.split()[0]
         )
