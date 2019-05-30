@@ -339,16 +339,20 @@ class Screen(signal_event.signal_event):
         return self.add_view(arch, fields, display, True, toolbar=toolbar)
 
     def add_view_id(self, view_id, view_type, display=False, context=None):
+        if context is None:
+            context = {}
         if view_type in self.views_preload:
             return self.add_view(self.views_preload[view_type]['arch'],
                     self.views_preload[view_type]['fields'], display,
                     toolbar=self.views_preload[view_type].get('toolbar', False),
                     context=context)
         else:
-            view = self.rpc.fields_view_get(view_id, view_type, self.context,
+            ctx = context.copy()
+            ctx.update(self.context)
+            view = self.rpc.fields_view_get(view_id, view_type, ctx,
                     self.hastoolbar)
             return self.add_view(view['arch'], view['fields'], display,
-                    toolbar=view.get('toolbar', False), context=context)
+                    toolbar=view.get('toolbar', False), context=ctx)
 
     def add_view(self, arch, fields, display=False, custom=False, toolbar=None,
             context=None):
