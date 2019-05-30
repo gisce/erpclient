@@ -36,6 +36,9 @@ import re
 import pytz
 import msgpack
 import urllib2
+import release
+import sys
+
 
 CONCURRENCY_CHECK_FIELD = '__last_update'
 
@@ -97,6 +100,10 @@ class xmlrpc_gw(gw_inter):
     def __init__(self, url, db, uid, passwd, obj='/object'):
         gw_inter.__init__(self, url, db, uid, passwd, obj)
         self._sock = xmlrpclib.ServerProxy(url+obj)
+        t = self._sock.__call__('transport')
+        t.user_agent = '%s %s/%s (Python %s)' % (
+            release.description, release.name, release.version, sys.version.split()[0]
+        )
     def exec_auth(self, method, *args):
         logging.getLogger('rpc.request').debug_rpc(str((method, self._db, self._uid, self._passwd, args)))
         res = self.execute(method, self._uid, self._passwd, *args)
