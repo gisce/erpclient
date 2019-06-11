@@ -160,10 +160,7 @@ class msgpack_gw(gw_inter):
     def execute(self, method, *args):
         endpoint = '%s/%s' % (self._url, self._obj)
         m = msgpack.packb([method, self._db] + list(args))
-        try:
-            u = urllib2.urlopen(endpoint, m)
-        except urllib2.HTTPError:
-            pass
+        u = urllib2.urlopen(endpoint, m)
         s = u.read()
         u.close()
         res = msgpack.unpackb(s)
