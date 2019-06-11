@@ -160,10 +160,18 @@ class msgpack_gw(gw_inter):
     def execute(self, method, *args):
         endpoint = '%s/%s' % (self._url, self._obj)
         m = msgpack.packb([method, self._db] + list(args))
-        u = urllib2.urlopen(endpoint, m)
+        try:
+            u = urllib2.urlopen(endpoint, m)
+        except urllib2.HTTPError:
+            pass
         s = u.read()
         u.close()
         res = msgpack.unpackb(s)
+        if u.code == 210:
+            raise xmlrpclib.Fault(
+                res['exception'],
+                res['traceback']
+            )
         return self.__convert(res)
 
     def __convert(self, result):
@@ -235,8 +243,7 @@ class rpc_session(object):
                 common.message(_('Unable to reach to OpenERP server !\nYou should check your connection to the network and the OpenERP server.'), _('Connection Error'), type=gtk.MESSAGE_ERROR)
                 raise rpc_exception(69, 'Connection refused!')
             except Exception, e:
-                if isinstance(e, xmlrpclib.Fault) \
-                        or isinstance(e, tiny_socket.Myexception):
+                if isinstance(e, (xmlrpclib.Fault, tiny_socket.Myexception)):
                     a = rpc_exception(e.faultCode, e.faultString)
                     if a.type in ('warning','UserError'):
                         if a.message in ('ConcurrencyException') and len(args) > 4:
