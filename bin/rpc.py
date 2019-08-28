@@ -151,7 +151,6 @@ class msgpack_gw(gw_inter):
 
     def __init__(self, url, db, uid, passwd, obj='/object'):
         super(msgpack_gw, self).__init__(url, db, uid, passwd, obj)
-        self._sock = tiny_socket.mysocket()
 
     def exec_auth(self, method, *args):
         res = self.execute(method, self._uid, self._passwd, *args)
@@ -273,12 +272,12 @@ class rpc_session(object):
                 self._open=False
                 self.uid=False
                 return -2
-        elif _protocol == 'http+msgpack://':
-            _url = 'http://%s:%s' % (url, port)
+        elif _protocol.endswith('+msgpack://'):
+            _url = '%s://%s:%s' % (_protocol.split('+')[0], url, port)
             self._gw = msgpack_gw
             try:
                 m = msgpack.packb(['login', db or '', uname or '', passwd or ''])
-                u = urllib2.urlopen('http://%s:%s/common' % (url, port), m)
+                u = urllib2.urlopen('%s/common' % _url, m)
                 s = u.read()
                 u.close()
                 res = msgpack.unpackb(s)
