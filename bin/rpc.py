@@ -157,7 +157,7 @@ class msgpack_gw(gw_inter):
         return res
 
     def execute(self, method, *args):
-        endpoint = '%s/%s' % (self._url, self._obj)
+        endpoint = '%s%s' % (self._url, self._obj)
         m = msgpack.packb([method, self._db] + list(args))
         u = urllib2.urlopen(endpoint, m)
         s = u.read()
@@ -350,7 +350,7 @@ class rpc_session(object):
         if m.group(1) == 'http://' or m.group(1) == 'https://':
             sock = xmlrpclib.ServerProxy(url + '/xmlrpc/' + resource)
             return getattr(sock, method)(*args)
-        elif m.group(1) == 'http+msgpack://':
+        elif m.group(1).endswith('+msgpack://'):
             endpoint = '%s/%s' % (url.replace('+msgpack', ''), resource)
             m = msgpack.packb([method] + list(args))
             u = urllib2.urlopen(endpoint, m)
