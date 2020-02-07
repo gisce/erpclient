@@ -151,19 +151,23 @@ class msgpack_gw(gw_inter):
 
     def __init__(self, url, db, uid, passwd, obj='/object'):
         super(msgpack_gw, self).__init__(url, db, uid, passwd, obj)
-        self._sock = tiny_socket.mysocket()
 
     def exec_auth(self, method, *args):
         res = self.execute(method, self._uid, self._passwd, *args)
         return res
 
     def execute(self, method, *args):
-        endpoint = '%s/%s' % (self._url, self._obj)
+        endpoint = '%s%s' % (self._url, self._obj)
         m = msgpack.packb([method, self._db] + list(args))
         u = urllib2.urlopen(endpoint, m)
         s = u.read()
         u.close()
         res = msgpack.unpackb(s)
+        if u.code == 210:
+            raise xmlrpclib.Fault(
+                res['exception'],
+                res['traceback']
+            )
         return self.__convert(res)
 
     def __convert(self, result):
@@ -235,8 +239,7 @@ class rpc_session(object):
                 common.message(_('Unable to reach to OpenERP server !\nYou should check your connection to the network and the OpenERP server.'), _('Connection Error'), type=gtk.MESSAGE_ERROR)
                 raise rpc_exception(69, 'Connection refused!')
             except Exception, e:
-                if isinstance(e, xmlrpclib.Fault) \
-                        or isinstance(e, tiny_socket.Myexception):
+                if isinstance(e, (xmlrpclib.Fault, tiny_socket.Myexception)):
                     a = rpc_exception(e.faultCode, e.faultString)
                     if a.type in ('warning','UserError'):
                         if a.message in ('ConcurrencyException') and len(args) > 4:
@@ -269,12 +272,12 @@ class rpc_session(object):
                 self._open=False
                 self.uid=False
                 return -2
-        elif _protocol == 'http+msgpack://':
-            _url = 'http://%s:%s' % (url, port)
+        elif _protocol.endswith('+msgpack://'):
+            _url = '%s://%s:%s' % (_protocol.split('+')[0], url, port)
             self._gw = msgpack_gw
             try:
                 m = msgpack.packb(['login', db or '', uname or '', passwd or ''])
-                u = urllib2.urlopen('http://%s:%s/common' % (url, port), m)
+                u = urllib2.urlopen('%s/common' % _url, m)
                 s = u.read()
                 u.close()
                 res = msgpack.unpackb(s)
@@ -347,7 +350,7 @@ class rpc_session(object):
         if m.group(1) == 'http://' or m.group(1) == 'https://':
             sock = xmlrpclib.ServerProxy(url + '/xmlrpc/' + resource)
             return getattr(sock, method)(*args)
-        elif m.group(1) == 'http+msgpack://':
+        elif m.group(1).endswith('+msgpack://'):
             endpoint = '%s/%s' % (url.replace('+msgpack', ''), resource)
             m = msgpack.packb([method] + list(args))
             u = urllib2.urlopen(endpoint, m)

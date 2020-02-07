@@ -43,6 +43,7 @@ import logging
 arguments = {}
 if sys.platform == 'win32':
     arguments['filename'] = os.path.join(os.environ['USERPROFILE'], 'openerp-client.log')
+import compat
 
 logging.basicConfig(**arguments)
 

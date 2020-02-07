@@ -441,7 +441,8 @@ def _server_ask(server_widget, parent=None):
     protocol = {
         'XML-RPC': 'http://',
         'NET-RPC (faster)': 'socket://',
-        'MsgPack': 'http+msgpack://'
+        'MsgPack': 'http+msgpack://',
+        'MsgPack SSL': 'https+msgpack://'
     }
 
     if check_ssl():
@@ -457,7 +458,7 @@ def _server_ask(server_widget, parent=None):
 
     index = 0
     i = 0
-    for p in protocol:
+    for p in sorted(protocol):
         listprotocol.append([p])
         if m and protocol[p] == m.group(1):
             index = i
