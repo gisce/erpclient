@@ -238,6 +238,10 @@ class rpc_session(object):
                 if isinstance(e, xmlrpclib.Fault) \
                         or isinstance(e, tiny_socket.Myexception):
                     a = rpc_exception(e.faultCode, e.faultString)
+                    if isinstance(e.faultCode, int):
+                        a.type = 'UserError'
+                        a.message = 'Error %s' % e.faultCode
+                        a.data = e.faultString
                     if a.type in ('warning','UserError'):
                         if a.message in ('ConcurrencyException') and len(args) > 4:
                             if common.concurrency(args[0], args[2][0], args[4]):
