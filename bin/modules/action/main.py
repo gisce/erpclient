@@ -97,8 +97,7 @@ class main(service.Service):
                     'limit', 'auto_refresh'):
                 datas[key] = action.get(key, datas.get(key, None))
 
-            if datas['limit'] is None or datas['limit'] == 0:
-                datas['limit'] = 80
+            datas['limit'] = int(os.environ["SEARCH_LIMIT"])
 
             view_ids=False
             if action.get('views', []):

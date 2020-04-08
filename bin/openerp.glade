@@ -6255,7 +6255,7 @@ Latin1</property>
           <widget class="GtkTable" id="table16">
             <property name="visible">True</property>
             <property name="border_width">12</property>
-            <property name="n_rows">3</property>
+            <property name="n_rows">4</property>
             <property name="n_columns">2</property>
             <property name="row_spacing">6</property>
             <child>
@@ -6298,6 +6298,37 @@ Latin1</property>
                 <property name="top_attach">2</property>
                 <property name="bottom_attach">3</property>
                 <property name="x_options">GTK_FILL</property>
+                <property name="y_options"></property>
+              </packing>
+            </child>
+            <child>
+              <widget class="GtkEntry" id="limit_number">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="activates_default">True</property>
+                <property name="width_chars">16</property>
+                <property name="max_length">3</property>
+                <property name="text">40</property>
+              </widget>
+              <packing>
+                <property name="left_attach">1</property>
+                <property name="right_attach">2</property>
+                <property name="top_attach">3</property>
+                <property name="bottom_attach">4</property>
+                <property name="y_options"></property>
+              </packing>
+            </child>
+            <child>
+              <widget class="GtkLabel" id="label_limit">
+                <property name="visible">True</property>
+                <property name="xalign">1</property>
+                <property name="xpad">3</property>
+                <property name="ypad">3</property>
+                <property name="label" translatable="yes">Limit de cerca:</property>
+              </widget>
+              <packing>
+                <property name="top_attach">3</property>
+                <property name="bottom_attach">4</property>
                 <property name="y_options"></property>
               </packing>
             </child>

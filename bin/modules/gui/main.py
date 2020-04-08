@@ -436,6 +436,7 @@ def _server_ask(server_widget, parent=None):
     win.set_default_response(gtk.RESPONSE_OK)
     host_widget = win_gl.get_widget('ent_host')
     port_widget = win_gl.get_widget('ent_port')
+    search_limit = win_gl.get_widget('limit_number')
     protocol_widget = win_gl.get_widget('protocol')
 
     protocol = {
@@ -466,6 +467,7 @@ def _server_ask(server_widget, parent=None):
 
     res = win.run()
     if res == gtk.RESPONSE_OK:
+        os.environ["SEARCH_LIMIT"] = search_limit.get_text()
         protocol = protocol[protocol_widget.get_active_text()]
         url = '%s%s:%s' % (protocol, host_widget.get_text(), port_widget.get_text())
         server_widget.set_text(url)
