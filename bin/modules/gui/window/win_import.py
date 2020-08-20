@@ -47,7 +47,7 @@ def import_csv(csv_data, f, model, fields, context=None):
     for line in data:
         if not line:
             continue
-        datas.append(map(lambda x:x.decode(csv_data['combo']).encode('utf-8'), line))
+        datas.append(map(lambda x:x.decode(csv_data['combo']).encode('utf-8-sig'), line))
     if not datas:
         common.warning(_('The file is empty !'), _('Importation !'))
         return False
@@ -235,7 +235,7 @@ class win_import(object):
                     'sep': self.glade.get_widget('import_csv_sep').get_text(),
                     'del': self.glade.get_widget('import_csv_del').get_text(),
                     'skip': self.glade.get_widget('import_csv_skip').get_value(),
-                    'combo': self.glade.get_widget('import_csv_combo').get_active_text() or 'UTF-8'
+                    'combo': self.glade.get_widget('import_csv_combo').get_active_text() or 'utf-8-sig'
                 }
                 self.parent.present()
                 self.win.destroy()                
