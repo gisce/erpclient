@@ -71,6 +71,14 @@ def scan(datas, wait_server=False):
                             # Set attachment to resource
                             res_id = datas['id']
                             res_model = datas['model']
+                            category_code = attachment['category'] and attachment['category'].split('-')[0].strip()
+                            categories_ids = rpc.session.rpc_exec_auth(
+                                '/object', 'execute', 'ir.attachment.category',
+                                'search', [('code', '=', category_code)])
+                            if categories_ids:
+                                category_id = categories_ids[0]
+                            else:
+                                category_id = False
                             if attachment['resource'] != 'Por defecto' and datas['model'] == 'giscedata.polissa':
                                 if attachment['resource'] == 'Titular':
                                     res_id = rpc.session.rpc_exec_auth(
@@ -107,7 +115,7 @@ def scan(datas, wait_server=False):
                                 {
                                     'name': document_name,
                                     'description': attachment['notes'],
-                                    'category_id': attachment['category'][:2],
+                                    'category_id': category_id,
                                     'res_model': res_model,
                                     'res_id': res_id,
                                     'datas': base64.b64encode(content)
