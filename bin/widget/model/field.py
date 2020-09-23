@@ -89,6 +89,7 @@ class CharField(object):
     def set(self, model, value, test_state=True, modified=False):
         model.value[self.name] = value
         if modified:
+            print model, self.name, value
             model.modified = True
             model.modified_fields.setdefault(self.name)
         return True
@@ -100,6 +101,7 @@ class CharField(object):
         internal = model.value.get(self.name, False)
         self.set(model, value, test_state)
         if (internal or False) != (model.value.get(self.name,False) or False):
+            print model,  self.name, value
             model.modified = True
             model.modified_fields.setdefault(self.name)
             self.sig_changed(model)
@@ -195,6 +197,7 @@ class BinaryField(CharField):
         if not value:
             model.value[self.get_size_name()] = ""
         if modified:
+            print model, self.name, value
             model.modified = True
             model.modified_fields.setdefault(self.name)
         return True
@@ -216,6 +219,7 @@ class BinaryField(CharField):
         before = self.get(model)
         self.set(model, value, test_state, get_binary_size=False)
         if before != self.get(model):
+            print model, self.name, value
             model.modified = True
             model.modified_fields.setdefault(self.name)
             self.sig_changed(model)
@@ -242,6 +246,7 @@ class FloatField(CharField):
         self.set(model, value, test_state)
         if abs(float(internal or 0.0) - float(model.value[self.name] or 0.0)) >= (10.0**(-1-int(self.attrs.get('digits', (12,4))[1]))):
             if not self.get_state_attrs(model).get('readonly', False):
+                print model, self.name, value
                 model.modified = True
                 model.modified_fields.setdefault(self.name)
                 self.sig_changed(model)
@@ -287,6 +292,7 @@ class M2OField(CharField):
         else:
             model.value[self.name] = value
         if modified:
+            print model, self.name, value
             model.modified = True
             model.modified_fields.setdefault(self.name)
 
@@ -294,6 +300,7 @@ class M2OField(CharField):
         internal = model.value[self.name]
         self.set(model, value, test_state)
         if internal != model.value[self.name]:
+            print model, self.name, value
             model.modified = True
             model.modified_fields.setdefault(self.name)
             self.sig_changed(model)
@@ -321,6 +328,7 @@ class M2MField(CharField):
     def set(self, model, value, test_state=False, modified=False):
         model.value[self.name] = value or []
         if modified:
+            print model, self.name, value
             model.modified = True
             model.modified_fields.setdefault(self.name)
 
@@ -328,6 +336,7 @@ class M2MField(CharField):
         internal = model.value[self.name]
         self.set(model, value, test_state, modified=False)
         if set(internal) != set(value):
+            print model, self.name, value
             model.modified = True
             model.modified_fields.setdefault(self.name)
             self.sig_changed(model)
@@ -353,6 +362,7 @@ class O2MField(CharField):
         return mod
 
     def _model_changed(self, group, model):
+        print model, self.name
         model.parent.modified = True
         model.parent.modified_fields.setdefault(self.name)
         self.sig_changed(model.parent)
@@ -444,6 +454,7 @@ class ReferenceField(CharField):
         internal = model.value[self.name]
         model.value[self.name] = value
         if (internal or False) != (model.value[self.name] or False):
+            print model, self.name, value
             model.modified = True
             model.modified_fields.setdefault(self.name)
             self.sig_changed(model)
@@ -463,6 +474,7 @@ class ReferenceField(CharField):
         else:
             model.value[self.name] = False
         if modified:
+            print model, self.name, value
             model.modified = True
             model.modified_fields.setdefault(self.name)
 
