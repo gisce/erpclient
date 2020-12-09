@@ -38,6 +38,8 @@ import msgpack
 import urllib2
 import release
 import sys
+import json
+import base64
 
 
 CONCURRENCY_CHECK_FIELD = '__last_update'
@@ -56,6 +58,12 @@ try:
         ssl._create_default_https_context = _create_unverified_https_context
 except ImportError:
     pass
+
+
+def decode_token(token):
+    data = token.split('.')[1]
+    data += "=" * ((4 - len(data) % 4) % 4)
+    return json.loads(base64.b64decode(data))
 
 
 class rpc_exception(Exception):
@@ -188,12 +196,13 @@ class msgpack_gw(gw_inter):
 
 
 class rpc_session(object):
-    __slots__ = ('_open', '_url', 'uid', 'uname', '_passwd', '_gw', 'db', 'context', 'timezone')
+    __slots__ = ('_open', '_url', 'uid', 'uname', '_passwd', '_gw', 'db', 'context', 'timezone', 'token')
     def __init__(self):
         self._open = False
         self._url = None
         self._passwd = None
         self.uid = None
+        self.token = None
         self.context = {}
         self.uname = None
         self._gw = xmlrpc_gw
@@ -202,7 +211,7 @@ class rpc_session(object):
 
     def rpc_exec(self, obj, method, *args):
         try:
-            sock = self._gw(self._url, self.db, self.uid, self._passwd, obj)
+            sock = self._gw(self._url, self.db, 'token', self.token, obj)
             return sock.execute(method, *args)
         except socket.error, e:
             common.message(str(e), title=_('Connection refused !'), type=gtk.MESSAGE_ERROR)
@@ -212,14 +221,14 @@ class rpc_session(object):
 
     def rpc_exec_auth_try(self, obj, method, *args):
         if self._open:
-            sock = self._gw(self._url, self.db, self.uid, self._passwd, obj)
+            sock = self._gw(self._url, self.db, 'token', self.token, obj)
             return sock.exec_auth(method, *args)
         else:
             raise rpc_exception(1, 'not logged')
 
     def rpc_exec_auth_wo(self, obj, method, *args):
         try:
-            sock = self._gw(self._url, self.db, self.uid, self._passwd, obj)
+            sock = self._gw(self._url, self.db, 'token', self.token, obj)
             return sock.exec_auth(method, *args)
         except xmlrpclib.Fault, err:
             a = rpc_exception(err.faultCode, err.faultString)
@@ -233,7 +242,7 @@ class rpc_session(object):
     def rpc_exec_auth(self, obj, method, *args):
         if self._open:
             try:
-                sock = self._gw(self._url, self.db, self.uid, self._passwd, obj)
+                sock = self._gw(self._url, self.db, 'token', self.token, obj)
                 return sock.exec_auth(method, *args)
             except socket.error, e:
                 common.message(_('Unable to reach to OpenERP server !\nYou should check your connection to the network and the OpenERP server.'), _('Connection Error'), type=gtk.MESSAGE_ERROR)
@@ -269,7 +278,7 @@ class rpc_session(object):
             _sock = xmlrpclib.ServerProxy(_url+'/common')
             self._gw = xmlrpc_gw
             try:
-                res = _sock.login(db or '', uname or '', passwd or '')
+                res = _sock.token(db or '', uname or '', passwd or '')
             except socket.error,e:
                 return -1
             if not res:
@@ -280,7 +289,7 @@ class rpc_session(object):
             _url = '%s://%s:%s' % (_protocol.split('+')[0], url, port)
             self._gw = msgpack_gw
             try:
-                m = msgpack.packb(['login', db or '', uname or '', passwd or ''])
+                m = msgpack.packb(['token', db or '', uname or '', passwd or ''])
                 u = urllib2.urlopen('%s/common' % _url, m)
                 s = u.read()
                 u.close()
@@ -298,7 +307,7 @@ class rpc_session(object):
             self._gw = tinySocket_gw
             try:
                 _sock.connect(url, int(port))
-                _sock.mysend(('common', 'login', db or '', uname or '', passwd or ''))
+                _sock.mysend(('common', 'token', db or '', uname or '', passwd or ''))
                 res = _sock.myreceive()
                 _sock.disconnect()
             except socket.error,e:
@@ -309,14 +318,15 @@ class rpc_session(object):
                 return -2
         self._url = _url
         self._open = True
-        self.uid = res
+        self.token = res
+        self.uid = decode_token(res)['uid']
         self.uname = uname
         self._passwd = passwd
         self.db = db
 
         #CHECKME: is this useful? maybe it's used to see if there is no
         # exception raised?
-        sock = self._gw(self._url, self.db, self.uid, self._passwd)
+        sock = self._gw(self._url, self.db, 'token', self.token)
         self.context_reload()
         return 1
 
