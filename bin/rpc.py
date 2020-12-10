@@ -159,7 +159,10 @@ class msgpack_gw(gw_inter):
     def execute(self, method, *args):
         endpoint = '%s%s' % (self._url, self._obj)
         m = msgpack.packb([method, self._db] + list(args))
-        u = urllib2.urlopen(endpoint, m)
+        request = urllib2.Request(endpoint, m, headers={
+            'Content-Type': 'application/msgpack'
+        })
+        u = urllib2.urlopen(request)
         s = u.read()
         u.close()
         res = msgpack.unpackb(s)
@@ -281,7 +284,11 @@ class rpc_session(object):
             self._gw = msgpack_gw
             try:
                 m = msgpack.packb(['login', db or '', uname or '', passwd or ''])
-                u = urllib2.urlopen('%s/common' % _url, m)
+                endpoint = '%s/common' % _url
+                request = urllib2.Request(endpoint, m, headers={
+                    'Content-Type': 'application/msgpack'
+                })
+                u = urllib2.urlopen(request)
                 s = u.read()
                 u.close()
                 res = msgpack.unpackb(s)
@@ -357,7 +364,10 @@ class rpc_session(object):
         elif m.group(1).endswith('+msgpack://'):
             endpoint = '%s/%s' % (url.replace('+msgpack', ''), resource)
             m = msgpack.packb([method] + list(args))
-            u = urllib2.urlopen(endpoint, m)
+            request = urllib2.Request(endpoint, m, headers={
+                'Content-Type': 'application/msgpack'
+            })
+            u = urllib2.urlopen(request)
             s = u.read()
             u.close()
             res = msgpack.unpackb(s)
