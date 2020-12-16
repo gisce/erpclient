@@ -29,7 +29,6 @@ import locale
 
 import common
 import interface
-from mx.DateTime import DateTimeDelta
 
 class float_time(interface.widget_interface):
     def __init__(self, window, parent, model, attrs={}):

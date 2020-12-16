@@ -26,8 +26,6 @@ import datetime as DT
 import gettext
 import locale
 
-import mx.DateTime
-from mx.DateTime import *
 
 import tools
 import tools.datetime_util

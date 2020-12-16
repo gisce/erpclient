@@ -29,7 +29,6 @@ import re
 import tools
 import tools.datetime_util
 import time
-from mx.DateTime import DateTime
 
 
 class DateEntry(gtk.Entry):

@@ -20,19 +20,10 @@
 #
 ##############################################################################
 
-import time
 import locale
 
-from mx.DateTime import RelativeDateTime
-from mx.DateTime import now
-
-try:
-    from mx.DateTime import strptime
-except ImportError:
-    # strptime does not exist on windows. we emulate it
-    from mx.DateTime import mktime
-    def strptime(s, f):
-        return mktime(time.strptime(s, f))
+from dateutil.relativedelta import relativedelta as RelativeDateTime
+from datetime import datetime
 
 date_operation = {
     '^=w(\d+)$': lambda dt,r: dt+RelativeDateTime(day=0, month=0, weeks = int(r.group(1))),
@@ -50,7 +41,7 @@ date_operation = {
     '^([\\+-]\d+)d$': lambda dt,r: dt+RelativeDateTime(days = int(r.group(1))),
     '^([\\+-]\d+)m$': lambda dt,r: dt+RelativeDateTime(months = int(r.group(1))),
     '^([\\+-]\d+)y$': lambda dt,r: dt+RelativeDateTime(years = int(r.group(1))),
-    '^=$': lambda dt,r: now(),
+    '^=$': lambda dt,r: datetime.now(),
     '^-$': lambda dt,r: False
 }
 
@@ -65,7 +56,7 @@ date_mapping = {
 }
 
 def get_date_format():
-    """Return locale date format string. If format string doesn't contain 
+    """Return locale date format string. If format string doesn't contain
     any of the `%Y, %m or %d` then returns default datetime format `%Y/%m/%d`
     """
 
