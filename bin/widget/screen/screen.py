@@ -447,7 +447,8 @@ class Screen(signal_event.signal_event):
             return False
         self.current_view.set_value()
         id = False
-        if self.current_model.validate():
+        errors = self.current_model.validate()
+        if not errors:
             id = self.current_model.save(reload=True)
             self.models.writen(id)
             if not id:
@@ -455,7 +456,7 @@ class Screen(signal_event.signal_event):
         else:
             self.current_view.display()
             self.current_view.set_cursor()
-            return False
+            return {'errors' : errors}
         if self.current_view.view_type == 'tree':
             for model in self.models.models:
                 if model.is_modified():

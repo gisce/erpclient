@@ -305,11 +305,14 @@ class form(object):
         pass
 
     def sig_save(self, widget=None, sig_new=True, auto_continue=True):
-        id = self.screen.save_current()
+        id = False
+        values = self.screen.save_current()
+        if not 'errors' in values:
+            id = values
         if id:
             self.message_state(_('Document Saved.'), color="darkgreen")
         else:
-            common.warning(_('Invalid form, correct red fields !'),_('Error !'))
+            common.warning(_('Invalid form, correct following fields:\n' + '\n'.join(values['errors']) ),_('Error !'))
             self.message_state(_('Invalid form, correct red fields !'), color="red")
         return bool(id)
 
