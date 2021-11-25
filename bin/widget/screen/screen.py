@@ -354,6 +354,11 @@ class Screen(signal_event.signal_event):
             return self.add_view(view['arch'], view['fields'], display,
                     toolbar=view.get('toolbar', False), context=ctx)
 
+    def clean_models(self):
+        ''' Clean self.models to remove models != current_model'''
+        self.models.models.clear()
+        self.models.models.append(self.current_model)
+
     def add_view(self, arch, fields, display=False, custom=False, toolbar=None,
             context=None):
         if toolbar is None:
@@ -385,6 +390,8 @@ class Screen(signal_event.signal_event):
         if custom:
             self.models.add_fields_custom(fields, self.models)
         else:
+            if self.current_model:
+                self.clean_models()
             self.models.add_fields(fields, self.models, context=context)
         self.fields = self.models.fields
 
