@@ -181,11 +181,13 @@ class ModelRecord(signal_event.signal_event):
     def validate(self):
         self._check_load()
         ok = True
-        for fname in self.mgroup.mfields:
+        mfields_with_errors = []
+        for fname, _object in self.mgroup.mfields.iteritems():
             if not self.mgroup.mfields[fname].validate(self):
                 print("Not valid field: %s" % (fname))
+                mfields_with_errors.append(_object.attrs.get('string', fname))
                 ok = False
-        return ok
+        return mfields_with_errors
 
     def _get_invalid_fields(self):
         res = []
