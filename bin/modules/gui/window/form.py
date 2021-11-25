@@ -163,6 +163,12 @@ class form(object):
             self.screen.current_view.set_cursor()
         else:
             common.message(_('Resource ID does not exist for this object!'))    
+
+    def get_one_resource(self, widget):
+        _id = int(widget.get_value())
+        self.screen.display(_id)
+        self.screen.load([_id])
+        self.screen.current_view.set_cursor()
     
     def get_event(self, widget, event, win):
         if event.keyval in (gtk.keysyms.Return, gtk.keysyms.KP_Enter):
@@ -186,7 +192,7 @@ class form(object):
         win.destroy()
         
         if response == gtk.RESPONSE_OK:
-            self.get_resource(widget)
+            self.get_one_resource(widget)
             
 
     def destroy(self):
