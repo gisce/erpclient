@@ -163,7 +163,6 @@ class Button(Observable):
                 self.form.screen.reload()
                 self.warn('misc-message', '')
         else:
-            common.warning(_('Invalid form, correct red fields !'), _('Error !') )
             self.warn('misc-message', _('Invalid form, correct red fields !'), "red")
             self.form.screen.display()
 
