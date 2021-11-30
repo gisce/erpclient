@@ -187,7 +187,10 @@ class ModelRecord(signal_event.signal_event):
                 print("Not valid field: %s" % (fname))
                 mfields_with_errors.append(_object.attrs.get('string', fname))
                 ok = False
-        return mfields_with_errors
+        if mfields_with_errors:
+            common.warning(_('Invalid form, correct following fields:\n') + '\n'.join(mfields_with_errors))
+            return False
+        return True
 
     def _get_invalid_fields(self):
         res = []
