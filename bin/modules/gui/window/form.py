@@ -173,7 +173,7 @@ class form(object):
     def get_event(self, widget, event, win):
         if event.keyval in (gtk.keysyms.Return, gtk.keysyms.KP_Enter):
             win.destroy()
-            self.get_resource(widget)
+            self.get_one_resource(widget)
         
         
     def sig_goto(self, *args):
