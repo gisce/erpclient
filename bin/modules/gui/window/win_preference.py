@@ -66,6 +66,12 @@ class win_preference(object):
         vbox = self.glade.get_widget('preference_vbox')
         vbox.pack_start(self.screen.widget)
 
+
+        search_limit = options.options['client.search_limit']
+
+        buffer = self.glade.get_widget('limit_number_input').get_buffer()
+        buffer.set_text(search_limit, len(search_limit))
+
         self.win.set_title(_('Preference'))
         self.win.show_all()
 
@@ -80,6 +86,11 @@ class win_preference(object):
                 common.message(_("The default language of the interface has been modified, do not forget to restart " \
                                  "the client to have the interface in your language"),
                                _("Default language modified !"), parent=self.win)
+            buffer = self.glade.get_widget('limit_number_input').get_buffer()
+            search_limit_input = buffer.get_text()
+            options.options['client.search_limit'] = search_limit_input
+            options.options.save()
+
         self.parent.present()
         self.win.destroy()
         return True
