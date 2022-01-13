@@ -33,6 +33,7 @@ import signal_event
 import tools
 import service
 import copy
+import gtk
 
 
 class Screen(signal_event.signal_event):
@@ -112,6 +113,10 @@ class Screen(signal_event.signal_event):
 
     readonly = property(readonly_get, readonly_set)
 
+    def get_event(self, widget, event):
+        if event.keyval in (gtk.keysyms.Return, gtk.keysyms.KP_Enter):
+            self.search_filter()
+
     def search_active(self, active=True, show_search=True):
 
         if active:
@@ -144,7 +149,11 @@ class Screen(signal_event.signal_event):
                         self.search_offset_next,
                         self.search_offset_previous)
                 self.filter_widget.set_limit(self.limit)
-                
+                self.screen_container.spin_limit.set_value(self.limit)
+                self.filter_widget.set_offset(self.screen_container.spin_offset.get_value())
+                self.screen_container.spin_limit.connect('key_press_event',self.get_event)
+                self.screen_container.spin_offset.connect('key_press_event',self.get_event)
+
         if active and show_search:
             self.screen_container.show_filter()
         else:
@@ -164,16 +173,30 @@ class Screen(signal_event.signal_event):
             self.screen_container.but_next.set_sensitive(True)
 
     def search_offset_next(self, *args):
-        offset=self.filter_widget.get_offset()
-        limit=self.filter_widget.get_limit()
-        self.filter_widget.set_offset(offset+limit)
+        offset=self.search_offset_add()
+        limit=self.search_limit_add()
+        new_offset=offset+limit
+        self.screen_container.spin_offset.set_value(new_offset)
+        self.filter_widget.set_offset(new_offset)
         self.search_filter()
 
     def search_offset_previous(self, *args):
-        offset=self.filter_widget.get_offset()
-        limit=self.filter_widget.get_limit()
-        self.filter_widget.set_offset(max(offset-limit,0))
+        offset=self.search_offset_add()
+        limit=self.search_limit_add()
+        new_offset=max(offset-limit,0)
+        self.screen_container.spin_offset.set_value(new_offset)
+        self.filter_widget.set_offset(new_offset)
         self.search_filter()
+
+    def search_limit_add(self, *args):
+        spin_limit_sc =  int(self.screen_container.spin_limit.get_text())
+        self.filter_widget.set_limit(spin_limit_sc)
+        return spin_limit_sc
+
+    def search_offset_add(self, *args):
+        spin_offset_sc = int(self.screen_container.spin_offset.get_text())
+        self.filter_widget.set_offset(spin_offset_sc)
+        return spin_offset_sc
 
     def search_clear(self, *args):
         self.filter_widget.clear()
@@ -196,7 +219,11 @@ class Screen(signal_event.signal_event):
         if self.latest_search != v:
             self.filter_widget.set_offset(0)
         limit=self.filter_widget.get_limit()
+        limit=self.search_limit_add()
+
         offset=self.filter_widget.get_offset()
+        offset=self.search_offset_add()
+
         self.latest_search = v
         ids = rpc.session.rpc_exec_auth('/object', 'execute', self.name, 'search', v, offset, limit, 0, self.context)
         if len(ids) < limit:
