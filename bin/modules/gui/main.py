@@ -1163,6 +1163,16 @@ class terp_main(service.Service):
         try:
             act_id = rpc.session.rpc_exec_auth('/object', 'execute', 'res.users',
                     'read', [rpc.session.uid], [type,'name'], rpc.session.context)
+            estimate_min_value = 0
+            estimate_min_value_id = rpc.session.rpc_exec_auth('/object', 'execute', 'res.config',
+                    'search', [('name', '=', 'estimate_min_value')])
+            if estimate_min_value_id:
+                res = rpc.session.rpc_exec_auth('/object', 'execute', 'res.config',
+                        'read', estimate_min_value_id, [type,'value'], rpc.session.context)
+                estimate_min_value = int(res[0]['value'])
+            options.options['client.estimate_min_value'] = estimate_min_value
+            options.options.save()
+
         except:
             return False
         id = self.sb_username.get_context_id('message')

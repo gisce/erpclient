@@ -134,7 +134,8 @@ class form(object):
             if self.screen.current_view.view_type == 'form':
                 self.sig_new(autosave=False)
             if self.screen.current_view.view_type in ('tree', 'graph', 'calendar'):
-                self.screen.search_filter()
+                if not self.screen.search_filter(exact_count=False):
+                    self.message_state('Total aproximat!', color='red')
 
         if auto_refresh and int(auto_refresh):
             gobject.timeout_add(int(auto_refresh) * 1000, self.sig_reload)
@@ -347,7 +348,7 @@ class form(object):
             self.screen.display()
         else:
             id = self.screen.id_get()
-            self.screen.search_filter()
+            self.screen.search_filter(exact_count=True)
             for model in self.screen.models:
                 if model.id == id:
                     self.screen.current_model = model
@@ -408,7 +409,7 @@ class form(object):
             message = '<span foreground="%s">%s</span>' % (color, message)
         sb.set_label(message)
 
-    def _record_message(self, screen, signal_data):
+    def _record_message(self, screen, signal_data, color=None):
         if not signal_data[3]:
             msg = _('No record selected')
         else:

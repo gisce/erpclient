@@ -115,7 +115,7 @@ class Screen(signal_event.signal_event):
 
     def get_event(self, widget, event):
         if event.keyval in (gtk.keysyms.Return, gtk.keysyms.KP_Enter):
-            self.search_filter()
+            self.search_filter(exact_count=True)
 
     def search_active(self, active=True, show_search=True):
 
@@ -178,7 +178,7 @@ class Screen(signal_event.signal_event):
         new_offset=offset+limit
         self.screen_container.spin_offset.set_value(new_offset)
         self.filter_widget.set_offset(new_offset)
-        self.search_filter()
+        self.search_filter(exact_count=True)
 
     def search_offset_previous(self, *args):
         offset=self.search_offset_add()
@@ -186,7 +186,7 @@ class Screen(signal_event.signal_event):
         new_offset=max(offset-limit,0)
         self.screen_container.spin_offset.set_value(new_offset)
         self.filter_widget.set_offset(new_offset)
-        self.search_filter()
+        self.search_filter(exact_count=True)
 
     def search_limit_add(self, *args):
         spin_limit_sc =  int(self.screen_container.spin_limit.get_text())
@@ -202,7 +202,12 @@ class Screen(signal_event.signal_event):
         self.filter_widget.clear()
         self.clear()
 
-    def search_filter(self, *args):
+    def write_to_stat_state(self, msg):
+        sb = self.widget.parent.parent.parent.children()[1].children()[2]
+        sb.set_text(msg)
+
+    def search_filter(self, exact_count=True, *args):
+        self.context.update({'estimate_search_count': not exact_count})
         v = self.filter_widget.value
         filter_keys = [ key for key, _, _ in v]
 
@@ -228,14 +233,24 @@ class Screen(signal_event.signal_event):
         ids = rpc.session.rpc_exec_auth('/object', 'execute', self.name, 'search', v, offset, limit, 0, self.context)
         if len(ids) < limit:
             self.search_count = len(ids)
+            exact_count = True
         else:
             self.search_count = rpc.session.rpc_exec_auth_try('/object', 'execute', self.name, 'search_count', v, self.context)
-
+            if not exact_count:
+                estimate_min_value = options.options['client.estimate_min_value']
+                exact_count = self.search_count < estimate_min_value
         self.update_scroll()
 
         self.clear()
         self.load(ids)
-        return True
+
+        main = service.LocalService('gui.main')
+        id = main.sb_requests.get_context_id('message')
+
+        if exact_count:
+            self.write_to_stat_state('')
+
+        return exact_count
 
     def models_set(self, models):
         import time
