@@ -34,6 +34,7 @@ import tools
 import service
 import copy
 import gtk
+import options
 
 
 class Screen(signal_event.signal_event):
