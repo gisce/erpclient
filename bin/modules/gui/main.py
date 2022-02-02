@@ -1063,7 +1063,8 @@ class terp_main(service.Service):
                     id = self.sig_win_menu(quiet=False)
                     if id:
                         win = service.LocalService('gui.main').window
-                        win.set_title('OpenERP - %s' % res[5])
+                        import release
+                        win.set_title('OpenERP - %s - %s' % (res[5], release.version))
                         self.sig_home_new(quiet=True, except_id=id)
                     if res[4] == 'https://':
                         self.secure_img.show()
