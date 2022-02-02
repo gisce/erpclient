@@ -205,7 +205,7 @@ class Screen(signal_event.signal_event):
 
     def write_to_stat_state(self, msg):
         sb = self.widget.parent.parent.parent.children()[1].children()[2]
-        sb.set_text(msg)
+        sb.set_label(msg)
 
     def search_filter(self, exact_count=True, *args):
         self.context.update({'estimate_search_count': not exact_count})

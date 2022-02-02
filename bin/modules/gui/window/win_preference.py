@@ -70,7 +70,7 @@ class win_preference(object):
         search_limit = options.options['client.search_limit']
 
         buffer = self.glade.get_widget('limit_number_input').get_buffer()
-        buffer.set_text(search_limit, len(str(search_limit)))
+        buffer.set_text(str(search_limit), len(str(search_limit)))
 
         self.win.set_title(_('Preference'))
         self.win.show_all()
