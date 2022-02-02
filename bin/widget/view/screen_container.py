@@ -62,6 +62,21 @@ class screen_container(object):
         hb2.pack_start(self.but_previous, expand=False, fill=False)
         hb2.pack_start(self.but_next, expand=False, fill=False)
 
+        hb.pack_start(gtk.Label(_('Limit :')), expand=False, fill=False)
+        self.spin_limit = gtk.SpinButton(climb_rate=1, digits=0)
+        self.spin_limit.set_numeric(False)
+        self.spin_limit.set_adjustment(gtk.Adjustment(value=0, lower=0, upper=10000, step_incr=10, page_incr=100))
+        self.spin_limit.set_property('visible', True)
+        hb.pack_start(self.spin_limit, expand=False, fill=False)
+
+        hb.pack_start(gtk.Label(_('Offset :')), expand=False, fill=False)
+        self.spin_offset = gtk.SpinButton(climb_rate=1, digits=0)
+        self.spin_offset.set_numeric(False)
+        self.spin_offset.set_adjustment(gtk.Adjustment(value=0, lower=0, upper=10000, step_incr=80, page_incr=100))
+        self.spin_offset.set_property('visible', True)
+        hb.pack_start(self.spin_offset, expand=False, fill=False)
+
+
         button_clear = gtk.Button(stock=gtk.STOCK_CLEAR)
         button_clear.connect('clicked', clear_fnct)
         hb.pack_start(button_clear, expand=False, fill=False)

@@ -1063,7 +1063,8 @@ class terp_main(service.Service):
                     id = self.sig_win_menu(quiet=False)
                     if id:
                         win = service.LocalService('gui.main').window
-                        win.set_title('OpenERP - %s' % res[5])
+                        import release
+                        win.set_title('OpenERP - %s - %s' % (res[5], release.version))
                         self.sig_home_new(quiet=True, except_id=id)
                     if res[4] == 'https://':
                         self.secure_img.show()
@@ -1163,6 +1164,14 @@ class terp_main(service.Service):
         try:
             act_id = rpc.session.rpc_exec_auth('/object', 'execute', 'res.users',
                     'read', [rpc.session.uid], [type,'name'], rpc.session.context)
+            estimate_min_value = 0
+            try:
+                estimate_min_value = rpc.session.get_estimate_min_value('/object', 'estimate_min_value')
+            except:
+                pass
+            options.options['client.estimate_min_value'] = int(estimate_min_value)
+            options.options.save()
+
         except:
             return False
         id = self.sb_username.get_context_id('message')

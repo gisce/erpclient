@@ -131,6 +131,8 @@ for fname in os.listdir(pix_file):
 
 try:
     win = modules.gui.main.terp_main()
+    import release
+    win.window.set_title('OpenERP - %s' % release.version)
     color = options.options.get('client.color', None)
     if color:
         eb = gtk.EventBox()

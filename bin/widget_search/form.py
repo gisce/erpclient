@@ -140,22 +140,20 @@ class parse(object):
         self.dict_widget[str(attrs['name'])] = (widget_act, wid, int(val))
 
     def add_parameters(self):
-
         hb_param=gtk.HBox(spacing=3)
+
         hb_param.pack_start(gtk.Label(_('Limit :')), expand=False, fill=False)
-
-        self.spin_limit = gtk.SpinButton(climb_rate=1, digits=0)
-        self.spin_limit.set_numeric(False)
-        self.spin_limit.set_adjustment(gtk.Adjustment(value=80, lower=1, upper=sys.maxint, step_incr=10, page_incr=100))
-        self.spin_limit.set_property('visible', True)
-
+        self.spin_limit = gtk.SpinButton(climb_rate=1,digits=0)
+        self.spin_limit.set_numeric(True)
+        self.spin_limit.set_adjustment(gtk.Adjustment(value=80, lower=1, upper=sys.maxint))
+        self.spin_limit.set_sensitive(False)
         hb_param.pack_start(self.spin_limit, expand=False, fill=False)
 
         hb_param.pack_start(gtk.Label(_('Offset :')), expand=False, fill=False)
-
         self.spin_offset = gtk.SpinButton(climb_rate=1,digits=0)
-        self.spin_offset.set_numeric(False)
-        self.spin_offset.set_adjustment(gtk.Adjustment(value=0, lower=0, upper=sys.maxint, step_incr=80, page_incr=100))
+        self.spin_offset.set_numeric(True)
+        self.spin_offset.set_adjustment(gtk.Adjustment(value=0, lower=0, upper=sys.maxint))
+        self.spin_offset.set_sensitive(False)
 
         hb_param.pack_start(self.spin_offset, expand=False, fill=False)
 

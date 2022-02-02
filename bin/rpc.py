@@ -332,6 +332,14 @@ class rpc_session(object):
     def about(self, url):
         return self.exec_no_except(url, 'common', 'about')
 
+    def get_estimate_min_value(self, obj, method, *args):
+        if self._open:
+            try:
+                sock = self._gw(self._url, self.db, self.uid, self._passwd, obj)
+                return sock.exec_auth(method, *args)
+            except Exception as e:
+                raise e
+
     def login_message(self, url):
         try:
             return self.exec_no_except(url, 'common', 'login_message')
