@@ -208,7 +208,8 @@ class Screen(signal_event.signal_event):
         sb.set_label(msg)
 
     def search_filter(self, exact_count=True, *args):
-        self.context.update({'estimate_search_count': not exact_count})
+        ctx = self.context.copy()
+        ctx.update({'estimate_search_count': not exact_count})
         v = self.filter_widget.value
         filter_keys = [ key for key, _, _ in v]
 
@@ -231,12 +232,12 @@ class Screen(signal_event.signal_event):
         offset=self.search_offset_add()
 
         self.latest_search = v
-        ids = rpc.session.rpc_exec_auth('/object', 'execute', self.name, 'search', v, offset, limit, 0, self.context)
+        ids = rpc.session.rpc_exec_auth('/object', 'execute', self.name, 'search', v, offset, limit, 0, ctx)
         if len(ids) < limit:
             self.search_count = len(ids)
             exact_count = True
         else:
-            self.search_count = rpc.session.rpc_exec_auth_try('/object', 'execute', self.name, 'search_count', v, self.context)
+            self.search_count = rpc.session.rpc_exec_auth_try('/object', 'execute', self.name, 'search_count', v, ctx)
             if not exact_count:
                 estimate_min_value = options.options['client.estimate_min_value']
                 exact_count = self.search_count < estimate_min_value
