@@ -182,7 +182,7 @@ class ViewForm(parser_view):
                                 common.message(_('You must select a record to use the relate button !'))
                                 return False
                             act['domain'] = self.screen.current_model.expr_eval(act['domain'], check_load=False)
-                            act['context'] = str(self.screen.current_model.expr_eval(act['context'], check_load=False))
+                            act['context'] = str(self.screen.current_model.expr_eval(act['context'] or {}, check_load=False))
                         obj = service.LocalService('action.main')
                         value = obj._exec_action(act, data, context)
                         if type in ('print', 'action'):
