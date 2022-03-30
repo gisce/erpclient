@@ -84,7 +84,7 @@ class main(service.Service):
         res = rpc.session.rpc_exec_auth('/object', 'execute', type, 'read', act_id, False, ctx)
         self._exec_action(res,datas,context)
 
-    def _exec_action(self, action, datas, context=None):
+    def _exec_action(self, action, datas, context=None, blank_tree=False):
         if context is None:
             context = {}
         if isinstance(action, bool) or 'type' not in action:
@@ -135,7 +135,8 @@ class main(service.Service):
                 obj.create(view_ids, datas['res_model'], datas['res_id'], domain,
                         action['view_type'], datas.get('window',None), ctx,
                         datas['view_mode'], name=action.get('name', False),
-                        limit=datas['limit'], auto_refresh=datas['auto_refresh'])
+                        limit=datas['limit'], auto_refresh=datas['auto_refresh'],
+                        blank_tree=blank_tree)
 
         elif action['type']=='ir.actions.server':
             ctx = context.copy()
@@ -172,7 +173,7 @@ class main(service.Service):
         elif action['type']=='ir.actions.act_url':
             tools.launch_browser(action.get('url',''))
 
-    def exec_keyword(self, keyword, data=None, adds=None, context=None, warning=True):
+    def exec_keyword(self, keyword, data=None, adds=None, context=None, warning=True, blank_tree=False):
         if data is None:
             data = {}
         if adds is None:
@@ -198,7 +199,7 @@ class main(service.Service):
         res = common.selection(_('Select your action'), keyact)
         if res:
             (name,action) = res
-            self._exec_action(action, data, context=context)
+            self._exec_action(action, data, context=context, blank_tree=blank_tree)
             return (name, action)
         return False
 

@@ -38,7 +38,7 @@ class window(service.Service):
         service.Service.__init__(self, name)
     def create(self, view_ids, model, res_id=False, domain=None,
             view_type='form', window=None, context=None, mode=None, name=False,
-            limit=80, auto_refresh=False):
+            limit=80, auto_refresh=False, blank_tree=False):
         if context is None:
             context = {}
         context.update(rpc.session.context)
@@ -48,7 +48,8 @@ class window(service.Service):
             win = form.form(model, res_id, domain, view_type=mode,
                     view_ids = (view_ids or []), window=window,
                     context=context, name=name, limit=limit,
-                    auto_refresh=auto_refresh)
+                    auto_refresh=auto_refresh,
+                    blank_tree=blank_tree)
             spool = service.LocalService('spool')
             spool.publish('gui.window', win, {})
         elif view_type=='tree':

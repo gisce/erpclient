@@ -50,7 +50,7 @@ from widget.screen import Screen
 class form(object):
     def __init__(self, model, res_id=False, domain=None, view_type=None,
             view_ids=None, window=None, context=None, name=False, limit=80,
-            auto_refresh=False):
+            auto_refresh=False, blank_tree=False):
         if not view_type:
             view_type = ['form','tree']
         if domain is None:
@@ -134,7 +134,7 @@ class form(object):
             if self.screen.current_view.view_type == 'form':
                 self.sig_new(autosave=False)
             if self.screen.current_view.view_type in ('tree', 'graph', 'calendar'):
-                if not self.screen.search_filter(exact_count=False):
+                if not self.screen.search_filter(exact_count=False, blank_tree=blank_tree):
                     self.message_state('Total aproximat!', color='red')
 
         if auto_refresh and int(auto_refresh):

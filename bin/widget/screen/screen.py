@@ -207,7 +207,10 @@ class Screen(signal_event.signal_event):
         sb = self.widget.parent.parent.parent.children()[1].children()[2]
         sb.set_label(msg)
 
-    def search_filter(self, exact_count=True, *args):
+    def search_filter(self, exact_count=True, blank_tree=False, *args):
+        if blank_tree:
+            return True
+
         ctx = self.context.copy()
         ctx.update({'estimate_search_count': not exact_count})
         v = self.filter_widget.value

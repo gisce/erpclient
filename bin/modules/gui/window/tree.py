@@ -171,7 +171,7 @@ class tree(object):
     def sig_print(self, widget=None, keyword='client_print_multi', id=None):
         self.sig_action(keyword='client_print_multi')
 
-    def sig_action(self, widget=None, keyword='tree_but_action', id=None, report_type='pdf', warning=True):
+    def sig_action(self, widget=None, keyword='tree_but_action', id=None, report_type='pdf', warning=True, blank_tree=False):
         ids = self.ids_get()
 
         if not id and ids and len(ids):
@@ -185,13 +185,13 @@ class tree(object):
             obj = service.LocalService('action.main')
             return obj.exec_keyword(keyword, {'model':self.model, 'id':id,
                 'ids':ids, 'report_type':report_type, 'window': self.window}, context=ctx,
-                warning=warning)
+                warning=warning, blank_tree=blank_tree)
         else:
             common.message(_('No resource selected!'))
         return False
 
     def sig_open(self, widget, iter, path):
-        if not self.sig_action(widget, 'tree_but_open', warning=False):
+        if not self.sig_action(widget, 'tree_but_open', warning=False, blank_tree=True):
             if self.tree_res.view.row_expanded(iter):
                 self.tree_res.view.collapse_row(iter)
             else:
