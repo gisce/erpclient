@@ -175,15 +175,18 @@ class ModelRecordGroup(signal_event.signal_event):
             self.models.lock_signal = False
             self.signal('record-cleared')
 
-    def load(self, ids, display=True):
+    def load(self, ids, display=True, fetch_fields=None):
         if not ids:
             return True
         if not self.fields:
             return self.pre_load(ids, display)
+        if fetch_fields is None:
+            fetch_fields = self.fields.keys()
+
         c = rpc.session.context.copy()
         c.update(self.context)
         c['bin_size'] = True
-        values = self.rpc.read(ids, self.fields.keys() + [rpc.CONCURRENCY_CHECK_FIELD], c)
+        values = self.rpc.read(ids, fetch_fields + [rpc.CONCURRENCY_CHECK_FIELD], c)
         if not values:
             return False
         newmod = False
