@@ -1,7 +1,9 @@
-FROM python:2
+FROM ubuntu:18.04
 
 # Install basic packages
 RUN apt-get update && apt-get install -qqy \
+  python-setuptools \
+  python-pip \
   python-glade2 \
   python-gtk2 \
   libssl-dev \
@@ -11,10 +13,12 @@ RUN apt-get update && apt-get install -qqy \
   gtk2-engines \
   iceweasel
 
-
 # Install ERPClient
 WORKDIR erpclient
+RUN pip install --upgrade pip
+RUN pip install --upgrade setuptools
 RUN easy_install egenix-mx-base
+COPY requirements.txt .
 RUN pip install -r requirements.txt
 RUN pip install pyOpenSSL pycairo
 RUN for lib in cairo gi glib gobject gtk-2.0 pygtk.pth pygtk.py; do \
